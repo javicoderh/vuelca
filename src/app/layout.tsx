@@ -37,7 +37,7 @@ export default function RootLayout({
           alt='next'
         />
         </div>
-        <nav className='flex flex-row w-full items-center justify-center nav-setup'>
+        <nav className='flex flex-row w-full items-center justify-center nav-setup md:mt-9'>
           <Link
           href={route}
           >
