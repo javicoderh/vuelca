@@ -83,11 +83,11 @@ transform: scaleY(1.5) scaleX(3.8) translateY(-35%) translateX(35%);
 filter: drop-shadow(2px 2px 0 rgb(252, 142, 16)) 
             drop-shadow(-2px 2px 0 rgb(255, 230, 202)) 
             drop-shadow(2px -2px 0 rgb(255, 217, 0)) 
-            drop-shadow(-2px -2px 0 rgb(255, 102, 0));
+            drop-shadow(0px 0px 30px rgb(255, 102, 0));
 }
 
 .nav-setup {
-  transform: translateY(-370%);
+  transform: translateY(-460%);
 }
 
 nav li {
