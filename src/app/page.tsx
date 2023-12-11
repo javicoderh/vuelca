@@ -10,7 +10,7 @@ import InverseDinamicFooter from './ui/inverseFooter'
 
 export default function Home() {
   return (
-    <div className="flex min-h-[100vh] flex-col min-w-full items-center justify-between redimensionado">
+    <div className="flex min-h-[100vh] flex-col min-w-full items-center justify-between">
       <header className='w-full h-[15vh] p-2'>
         <div className='flex logoCategorias2 flex-col'>
           <h1 className='title'>Vuelca</h1>
@@ -30,7 +30,7 @@ export default function Home() {
           <li>Contacto</li>
         </nav>
       </header>
-      <main className='w-full h-[80vh] overflow-main p-3'>
+      <main className='w-full h-[80vh] overflow-main p-3 redimensionado'>
         <Carousel />
         <Categorias />
       </main>
