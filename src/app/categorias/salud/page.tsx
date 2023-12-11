@@ -19,7 +19,7 @@ export default function Rutas() {
                 ................................................................<br/>
                 ................................................................<br/>
         </p>
-            <div className='grid grid-cols-2 gap-8 md:grid-cols-4 items-center justify-center mt-10'>
+            <div className='grid grid-cols-2 gap-8 md:grid-cols-4 items-center justify-center mt-10 redimensionado'>
                 <div className='flex flex-col items-center justify-center'>
                   <Image className='footer-img' src={lotus} alt='footer' width='50' height='50' />
                   <h3 className='text-white'>subcategoria.name</h3>
@@ -40,7 +40,7 @@ export default function Rutas() {
                   <h3 className='text-white'>subcategoria.name</h3>
                   <p className='text-white'>subcategoria.description</p>
                 </div>
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center high-layer'>
                   <Image className='footer-img' src={lotus} alt='footer' width='50' height='50' />
                   <h3 className='text-white'>subcategoria.name</h3>
                   <p className='text-white'>subcategoria.description</p>

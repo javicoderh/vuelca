@@ -19,7 +19,7 @@ export default function Redes() {
                 ................................................................<br/>
                 ................................................................<br/>
         </p>
-            <div className='grid grid-cols-2 gap-8 md:grid-cols-4 items-center justify-center mt-10'>
+            <div className='grid grid-cols-2 gap-8 md:grid-cols-4 items-center justify-center mt-10 redimensionado'>
                 <div className='flex flex-col items-center justify-center'>
                   <Image className='footer-img' src={lotus} alt='footer' width='50' height='50' />
                   <h3 className='text-white'>subcategoria.name</h3>
