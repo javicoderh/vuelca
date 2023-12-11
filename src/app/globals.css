@@ -84,7 +84,7 @@ filter: drop-shadow(2px 2px 0 rgb(252, 142, 16))
 }
 
 .nav-setup {
-  transform: translateY(-460%);
+  transform: translateY(-480%);
 }
 
 nav li {
