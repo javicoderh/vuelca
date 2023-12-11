@@ -52,6 +52,10 @@ z-index: 7;
 transform: scale(0.90);
 }
 
+.redimensionado2 {
+  transform: scale(0.8);
+  }
+
 .overflow-main {
 overflow-y: scroll;
 }
@@ -67,6 +71,11 @@ transform: scale(0.7) translateY(-40%);
 .title {
 font-size: 2rem;
 transform: translateX(3%);
+color: rgb(238, 184, 134);
+}
+
+.subcat {
+font-size: 1rem;
 color: rgb(238, 184, 134);
 }
 
