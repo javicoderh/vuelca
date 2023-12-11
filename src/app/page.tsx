@@ -30,7 +30,7 @@ export default function Home() {
           <li>Contacto</li>
         </nav>
       </header>
-      <main className='w-full h-[80vh] overflow-main p-3 redimensionado'>
+      <main className='w-full h-[80vh] overflow-main p-3'>
         <Carousel />
         <Categorias />
       </main>
