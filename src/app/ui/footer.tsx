@@ -37,7 +37,7 @@ const DinamicFooter = () => {
   return (
     <footer className='w-full h-[6vh] flex flex-row items-center justify-center p-2'>
       <Image className='footer-img' src={lotus} alt='footer' width='100' height='100' />
-      <h3 className={`text-center ${fade ? 'fade-in' : 'fade-out'}`}>{currentPhrase}</h3>
+      <h3 className='phrase-translate text-center '>{currentPhrase}</h3>
     </footer>
   );
 };
