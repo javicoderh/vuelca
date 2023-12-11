@@ -11,7 +11,6 @@ import '../../globals.css'
 export default function Rutas() {
 
   return (    
-      <main className='w-full hide-scrollbar flex flex-col h-[80vh] overflow-main p-3'>
         <div className='w-full flex flex-col items-center justify-center'>
         <h1 className='text-white text-center w-full mb-5'>Salud Completa</h1>
         <p className='text-white'>
@@ -49,6 +48,5 @@ export default function Rutas() {
           <iframe className='iframe' width="560" height="315" src="https://www.youtube.com/embed/AGcTCvn-a6g?si=Cqwld_dMR_OTazPP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
           <iframe className='iframe' width="560" height="315" src="https://www.youtube.com/embed/AGcTCvn-a6g?si=Cqwld_dMR_OTazPP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
-      </main>
   )
 }

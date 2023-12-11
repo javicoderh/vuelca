@@ -57,11 +57,11 @@ overflow-y: scroll;
 }
 
 .logoCategorias {
-transform: scale(0.7) translateY(-20%);
+transform: scale(0.7) translateY(-40%);
 }
 
 .logoCategorias2 {
-  transform: scale(0.7) translateY(-20%) translateX(-20%);
+  transform: scale(0.7) translateY(-20%) translateX(0%);
   }
 
 .title {
