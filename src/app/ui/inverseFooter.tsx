@@ -4,7 +4,7 @@ import Image from 'next/image';
 import lotus from '../../../public/lotus.svg'; 
 import '../globals.css'
 
-const DinamicFooter = () => {
+const InverseDinamicFooter = () => {
 
   const phrases = [
     'Tenemos lo que necesitas para ser feliz',
@@ -36,10 +36,10 @@ const DinamicFooter = () => {
 
   return (
     <footer className='w-full h-[6vh] flex flex-row items-center justify-center p-2'>
-      <Image className='footer-img' src={lotus} alt='footer' width='100' height='100' />
-      <h3 className='phrase-translate text-center md:footer-imgDesktop'>{currentPhrase}</h3>
+        <h3 className='inverse-phrase-translate text-center md:footer-imgDesktop'>{currentPhrase}</h3>
+        <Image className='inverse-footer-img' src={lotus} alt='footer' width='100' height='100' />     
     </footer>
   );
 };
 
-export default DinamicFooter;
+export default InverseDinamicFooter;

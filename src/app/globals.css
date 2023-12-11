@@ -127,6 +127,18 @@ filter: invert(2) drop-shadow(2px 2px 0 rgb(251, 255, 0))
             drop-shadow(-2px -2px 0 rgb(255, 255, 255))
 }
 
+.inverse-footer-img {
+  
+    transform:scaleX(-1) scale(2) translateY(-35%);
+    z-index: 5;
+    filter: invert(2) drop-shadow(2px 2px 0 rgb(251, 255, 0)) 
+                drop-shadow(-2px 2px 0 rgb(177, 17, 17)) 
+                drop-shadow(-2px -2px 0 rgb(255, 102, 0))
+                drop-shadow(-2px -2px 0 rgb(255, 255, 255))
+}
+
+
+
 .phrase-container {
   position: relative;
 }
@@ -140,6 +152,10 @@ filter: invert(2) drop-shadow(2px 2px 0 rgb(251, 255, 0))
 
 .phrase-translate {
 transform: translateX(-15%)
+}
+
+.inverse-phrase-translate {
+transform: translateX(15%);
 }
 
 .fade-in {

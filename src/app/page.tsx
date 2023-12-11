@@ -4,6 +4,7 @@ import Categorias from './ui/categorias'
 import lotus from '../../public/lotus.svg'
 import Carousel from './ui/carousel'
 import DinamicFooter from './ui/footer'
+import InverseDinamicFooter from './ui/inverseFooter'
 
 
 
@@ -33,7 +34,7 @@ export default function Home() {
         <Carousel />
         <Categorias />
       </main>
-      <DinamicFooter />
+      <InverseDinamicFooter />
     </div>
   )
 }
