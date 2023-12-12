@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html className='flex background w-full h-[100vh] flex-col overflow items-center justify-center bg-blue-900' lang="en">
       <body className='flex w-full h-[100vh] flex-col overflow items-center justify-center'>
-      <div className="flex min-h-[100vh] flex-col min-w-full items-center justify-between">
+      <div className="flex min-h-[100vh] flex-col min-w-full items-center justify-between pb-[80px] md:pb-[0px]">
       <header className='w-full h-[15vh] p-2'>
         <div className='flex logoCategorias2 flex-col'>
           <h1 className='title'>Vuelca</h1>
