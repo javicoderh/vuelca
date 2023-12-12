@@ -15,11 +15,20 @@
   overflow: hidden;
 }
 
+.background {
+background-color: rgb(36, 17, 0);
+}
+
+html {
+background-color: rgb(36, 17, 0);
+}
+
 body {
 height: 100vh;
 overflow: hidden;
 overflow-y: hidden;
 padding: 0rem;
+background-color: rgb(36, 17, 0);
 }
 
 .text-footer {
