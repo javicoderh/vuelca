@@ -27,7 +27,8 @@ export default function RootLayout({
       <div className="flex min-h-[100vh] flex-col min-w-full items-center justify-between pb-[65px] md:pb-[0px]">
       <header className='w-full h-[15vh] p-2'>
         <div className='flex logoCategorias2 flex-col'>
-          <h1 className='title'>Vuelca</h1>
+          <h1 className='title hidden md:block'>Vuelca</h1>
+          <h1 className='title2 block md:hidden'>Vuelca</h1>
           <h2 className='subtitle md:hidden'>directorio de empresas sustentables</h2>
           <h2 className='subtitle-desktop hidden md:block'>directorio de empresas sustentables</h2>
           <Image
