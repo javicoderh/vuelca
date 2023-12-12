@@ -3,25 +3,26 @@ import React, { useState } from 'react';
 import './carousel.css';
 import logo from '../../../public/forest.jpg'
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface Drink {
   name: string;
-  image: string;
+  ruta: string;
+  imgsrc: string
 }
 
 const CarouselDestacados = () => {
     const drinks = [
-        { name: 'Drink 1', image: 'https://wallpaperaccess.com/full/1739064.jpg' },
-        { name: 'Drink 2', image: 'https://www.travelandleisure.com/thmb/e1PTFm80-LXnue_5GeiZNcoe69g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3-banteay-kdei-TEMPLETRIP0619-7075e115973549a69b9ec8fc7704d7b6.jpg' },
-        { name: 'Drink 3', image: 'https://wallpaperaccess.com/full/1739064.jpg' },
-        { name: 'Drink 4', image: 'https://www.travelandleisure.com/thmb/e1PTFm80-LXnue_5GeiZNcoe69g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3-banteay-kdei-TEMPLETRIP0619-7075e115973549a69b9ec8fc7704d7b6.jpg' },
-        { name: 'Drink 5', image: 'https://wallpaperaccess.com/full/1739064.jpg' },
-        { name: 'Drink 6', image: 'https://www.travelandleisure.com/thmb/e1PTFm80-LXnue_5GeiZNcoe69g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3-banteay-kdei-TEMPLETRIP0619-7075e115973549a69b9ec8fc7704d7b6.jpg' },
-        { name: 'Drink 7', image: 'https://wallpaperaccess.com/full/1739064.jpg' },
-        { name: 'Drink 8', image: 'https://www.travelandleisure.com/thmb/e1PTFm80-LXnue_5GeiZNcoe69g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3-banteay-kdei-TEMPLETRIP0619-7075e115973549a69b9ec8fc7704d7b6.jpg' },
-        { name: 'Drink 9', image: 'https://wallpaperaccess.com/full/1739064.jpg' },
-        { name: 'Drink 10', image: 'https://www.travelandleisure.com/thmb/e1PTFm80-LXnue_5GeiZNcoe69g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3-banteay-kdei-TEMPLETRIP0619-7075e115973549a69b9ec8fc7704d7b6.jpg' },
-        // ...
+        { name: 'Emprendimiento 1', ruta: '/categorias/salud', imgsrc: 'imagen'},
+        { name: 'emprendimiento 2', ruta: '/emprendimiento2', imgsrc: '1'},
+        { name: 'emprendimiento 3', ruta: '/emprendimiento3', imgsrc: '2'},
+        { name: 'emprendimiento 4', ruta: '/emprendimiento4', imgsrc: '3'},
+        { name: 'emprendimiento 5', ruta: '/emprendimiento5', imgsrc: '4'},
+        { name: 'emprendimiento 6', ruta: '/emprendimiento6', imgsrc: '5'},
+        { name: 'emprendimiento 7', ruta: '/emprendimiento7', imgsrc: '6'},
+        { name: 'emprendimiento 8', ruta: '/emprendimiento8', imgsrc: '7'},
+        { name: 'emprendimiento 9', ruta: '/emprendimiento9', imgsrc: '8'},
+        { name: 'emprendimiento 10', ruta: '/emprendimiento10', imgsrc: '9'},              
       ];
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
@@ -57,26 +58,29 @@ const CarouselDestacados = () => {
   return (
     <div className="carousel-container">
       <div className="carousel-controls carousel-controls-prev" onClick={goToPrevious}>
-        <button>Previous</button>
+        <button>Anterior</button>
       </div>
       <div className="carousel">
         {visibleIndices.map((index) => {
           const drink = drinks[index];
           const isActive = index === activeIndex;
-          return (
+          return (            
             <div
               className={`carousel-item ${isActive ? 'active' : ''} ${positionClass(index)}`}
               key={index}
             >
+            <Link href={drinks[activeIndex].ruta}>
               <Image src={logo} alt='foto' width='100' height='100' />
+            </Link>
             </div>
+           
           );
         })}
       </div>
       <div className="carousel-controls carousel-controls-next" onClick={goToNext}>
-        <button>Next</button>
+        <button>Siguiente</button>
       </div>
-      <h2>{drinks[activeIndex].name}</h2>
+      <h2 className='nombre'>{drinks[activeIndex].name}</h2>
     </div>
   );
 };

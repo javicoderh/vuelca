@@ -37,7 +37,7 @@ left: 120px;
 }
   
 .carousel-controls-next {
-right: 150px;
+right: 120px;
 }
   
 .carousel {
@@ -115,7 +115,8 @@ h2 {
 text-align: center;
 margin-top: 20px;
 color: silver;
-font-size: 2rem;
-color: #FFE5B4;
-font-family: 'Playfair Display', serif;
+}
+
+.nombre {
+font-size: 1.5rem;
 }
