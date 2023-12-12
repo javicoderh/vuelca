@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.carousel-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+position: relative;
+width: max-content;
+margin: auto;
+padding: 20px;
+}
+  
+.carousel-controls {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background: transparent;
+border: none;
+font-size: 1.5rem;
+z-index: 2;
+}
+  
+.carousel-controls button {
+background: none;
+border: none;
+color: #FFE5B4;
+font-size: 1rem;
+}
+  
+.carousel-controls:focus {
+outline: none;
+}
+  
+.carousel-controls-prev {
+left: 120px;
+}
+  
+.carousel-controls-next {
+right: 150px;
+}
+  
+.carousel {
+display: flex;
+perspective: 1000px;
+justify-content: center;
+align-items: center;
+position: relative;
+z-index: 1;
+width: 1000px; 
+height: 300px; 
+overflow: hidden; 
+}
+  
+.carousel-item {
+transition: transform 0.5s;
+position: absolute;
+width: 200px;
+height: 200px;
+}
+  
+.carousel-item img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+  
+.carousel-item.far-left {
+transform: translateX(-120%) scale(0.6);
+opacity: 0.4;
+z-index: 1;
+border-radius: 5%;
+overflow: hidden;
+border: groove 2px silver;
+}
+  
+.carousel-item.left {
+transform: translateX(-80%) scale(0.8);
+opacity: 0.8;
+z-index: 2;
+border-radius: 5%;
+overflow: hidden;
+border: groove 2px silver;
+}
+  
+.carousel-item.center {
+transform: translateX(0) scale(1);
+opacity: 1;
+z-index: 4;
+border-radius: 5%;
+overflow: hidden;
+box-shadow: 0px 0px 10px 5px white;
+border: groove 4px goldenrod;
+}
+  
+.carousel-item.right {
+transform: translateX(80%) scale(0.8);
+opacity: 0.8;
+z-index: 2;
+border-radius: 5%;
+overflow: hidden;
+border: groove 2px silver;
+}
+  
+.carousel-item.far-right {
+transform: translateX(120%) scale(0.6);
+opacity: 0.4;
+z-index: 1;
+border-radius: 5%;
+overflow: hidden;
+border: groove 2px silver;
+}
+  
+h2 {
+text-align: center;
+margin-top: 20px;
+color: silver;
+font-size: 2rem;
+color: #FFE5B4;
+font-family: 'Playfair Display', serif;
+}

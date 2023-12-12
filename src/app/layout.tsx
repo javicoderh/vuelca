@@ -28,7 +28,8 @@ export default function RootLayout({
       <header className='w-full h-[15vh] p-2'>
         <div className='flex logoCategorias2 flex-col'>
           <h1 className='title'>Vuelca</h1>
-          <h2 className='subtitle'>directorio de empresas sustentables</h2>
+          <h2 className='subtitle md:hidden'>directorio de empresas sustentables</h2>
+          <h2 className='subtitle-desktop hidden md:block'>directorio de empresas sustentables</h2>
           <Image
           className='logo-setup'
           src={arrow}
@@ -37,11 +38,20 @@ export default function RootLayout({
           alt='next'
         />
         </div>
-        <nav className='flex flex-row w-full items-center justify-center nav-setup md:mt-9'>
+        <nav className=' md:flex-row w-full hidden md:flex items-center justify-center nav-setup2 md:mt-9'>
           <Link
           href={home}
           >
-          <button className='nav-button'><li>Home</li></button></Link>
+          <li>Home</li></Link>
+          <li>Galeria</li>
+          <li>Nosotros</li>
+          <li>Contacto</li>
+        </nav>
+        <nav className='flex flex-row w-full md:hidden items-center justify-center nav-setup md:mt-9'>
+          <Link
+          href={home}
+          >
+          <li>Home</li></Link>
           <li>Galeria</li>
           <li>Nosotros</li>
           <li>Contacto</li>

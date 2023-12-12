@@ -78,7 +78,7 @@ transform: scale(0.7) translateY(-40%);
   }
 
 .title {
-font-size: 2rem;
+font-size: 3rem;
 transform: translateX(3%);
 color: rgb(238, 184, 134);
 }
@@ -92,8 +92,16 @@ color: rgb(238, 184, 134);
 font-size: 1rem;
 color: rgb(238, 184, 134);
 margin-bottom: 1rem;
-transform: translateX(3%);
+transform: translateX(-14%);
 }
+
+.subtitle-desktop {
+  font-size: 1.2rem;
+  color: rgb(238, 184, 134);
+  margin-bottom: 1rem;
+  transform: translateX(-41%)
+  ;
+  }
 
 .logo-setup {
 transform: scaleY(1.5) scaleX(3.8) translateY(-35%) translateX(35%);
@@ -107,6 +115,10 @@ filter:     drop-shadow(2px 2px 0 rgb(252, 142, 16))
   transform: translateY(-480%);
 }
 
+.nav-setup2 {
+  transform: translateY(-550%);
+}
+
 nav li {
 color: rgb(238, 184, 134);
 list-style: none;
@@ -118,6 +130,14 @@ color: rgb(238, 184, 134);
 list-style: none;
 margin-left: 1rem;
 background-color: transparent;
+}
+
+.destacados {
+transform: translateY(-40%);
+}
+
+.destacados-text {
+padding-top: 2rem;
 }
 
 .circular {

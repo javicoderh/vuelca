@@ -5,6 +5,7 @@ import lotus from '../../public/lotus.svg'
 import Carousel from './ui/carousel'
 import DinamicFooter from './ui/footer'
 import InverseDinamicFooter from './ui/inverseFooter'
+import Destacados from './ui/destacados'
 
 
 
@@ -14,5 +15,6 @@ export default function Home() {
       <main className='w-full h-[80vh] overflow-main p-3'>
         <Carousel />
         <Categorias />
+        <Destacados />
       </main>
 )}
