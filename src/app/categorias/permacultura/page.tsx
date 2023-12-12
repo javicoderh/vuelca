@@ -14,8 +14,7 @@ export default async function Redes() {
  
   const permacultura = await fetchPermacultura();
 
-  return (    
-      <main className='w-full hide-scrollbar flex flex-col h-[80vh] overflow-main'>
+  return (         
         <div className='w-full flex flex-col items-center justify-center '>
         <h1 className='text-white text-center w-full mb-5'>Permacultura</h1>
         <p className='text-white'>
@@ -39,6 +38,5 @@ export default async function Redes() {
           <iframe className='iframe' width="560" height="315" src="https://www.youtube.com/embed/AGcTCvn-a6g?si=Cqwld_dMR_OTazPP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
           <iframe className='iframe' width="560" height="315" src="https://www.youtube.com/embed/AGcTCvn-a6g?si=Cqwld_dMR_OTazPP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
         </div>
-      </main>
   )
 }

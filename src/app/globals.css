@@ -113,6 +113,13 @@ list-style: none;
 margin-left: 1rem;
 }
 
+.nav-button {  
+color: rgb(238, 184, 134);
+list-style: none;
+margin-left: 1rem;
+background-color: transparent;
+}
+
 .circular {
 border-radius: 50%;
 border: solid 1px goldenrod;

@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
 
-  let route = '/'
+  let home = '/'
   return (
     <html className='flex background w-full h-[100vh] flex-col overflow items-center justify-center bg-blue-900' lang="en">
       <body className='flex w-full h-[100vh] flex-col overflow items-center justify-center'>
@@ -39,9 +39,9 @@ export default function RootLayout({
         </div>
         <nav className='flex flex-row w-full items-center justify-center nav-setup md:mt-9'>
           <Link
-          href={route}
+          href={home}
           >
-          <li>Home</li></Link>
+          <button className='nav-button'><li>Home</li></button></Link>
           <li>Galeria</li>
           <li>Nosotros</li>
           <li>Contacto</li>
