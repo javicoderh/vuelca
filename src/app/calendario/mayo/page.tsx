@@ -8,7 +8,7 @@ export default function Mayo() {
         <div>
         <h1 className="text-white">Soy mayo</h1>
         <Link href={back}>
-                <button>atras</button>
+                <button className="text-white">atras</button>
             </Link>
             </div>
     )

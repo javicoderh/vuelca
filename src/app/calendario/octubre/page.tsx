@@ -8,7 +8,7 @@ export default function Octubre() {
         <div>
         <h1 className="text-white">Soy octubre</h1>
         <Link href={back}>
-                <button>atras</button>
+                <button className="text-white">atras</button>
             </Link>
             </div>
     )

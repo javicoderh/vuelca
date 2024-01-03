@@ -8,7 +8,7 @@ export default function Julio() {
         <div>
         <h1 className="text-white">Soy julio</h1>
         <Link href={back}>
-                <button>atras</button>
+                <button className="text-white">atras</button>
             </Link>
             </div>
     )
