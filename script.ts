@@ -4,30 +4,80 @@ const prisma = new PrismaClient()
 
 async function main() {
     
-    const enero = await prisma.meses.create({
+    const abril = await prisma.meses.create({
         data: {
-          nombre: 'enero',
+          nombre: 'abril',
           dias: 30,
-          ruta: '/calendario/enero'
+          ruta: '/calendario/abril'
         }
       });
  
 
-    const febrero = await prisma.meses.create({
+    const mayo = await prisma.meses.create({
       data: {
-        nombre: 'febrero',
-        dias: 29,
-        ruta: '/calendario/febrero'
+        nombre: 'mayo',
+        dias: 31,
+        ruta: '/calendario/mayo'
       }
     });
 
-    const marzo = await prisma.meses.create({
+    const junio = await prisma.meses.create({
       data: {
-        nombre: 'marzo',
-        dias: 31,
-        ruta: '/calendario/marzo'
+        nombre: 'junio',
+        dias: 30,
+        ruta: '/calendario/junio'
       }
     });
+
+    const julio = await prisma.meses.create({
+      data: {
+        nombre: 'julio',
+        dias: 31,
+        ruta: '/calendario/julio'
+      }
+    });
+
+
+  const agosto = await prisma.meses.create({
+    data: {
+      nombre: 'agosto',
+      dias: 31,
+      ruta: '/calendario/agosto'
+    }
+  });
+
+  const septiembre = await prisma.meses.create({
+    data: {
+      nombre: 'septiembre',
+      dias: 30,
+      ruta: '/calendario/septiembre'
+    }
+  });
+
+  const octubre = await prisma.meses.create({
+    data: {
+      nombre: 'octubre',
+      dias: 31,
+      ruta: '/calendario/octubre'
+    }
+  });
+
+
+const noviembre = await prisma.meses.create({
+  data: {
+    nombre: 'noviembre',
+    dias: 30,
+    ruta: '/calendario/noviembre'
+  }
+});
+
+const diciembre = await prisma.meses.create({
+  data: {
+    nombre: 'diciembre',
+    dias: 31,
+    ruta: '/calendario/diciembre'
+  }
+});
 
     /*const permaPalooza = await prisma.eneroEventos.create({
       data: {
