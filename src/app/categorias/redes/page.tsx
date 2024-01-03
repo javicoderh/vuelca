@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import arrow from '../../../../public/arrow.png'
 import lotus from '../../../../public/lotus.svg'
 import '../../globals.css'
 
