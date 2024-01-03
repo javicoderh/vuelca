@@ -9,9 +9,6 @@ async function Calendario() {
     const back = '/calendario'
     return (
         <div className="flex flex-col">
-            <Link href={back}>
-                <button>atras</button>
-            </Link>
         {meses.map((mes) => (                     
               <Link
               key={mes.nombre}
