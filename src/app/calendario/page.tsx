@@ -6,11 +6,13 @@ import Link from "next/link";
 async function Calendario() {
 
     const meses = await fetchMesesTodos();
-
+    const back = '/calendario'
     return (
         <div className="flex flex-col">
-        {meses.map((mes) => (         
-              
+            <Link href={back}>
+                <button>atras</button>
+            </Link>
+        {meses.map((mes) => (                     
               <Link
               key={mes.nombre}
               href={mes.ruta}>

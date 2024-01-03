@@ -1,6 +1,15 @@
+import Link from "next/link"
+
 export default function Noviembre() {
 
+    let back = '/calendario'
+
     return (
-        <h1 className="text-white">Soy Noviembre</h1>
+        <div>
+        <h1 className="text-white">Soy noviembre</h1>
+        <Link href={back}>
+                <button>atras</button>
+            </Link>
+            </div>
     )
 }
