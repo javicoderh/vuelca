@@ -19,7 +19,7 @@ export async function fetchPermacultura() {
   }
 }
 
-export async function fetchMeses() {
+export async function fetchMesesTodos() {
   try {
     console.log('Fetching meses data...');
     await new Promise((resolve) => setTimeout(resolve, 1000));

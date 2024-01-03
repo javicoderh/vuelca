@@ -1,17 +1,18 @@
 import React from "react";
-import { fetchMeses } from '@/app/lib/data';
+import { fetchMesesTodos } from '@/app/lib/data';
 import Link from "next/link";
 
 
-export default async function Calendario() {
+async function Calendario() {
 
-    const meses = await fetchMeses();
+    const meses = await fetchMesesTodos();
 
     return (
         <div className="flex flex-col">
         {meses.map((mes) => (         
               
               <Link
+              key={mes.nombre}
               href={mes.ruta}>
               <div>
               <h1 className='text-white text-center subcat'>{mes.nombre}</h1>
@@ -21,3 +22,5 @@ export default async function Calendario() {
         </div>
     )
 }
+
+export default Calendario

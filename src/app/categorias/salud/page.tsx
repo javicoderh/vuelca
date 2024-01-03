@@ -1,9 +1,5 @@
 import Image from 'next/image'
-import arrow from '../../../../public/arrow.png'
-import Categorias from '../../ui/categorias'
 import lotus from '../../../../public/lotus.svg'
-import Carousel from '../../ui/carousel'
-import DinamicFooter from '../../ui/footer'
 import '../../globals.css'
 
 
