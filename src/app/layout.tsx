@@ -5,6 +5,8 @@ import arrow from '../../public/arrow.png'
 import Image from 'next/image'
 import InverseDinamicFooter from './ui/inverseFooter'
 import Link from 'next/link'
+import calendario from '../../public/timetable.png'
+import Calendario from './ui/calendar'
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -21,6 +23,7 @@ export default function RootLayout({
 }) {
 
   let home = '/'
+  let hrefCalendario = '/calendario'
   return (
     <html className='flex background w-full h-[100vh] flex-col overflow items-center justify-center bg-blue-900' lang="en">
       <body className='flex w-full h-[100vh] flex-col overflow items-center justify-center'>
@@ -57,6 +60,7 @@ export default function RootLayout({
           <li>Nosotros</li>
           <li>Contacto</li>
         </nav>
+        <Calendario />
       </header>
       {children}
       <InverseDinamicFooter />

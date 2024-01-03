@@ -19,4 +19,48 @@ model permacultura {
   route String
 }
 
+model eneroEventos {
+  id    Int     @id @default(autoincrement())
+  nombre  String?
+  fecha Int
+  descripcion String
+  categoria String
+  contacto String
+  ruta String
+  imagen1 String?
+  eslogan String
+}
+
+model febreroEventos {
+  id    Int     @id @default(autoincrement())
+  nombre  String?
+  fecha Int
+  descripcion String
+  categoria String
+  contacto String
+  ruta String
+  imagen1 String?
+  eslogan String
+}
+
+model marzoEventos {
+  id    Int     @id @default(autoincrement())
+  nombre  String?
+  fecha Int
+  descripcion String
+  categoria String
+  contacto String
+  ruta String
+  imagen1 String?
+  eslogan String
+}
+
+model meses {
+  nombre String @unique
+  dias Int
+  ruta String?
+}
+
+
+
 

@@ -4,58 +4,72 @@ const prisma = new PrismaClient()
 
 async function main() {
     
-    const bioconstruccion = await prisma.permacultura.create({
+    const enero = await prisma.meses.create({
         data: {
-          name: 'Bioconstrucción',
-          description: 'La bioconstrucción es la construcción mediante tecnicas ...',
-          category: 'permacultura',
-          contact: '+569991394',
-          route: '/bioconstrucción'
+          nombre: 'enero',
+          dias: 30,
+          ruta: '/calendario/enero'
         }
       });
-      
-      const agroecologia = await prisma.permacultura.create({
-        data: {
-          name: 'Agroecología, huertas y fertilizantes',
-          description: 'construcción de huertas organicas en base a fertilizantes naturales...',
-          category: 'permacultura',
-          contact: '+569991395',
-          route: '/anotherRoute'
-        }
-      });      
-      
-      const gestionResiduos = await prisma.permacultura.create({
-        data: {
-          name: 'Gestión de residuos',
-          description: 'gestiona tus residuos para que puedan ser reciclados y compostados...',
-          category: 'permacultura',
-          contact: '+569991395',
-          route: '/anotherRoute'
-        }
-      });
-      
-      const manejoAguas = await prisma.permacultura.create({
-        data: {
-          name: 'Manejo de aguas',
-          description: 'administra tus aguas para reducir el gasto y contaminar menos...',
-          category: 'permacultura',
-          contact: '+569991395',
-          route: '/anotherRoute'
-        }
-      });
-      
-      const asentamientos = await prisma.permacultura.create({
-        data: {
-          name: 'Asentamientos sustentables, locales y nacionales',
-          description: 'modernos asentamientos hechos en base a tecnicas de construcción...',
-          category: 'permacultura',
-          contact: '+569991395',
-          route: '/anotherRoute'
-        }
-      });
-    }
+ 
 
-main()
+    const febrero = await prisma.meses.create({
+      data: {
+        nombre: 'febrero',
+        dias: 29,
+        ruta: '/calendario/febrero'
+      }
+    });
+
+    const marzo = await prisma.meses.create({
+      data: {
+        nombre: 'marzo',
+        dias: 31,
+        ruta: '/calendario/marzo'
+      }
+    });
+
+    /*const permaPalooza = await prisma.eneroEventos.create({
+      data: {
+        nombre: 'PermaPalooza',
+        fecha:  25,     
+        descripcion: 'musica en vivo feria sustentable de permacultura en la aldea del encuentro...',
+        categoria: 'Festival',
+        contacto: 'permapalooza@gmail.com',
+        ruta: '/permapalooza',
+        imagen1: 'https://majomontemayor.com/wp-content/uploads/2019/05/Down-The-Rabbit-Hole-2018_Avond_BartHeemskerk_49_LQ-scaled.jpg',
+        eslogan: 'ven a vivir la emoción de permapalooza'
+      }
+    });
+
+    const permaPalooza2 = await prisma.eneroEventos.create({
+      data: {
+        nombre: 'PermaPalooza',
+        fecha:  28,     
+        descripcion: 'musica en vivo feria sustentable de permacultura en la aldea del encuentro...',
+        categoria: 'Festival',
+        contacto: 'permapalooza@gmail.com',
+        ruta: '/permapalooza',
+        imagen1: 'https://majomontemayor.com/wp-content/uploads/2019/05/Down-The-Rabbit-Hole-2018_Avond_BartHeemskerk_49_LQ-scaled.jpg',
+        eslogan: 'ven a vivir la emoción de permapalooza'
+      }
+    });
+
+    const permaPalooza3 = await prisma.febreroEventos.create({
+      data: {
+        nombre: 'PermaPalooza',
+        fecha:  25,     
+        descripcion: 'musica en vivo feria sustentable de permacultura en la aldea del encuentro...',
+        categoria: 'Festival',
+        contacto: 'permapalooza@gmail.com',
+        ruta: '/permapalooza',
+        imagen1: 'https://majomontemayor.com/wp-content/uploads/2019/05/Down-The-Rabbit-Hole-2018_Avond_BartHeemskerk_49_LQ-scaled.jpg',
+        eslogan: 'ven a vivir la emoción de permapalooza'
+      }
+    });*/
+  }
+  
+    main()
   .then(async () => {
     await prisma.$disconnect()
   })
@@ -64,3 +78,4 @@ main()
     await prisma.$disconnect()
     process.exit(1)
   })
+
