@@ -6,6 +6,7 @@ import Carousel from './ui/carousel'
 import DinamicFooter from './ui/footer'
 import InverseDinamicFooter from './ui/inverseFooter'
 import Destacados from './ui/destacados'
+import ProximosEventos from './ui/proximosEventos'
 
 
 
@@ -16,5 +17,6 @@ export default function Home() {
         <Carousel />
         <Categorias />
         <Destacados />
+        <ProximosEventos />
       </main>
 )}

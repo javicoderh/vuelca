@@ -52,3 +52,20 @@ export async function fetchEnero() {
     throw new Error('Failed to fetch Enero data.');
   }
 }
+
+export async function fetchFebrero() {
+  try {
+    console.log('Fetching eventos febrero data...');
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+    
+    const data = await sql<FebreroEventos>`SELECT febreroEventos.nombre, febreroEventos.fecha, febreroEventos.descripcion, febreroEventos.imagen1
+    FROM eneroEventos`;
+    console.log(data.rows)
+    console.log('febrero data fetch completed.');
+    return data.rows;
+    
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch febrero data.');
+  }
+}

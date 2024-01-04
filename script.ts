@@ -4,7 +4,7 @@ const prisma = new PrismaClient()
 
 async function main() {
     
-    const abril = await prisma.meses.create({
+    /*const abril = await prisma.meses.create({
         data: {
           nombre: 'abril',
           dias: 30,
@@ -78,8 +78,8 @@ const diciembre = await prisma.meses.create({
     ruta: '/calendario/diciembre'
   }
 });
-
-    /*const permaPalooza = await prisma.eneroEventos.create({
+*/
+    const permaPalooza = await prisma.eneroEventos.create({
       data: {
         nombre: 'PermaPalooza',
         fecha:  25,     
@@ -105,7 +105,7 @@ const diciembre = await prisma.meses.create({
       }
     });
 
-    const permaPalooza3 = await prisma.febreroEventos.create({
+    const permaPalooza3 = await prisma.eneroEventos.create({
       data: {
         nombre: 'PermaPalooza',
         fecha:  25,     
@@ -116,8 +116,52 @@ const diciembre = await prisma.meses.create({
         imagen1: 'https://majomontemayor.com/wp-content/uploads/2019/05/Down-The-Rabbit-Hole-2018_Avond_BartHeemskerk_49_LQ-scaled.jpg',
         eslogan: 'ven a vivir la emoción de permapalooza'
       }
-    });*/
-  }
+    });
+  
+
+  const permaPalooza4 = await prisma.febreroEventos.create({
+    data: {
+      nombre: 'PermaPalooza',
+      fecha:  25,     
+      descripcion: 'musica en vivo feria sustentable de permacultura en la aldea del encuentro...',
+      categoria: 'Festival',
+      contacto: 'permapalooza@gmail.com',
+      ruta: '/permapalooza',
+      imagen1: 'https://majomontemayor.com/wp-content/uploads/2019/05/Down-The-Rabbit-Hole-2018_Avond_BartHeemskerk_49_LQ-scaled.jpg',
+      eslogan: 'ven a vivir la emoción de permapalooza'
+    }
+  });
+
+  const permaPalooza5 = await prisma.febreroEventos.create({
+    data: {
+      nombre: 'PermaPalooza',
+      fecha:  25,     
+      descripcion: 'musica en vivo feria sustentable de permacultura en la aldea del encuentro...',
+      categoria: 'Festival',
+      contacto: 'permapalooza@gmail.com',
+      ruta: '/permapalooza',
+      imagen1: 'https://majomontemayor.com/wp-content/uploads/2019/05/Down-The-Rabbit-Hole-2018_Avond_BartHeemskerk_49_LQ-scaled.jpg',
+      eslogan: 'ven a vivir la emoción de permapalooza'
+    }
+  });
+
+  const permaPalooza6 = await prisma.febreroEventos.create({
+    data: {
+      nombre: 'PermaPalooza',
+      fecha:  25,     
+      descripcion: 'musica en vivo feria sustentable de permacultura en la aldea del encuentro...',
+      categoria: 'Festival',
+      contacto: 'permapalooza@gmail.com',
+      ruta: '/permapalooza',
+      imagen1: 'https://majomontemayor.com/wp-content/uploads/2019/05/Down-The-Rabbit-Hole-2018_Avond_BartHeemskerk_49_LQ-scaled.jpg',
+      eslogan: 'ven a vivir la emoción de permapalooza'
+    }
+  });
+}
+
+
+
+  
   
     main()
   .then(async () => {

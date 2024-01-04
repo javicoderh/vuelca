@@ -9,7 +9,8 @@ export type Permacultura = {
 
 export type EneroEventos = {
     nombre: string;
-    descripcion: string;    
+    fecha: string
+    descripcion: string;        
     categoria: String;
     contacto: String;
     ruta: String;
@@ -19,7 +20,8 @@ export type EneroEventos = {
 
   export type FebreroEventos = {
     nombre: string;
-    descripcion: string;    
+    fecha: string
+    descripcion: string;        
     categoria: String;
     contacto: String;
     ruta: String;
@@ -29,6 +31,7 @@ export type EneroEventos = {
 
   export type MarzoEventos = {
     nombre: string;
+    fecha: string
     descripcion: string;    
     categoria: String;
     contacto: String;
