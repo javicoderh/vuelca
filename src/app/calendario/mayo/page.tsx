@@ -14,8 +14,8 @@ async function Mayo() {
         <div className="inner-eventos-container enero-bg">
         <h1 className="mb-[20px] inner-eventos-tit">eventos enero 2024:</h1>
         <ul className="mensuales-container inner-proximos-eventos-ul">
-        {eventos.map((evento: any) => (
-          <Link key={evento.nombre} href={'/'+evento.nombre}>
+            {eventos.map((evento: any) => (
+            <Link key={evento.nombre} href={'/'+evento.nombre}>
             <li className="maxw">
                 <h2 className='p-[3px] maxh2'>{evento.nombre}:</h2>
                 <div className='flex flex-row'>
@@ -24,13 +24,13 @@ async function Mayo() {
                 </div>                        
                 <p className="text-white maxp">{evento.descripcion}</p>
             </li>
-          </Link>
-        ))}
-        </ul>
-        <Link href={back}>
+            </Link>
+            ))}
+            <Link href={back}>
                 <button className="text-white">atras</button>
             </Link>
-            </div>
+            </ul>           
+    </div>
     )
 }
 
