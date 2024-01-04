@@ -1,4 +1,4 @@
-import calendario from '../../../public/timetable.png'
+import calendario from '../../../public/timetable.svg'
 import '../globals.css'
 import Link from 'next/link';
 import Image from 'next/image';

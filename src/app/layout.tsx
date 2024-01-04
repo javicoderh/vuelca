@@ -5,7 +5,7 @@ import arrow from '../../public/arrow.png'
 import Image from 'next/image'
 import InverseDinamicFooter from './ui/inverseFooter'
 import Link from 'next/link'
-import calendario from '../../public/timetable.png'
+import calendario from '../../public/timetable.svg'
 import Calendario from './ui/calendar'
 
 
