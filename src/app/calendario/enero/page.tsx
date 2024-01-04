@@ -11,7 +11,7 @@ async function Enero() {
     
     return (
         <div>
-        <h1 className="text-white">eventos enero 2024:</h1>
+        <h1 className="text-green-100">eventos enero 2024:</h1>
         <ul className="mensuales-container">
         {eventos.map((evento: any) => (
           <Link key={evento.nombre} href={'/'+evento.nombre}>
