@@ -23,7 +23,7 @@ async function Calendario() {
           ))}
         </ul>
         <Link href={back}>
-        <button className="boton-calendario">atras</button>
+        <button className="boton-calendario mt-[20px]">atras</button>
         </Link>
         <h3 className="mt-[5rem] calendario-footer text-[1.6rem]">no te pierdas ninguno de nuestros eventos este 2024</h3>
     </div>
