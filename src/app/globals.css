@@ -402,4 +402,38 @@ filter: invert(1);
 transform: scale(0.5);
 }
 
+.inner-eventos-container {
+width: 100vw;
+height: 100%;
+padding: 2%;
+}
+
+.inner-proximos-eventos-ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100%;
+  width: 40vw;
+}
+
+.maxw {
+padding: 10px;
+max-width: 13vw;
+background-color: #000658;
+border-radius: 5%;
+border: solid 2px rgb(91, 152, 231);
+}
+
+.maxh2 {
+background-color: aliceblue;
+color: rgb(46, 56, 201);
+border: solid 2px rgb(114, 150, 250);
+}
+
+.maxh3 {
+color: rgb(127, 188, 241);
+}
+
 
