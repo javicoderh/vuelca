@@ -79,7 +79,7 @@ const diciembre = await prisma.meses.create({
   }
 });
 */
-const permaPalooza2 = await prisma.eneroeventos.create({
+const permaPalooza3 = await prisma.eneroeventos.create({
   data: {
     nombre: 'PermaPalooza',
     fecha:  25,     
@@ -93,7 +93,7 @@ const permaPalooza2 = await prisma.eneroeventos.create({
   }
 });
 
-const permaPalooza1 = await prisma.febreroeventos.create({
+const permaPalooza1 = await prisma.eneroeventos.create({
   data: {
     nombre: 'PermaPalooza',
     fecha:  25,     
@@ -107,7 +107,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
   }
 });
 
-    const permaPalooza7 = await prisma.marzoeventos.create({
+    const permaPalooza7 = await prisma.eneroeventos.create({
       data: {
         nombre: 'PermaPalooza',
         fecha:  25,     
@@ -121,7 +121,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
       }
     });
 
-    const permaPalooza8 = await prisma.abrileventos.create({
+    const permaPalooza8 = await prisma.eneroeventos.create({
       data: {
         nombre: 'PermaPalooza',
         fecha:  28,     
@@ -135,7 +135,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
       }
     });
 
-    const permaPalooza9 = await prisma.mayoeventos.create({
+    const permaPalooza9 = await prisma.eneroeventos.create({
       data: {
         nombre: 'PermaPalooza',
         fecha:  25,     
@@ -150,7 +150,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
     });
   
 
-  const permaPalooza10 = await prisma.junioeventos.create({
+  const permaPalooza10 = await prisma.eneroeventos.create({
     data: {
       nombre: 'PermaPalooza',
       fecha:  25,     
@@ -164,7 +164,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
     }
   });
 
-  const permaPalooza11 = await prisma.julioeventos.create({
+  const permaPalooza11 = await prisma.eneroeventos.create({
     data: {
       nombre: 'PermaPalooza',
       fecha:  25,     
@@ -178,7 +178,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
     }
   });
 
-  const permaPalooza13 = await prisma.agostoeventos.create({
+  const permaPalooza13 = await prisma.eneroeventos.create({
     data: {
       nombre: 'PermaPalooza',
       fecha:  25,     
@@ -192,7 +192,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
     }
   });
 
-  const permaPalooza14 = await prisma.septiembreeventos.create({
+  const permaPalooza14 = await prisma.eneroeventos.create({
     data: {
       nombre: 'PermaPalooza',
       fecha:  25,     
@@ -206,7 +206,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
     }
   });
 
-  const permaPalooza15 = await prisma.octubreeventos.create({
+  const permaPalooza15 = await prisma.eneroeventos.create({
     data: {
       nombre: 'PermaPalooza',
       fecha:  25,     
@@ -220,7 +220,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
     }
   });
 
-  const permaPalooza16 = await prisma.noviembreeventos.create({
+  const permaPalooza16 = await prisma.eneroeventos.create({
     data: {
       nombre: 'PermaPalooza',
       fecha:  25,     
@@ -234,7 +234,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
     }
   });
 
-  const permaPalooza17 = await prisma.diciembreeventos.create({
+  const permaPalooza17 = await prisma.eneroeventos.create({
     data: {
       nombre: 'PermaPalooza',
       fecha:  25,     
