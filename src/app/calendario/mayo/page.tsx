@@ -4,7 +4,7 @@ import Image from "next/image"
 import calendario from '../../../../public/timetable.svg'
 import '../../globals.css'
 
-async function Enero() {
+async function Mayo() {
 
     let back = '/calendario'
     const eventos = await fetchMayo()
@@ -34,4 +34,4 @@ async function Enero() {
     )
 }
 
-export default Enero;
+export default Mayo;
