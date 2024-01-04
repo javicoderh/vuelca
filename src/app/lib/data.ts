@@ -72,18 +72,18 @@ export async function fetchFebrero() {
 
 export async function fetchMarzo() {
   try {
-    console.log('Fetching eventos febrero data...');
+    console.log('Fetching eventos marzo data...');
     await new Promise((resolve) => setTimeout(resolve, 1000));
     
-    const data = await sql<MarzoEventos>`SELECT febreroeventos.nombre, febreroeventos.fecha, febreroeventos.descripcion, febreroeventos.imagen1, marzoeventos.mes
+    const data = await sql<MarzoEventos>`SELECT marzoeventos.nombre, marzoeventos.fecha, marzoeventos.descripcion, marzoeventos.imagen1, marzoeventos.mes
     FROM marzoeventos`;
     console.log(data.rows)
-    console.log('febrero data fetch completed.');
+    console.log('marzo data fetch completed.');
     return data.rows;
     
   } catch (error) {
     console.error('Database Error:', error);
-    throw new Error('Failed to fetch febrero data.');
+    throw new Error('Failed to fetch marzo data.');
   }
 }
 
