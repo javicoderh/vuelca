@@ -7,7 +7,7 @@ import '../globals.css'
 async function Calendario() {
 
     const meses = await fetchMesesTodos();
-    const back = '/calendario'
+    const back = '/'
     return (
     <div className="flex meses-container items-center justify-center flex-col">
         <h1 className="meses-title">Calendario 2024</h1>
@@ -23,7 +23,7 @@ async function Calendario() {
           ))}
         </ul>
         <Link href={back}>
-        <button>atrass</button>
+        <button className="boton-calendario">atras</button>
         </Link>
         <h3 className="mt-[5rem] calendario-footer text-[1.6rem]">no te pierdas ninguno de nuestros eventos este 2024</h3>
     </div>
