@@ -11,7 +11,7 @@ async function ProximosEventos() {
   const eventos = await fetchFebrero();
 
   return (
-    <div className='proximosEventos hidden md:block'>
+    <div className='proximosEventos hidden md:grid'>
       <h2>Este mes:</h2>
       <ul className='proximos-eventos-ul'>
         {eventos.map((evento: any) => (
