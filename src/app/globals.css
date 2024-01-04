@@ -406,6 +406,7 @@ transform: scale(0.5);
 width: 100vw;
 height: 100%;
 padding: 2%;
+overflow: hidden;
 }
 
 .inner-proximos-eventos-ul {
@@ -416,6 +417,11 @@ padding: 2%;
   justify-content: flex-start;
   height: 100%;
   width: 40vw;
+  overflow-y: scroll;
+}
+
+.inner-proximos-eventos-ul::-webkit-scrollbar {
+display: none
 }
 
 .maxw {
