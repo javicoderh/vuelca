@@ -27,7 +27,7 @@ async function Septiembre() {
             </Link>
             ))}
             <Link href={back}>
-                <button className="text-white">atras</button>
+                <button className="boton-calendario mt-[20px]">atras</button>
             </Link>
         </ul>        
     </div>
