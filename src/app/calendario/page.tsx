@@ -22,6 +22,9 @@ async function Calendario() {
               </Link>           
           ))}
         </ul>
+        <Link href={back}>
+        <button>atrass</button>
+        </Link>
         <h3 className="mt-[5rem] calendario-footer text-[1.6rem]">no te pierdas ninguno de nuestros eventos este 2024</h3>
     </div>
     )

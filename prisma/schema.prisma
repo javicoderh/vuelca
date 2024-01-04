@@ -19,7 +19,7 @@ model permacultura {
   route String
 }
 
-model eneroEventos {
+model eneroeventos {
   id    Int     @id @default(autoincrement())
   nombre  String?
   fecha Int
@@ -31,7 +31,7 @@ model eneroEventos {
   eslogan String
 }
 
-model febreroEventos {
+model febreroeventos {
   id    Int     @id @default(autoincrement())
   nombre  String?
   fecha Int
@@ -43,7 +43,7 @@ model febreroEventos {
   eslogan String
 }
 
-model marzoEventos {
+model marzoeventos {
   id    Int     @id @default(autoincrement())
   nombre  String?
   fecha Int

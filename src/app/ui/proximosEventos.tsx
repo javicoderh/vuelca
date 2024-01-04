@@ -1,34 +1,34 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import '../globals.css'
-import { fetchEnero, fetchFebrero } from '../lib/data';
+import '../globals.css';
+import { fetchFebrero } from '../lib/data';
 import Link from 'next/link';
-
+import '../globals.css';
+import Image from 'next/image';
+import calendario from '../../../public/timetable.svg'
 
 
 async function ProximosEventos() {
-
-let eventos = await fetchFebrero() 
+  const eventos = await fetchFebrero();
 
   return (
-   <div className='proximosEventos'>
-    <h2>Próximos eventos</h2>
-    <ul>
-    {eventos.map((evento) => (                     
-              <Link
-              key={evento.nombre}
-              href={evento.nombre}>
-              <li>
-              <h2 className='text-white mes text-center subcat'>{evento.nombre}</h2>
-              <h3>{evento.fecha} de {evento.nombre}</h3>
-              </li> 
-              </Link>           
-          ))}
-    </ul>
-   </div>
+    <div className='proximosEventos'>
+      <h2>Este mes:</h2>
+      <ul className='proximos-eventos-ul'>
+        {eventos.map((evento: any) => (
+          <Link key={evento.nombre} href={'/'+evento.nombre}>
+            <li>
+                <h2 className='p-[3px]'>{evento.nombre}:</h2>
+                <div className='flex flex-row'>
+                    <h3 className='pl-[6px]'>febrero {evento.fecha}</h3>
+                    <Image className='evento-img' src={calendario} width={100} height={100} alt='evt' /> 
+                </div>                        
+            </li>
+          </Link>
+        ))}
+      </ul>
+    </div>
   );
 };
 
-
-
 export default ProximosEventos;
+

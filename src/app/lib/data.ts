@@ -39,10 +39,10 @@ export async function fetchMesesTodos() {
 export async function fetchEnero() {
   try {
     console.log('Fetching eventos enero data...');
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 2000));
     
-    const data = await sql<EneroEventos>`SELECT eneroEventos.nombre, eneroEventos.fecha, eneroEventos.descripcion, eneroEventos.imagen1
-    FROM eneroEventos`;
+    const data = await sql<EneroEventos>`SELECT eneroeventos.nombre, eneroeventos.fecha, eneroeventos.descripcion, eneroeventos.imagen1
+    FROM eneroeventos`;
     console.log(data.rows)
     console.log('Enero data fetch completed.');
     return data.rows;
@@ -58,8 +58,8 @@ export async function fetchFebrero() {
     console.log('Fetching eventos febrero data...');
     await new Promise((resolve) => setTimeout(resolve, 1000));
     
-    const data = await sql<FebreroEventos>`SELECT febreroEventos.nombre, febreroEventos.fecha, febreroEventos.descripcion, febreroEventos.imagen1
-    FROM eneroEventos`;
+    const data = await sql<FebreroEventos>`SELECT febreroeventos.nombre, febreroeventos.fecha, febreroeventos.descripcion, febreroeventos.imagen1 
+    FROM febreroeventos`;
     console.log(data.rows)
     console.log('febrero data fetch completed.');
     return data.rows;
