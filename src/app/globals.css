@@ -409,6 +409,16 @@ padding: 2%;
 overflow: hidden;
 }
 
+.inner-eventos-tit {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.5rem;
+background-color: rgba(0, 0, 0, 0.4);
+color: rgb(176, 200, 252);
+text-align: center;
+border-radius: 70%;
+width: 190px;
+}
+
 .inner-proximos-eventos-ul {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -441,6 +451,10 @@ border: solid 2px rgb(114, 150, 250);
 
 .maxh3 {
 color: rgb(127, 188, 241);
+}
+
+.enero-bg {
+background: url(https://i.redd.it/everlasting-summer-morning-1920x1080-v0-dln4j0cjmp5a1.jpg?width=1920&format=pjpg&auto=webp&s=bc6bdb3bf6b8bc5cd5b8d0425c205bd543504cdf); 
 }
 
 

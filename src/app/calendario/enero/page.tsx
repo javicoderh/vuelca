@@ -11,8 +11,8 @@ async function Enero() {
     
     
     return (
-        <div className="inner-eventos-container">
-        <h1 className="text-green-100 mb-[20px]">eventos enero 2024:</h1>
+        <div className="inner-eventos-container enero-bg">
+        <h1 className="mb-[20px] inner-eventos-tit">eventos enero 2024:</h1>
         <ul className="mensuales-container inner-proximos-eventos-ul">
         {eventos.map((evento: any) => (
           <Link key={evento.nombre} href={'/'+evento.nombre}>
