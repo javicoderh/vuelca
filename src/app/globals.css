@@ -413,6 +413,7 @@ overflow: hidden;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   flex-direction: column;
+  gap: 5px;
   align-items: flex-start;
   justify-content: flex-start;
   height: 100%;
