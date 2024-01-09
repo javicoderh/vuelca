@@ -8,7 +8,7 @@ import InverseDinamicFooter from './ui/inverseFooter'
 import Destacados from './ui/destacados'
 import ProximosEventos from './ui/proximosEventos'
 import { trpc } from './_trpc/client'
-import { MarzoEventosList } from './ui/marzoeventosList'
+import { MarzoEventosList } from './_components/marzoeventosList'
 
 
 

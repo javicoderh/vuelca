@@ -64,7 +64,7 @@ export default function RootLayout({
         </nav>
         <Calendario />
       </header>           
-          <Provider>{children}</Provider>         
+          {children}         
       <InverseDinamicFooter />
     </div>         
       </body>       
