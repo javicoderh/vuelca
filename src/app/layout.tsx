@@ -7,7 +7,6 @@ import InverseDinamicFooter from './ui/inverseFooter'
 import Link from 'next/link'
 import calendario from '../../public/timetable.svg'
 import Calendario from './ui/calendar'
-import Provider from "./_trpc/Provider";
 
 
 
