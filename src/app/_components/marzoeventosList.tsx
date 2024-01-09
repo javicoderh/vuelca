@@ -1,4 +1,4 @@
-"use client";
+/*"use client";
 
 import { useForm } from "react-hook-form";
 import { Marzo, defaultMarzoValues } from "@/lib/types";
@@ -82,4 +82,4 @@ export const MarzoEventosList = () => {
       </ul>
     </div>
   );
-};
+};*/
