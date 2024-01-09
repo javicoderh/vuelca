@@ -7,6 +7,8 @@ import InverseDinamicFooter from './ui/inverseFooter'
 import Link from 'next/link'
 import calendario from '../../public/timetable.svg'
 import Calendario from './ui/calendar'
+import Provider from "./_trpc/Provider";
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -61,8 +63,8 @@ export default function RootLayout({
           <li>Contacto</li>
         </nav>
         <Calendario />
-      </header>
-      {children}
+      </header>           
+          <Provider>{children}</Provider>         
       <InverseDinamicFooter />
     </div>         
       </body>       

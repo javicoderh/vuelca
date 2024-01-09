@@ -8,6 +8,7 @@ import InverseDinamicFooter from './ui/inverseFooter'
 import Destacados from './ui/destacados'
 import ProximosEventos from './ui/proximosEventos'
 import { trpc } from './_trpc/client'
+import { MarzoEventosList } from './ui/marzoeventosList'
 
 
 
@@ -19,6 +20,5 @@ export default function Home() {
         <Categorias />
         <Destacados />
         <ProximosEventos />
-        
       </main>
 )}

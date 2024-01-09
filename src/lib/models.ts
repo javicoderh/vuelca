@@ -32,7 +32,7 @@ export const MarzoEventosSchema = z.object({
   categoria: String,
   contacto: String,
   ruta: String,
-  imagen1: String,
+  imagen1: String.nullable(),
   eslogan: String,
   mes: String,
 })

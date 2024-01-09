@@ -3,6 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import calendario from '../../../../public/timetable.svg'
 import '../../globals.css'
+import { MarzoEventosList } from "@/app/ui/marzoeventosList"
 
 async function Marzo() {
 
@@ -29,7 +30,8 @@ async function Marzo() {
             <Link href={back}>
                 <button className="boton-calendario mt-[20px]">atras</button>
             </Link>
-        </ul>        
+        </ul>  
+        <MarzoEventosList />      
     </div>
     )
 }

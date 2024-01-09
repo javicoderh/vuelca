@@ -1,69 +1,81 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { User, defaultUserValues } from "@/lib/types";
+import { Marzo, defaultMarzoValues } from "@/lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { MarzoSchema } from "@/lib/models";
+import { MarzoEventosSchema, UserSchema } from "@/lib/models";
 import { trpc } from "../_trpc/client";
 
+
+
 export const MarzoEventosList = () => {
-  const { register, handleSubmit, reset } = useForm<User>({
-    defaultValues: defaultUserValues,
-    resolver: zodResolver(MarzoSchema),
+  const { register, handleSubmit, reset } = useForm<Marzo>({
+    defaultValues: defaultMarzoValues,
+    resolver: zodResolver(MarzoEventosSchema),
   });
 
-  const users = trpc.marzoeventos.readAll.useQuery();
-  const createEvento = trpc.marzoeventos.create.useMutation({
+  const eventos = trpc.marzo.readAll.useQuery();
+  const crearEvento = trpc.marzo.create.useMutation({
     onSuccess: () => {
-      users.refetch();
+      eventos.refetch();
       reset();
     },
   });
-  const updateUser = trpc.marzoeventos.update.useMutation({
+  const updateMarzo = trpc.marzo.update.useMutation({
     onSuccess: () => {
-      users.refetch();
+      eventos.refetch();
       reset();
     },
   });
-  const deleteUser = trpc.marzoeventos.delete.useMutation({
+  const deleteMarzo = trpc.marzo.delete.useMutation({
     onSuccess: () => {
-      users.refetch();
+      eventos.refetch();
     },
   });
 
-  const onSubmit = (data: User) => {
+  const onSubmit = (data: Marzo) => {
     if (data.id) {
-      updateUser.mutate(data);
+      crearEvento.mutate(data);
     } else {
-      createUser.mutate(data);
+      crearEvento.mutate(data);
     }
-  };
+  }; 
 
   return (
     <div>
       <h1>Users</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" {...register("name")} />
+        <input type="text" {...register("id")} />
+        <input type="text" {...register("nombre")} />
+        <input type="text" {...register("fecha")} />
+        <input type="text" {...register("descripcion")} />
+        <input type="text" {...register("categoria")} />
+        <input type="text" {...register("contacto")} />
+        <input type="text" {...register("ruta")} />
+        <input type="text" {...register("imagen1")} />
+        <input type="text" {...register("eslogan")} />
+        <input type="text" {...register("mes")} />
+        
         <button type="submit">Submit</button>
       </form>
       <br />
       <ul>
-        {users.isLoading ? (
+        {eventos.isLoading ? (
           <li>Loading...</li>
         ) : (
-          users.data?.map((user) => (
-            <li key={user.id}>
-              <span>{user.name}</span>|{" "}
+          eventos.data?.map((evento) => (
+            <li key={evento.id}>
+              <span>{evento.nombre}</span>|{"nombre"}
               <button
                 onClick={() =>
-                  reset(user, {
+                  reset(evento, {
                     keepDefaultValues: true,
                   })
                 }
               >
                 Edit
               </button>
-              | <button onClick={() => deleteUser.mutate(user)}>Delete</button>
+              | <button onClick={() => deleteMarzo.mutate(evento)}>Delete</button>
             </li>
           ))
         )}
