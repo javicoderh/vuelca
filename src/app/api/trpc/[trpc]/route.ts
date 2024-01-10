@@ -7,12 +7,7 @@ const handler = (req: Request) =>
     req,
     router: appRouter,
     createContext: () => ({
-      session: {
-        user: {
-          email: "",
-        },
-        expires: "",
-      },
+      session: null,
     }),
   });
 
