@@ -7,6 +7,7 @@ import InverseDinamicFooter from './ui/inverseFooter'
 import Link from 'next/link'
 import calendario from '../../public/timetable.svg'
 import Calendario from './ui/calendar'
+import Provider from '../../_trpc/Provider'
 
 
 
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html className='flex background w-full h-[100vh] flex-col overflow items-center justify-center bg-blue-900' lang="en">
       <body className='flex w-full h-[100vh] flex-col overflow items-center justify-center'>
+        <Provider>
       <div className="flex min-h-[100vh] flex-col min-w-full items-center justify-between pb-[65px] md:pb-[0px]">
       <header className='w-full h-[15vh] p-2'>
         <div className='flex logoCategorias2 flex-col'>
@@ -65,7 +67,8 @@ export default function RootLayout({
       </header>           
           {children}         
       <InverseDinamicFooter />
-    </div>         
+    </div>
+    </Provider>        
       </body>       
     </html>
   )

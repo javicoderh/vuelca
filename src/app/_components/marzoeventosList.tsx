@@ -1,10 +1,11 @@
-/*"use client";
+"use client";
 
 import { useForm } from "react-hook-form";
 import { Marzo, defaultMarzoValues } from "@/lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { MarzoEventosSchema, UserSchema } from "@/lib/models";
-import { trpc } from "../_trpc/client";
+import { trpc } from "../../../_trpc/client";
+import '../globals.css'
 
 
 
@@ -45,15 +46,23 @@ export const MarzoEventosList = () => {
     <div>
       <h1>Users</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <input type="text" {...register("id")} />
+        <label htmlFor="nombre">nombre</label>
         <input type="text" {...register("nombre")} />
+        <label htmlFor="fecha">fecha</label>
         <input type="text" {...register("fecha")} />
+        <label htmlFor="descripcion">descripcion</label>
         <input type="text" {...register("descripcion")} />
+        <label htmlFor="categoria">categoria</label>
         <input type="text" {...register("categoria")} />
+        <label htmlFor="">contacto</label>
         <input type="text" {...register("contacto")} />
+        <label htmlFor="ruta">ruta</label>
         <input type="text" {...register("ruta")} />
+        <label htmlFor="imagen1">imagen1</label>
         <input type="text" {...register("imagen1")} />
+        <label htmlFor="eslogan">eslogan</label>
         <input type="text" {...register("eslogan")} />
+        <label htmlFor="mes">mes</label>
         <input type="text" {...register("mes")} />
         
         <button type="submit">Submit</button>
@@ -82,4 +91,4 @@ export const MarzoEventosList = () => {
       </ul>
     </div>
   );
-};*/
+};
