@@ -24,8 +24,11 @@ export const marzoRouter = router({
     }),
   readAll: publicProcedure.query(async () => {
     try {
-      return await prisma.marzoeventos.findMany();
+      const marzo = await prisma.marzoeventos.findMany();
+      console.log("🚀 ~ readAll:publicProcedure.query ~ marzo:", marzo)
+      return marzo;
     } catch (error) {
+      console.log("🚀 ~ readAll:publicProcedure.query ~ error:", error)
       new TRPCError({
         code: "INTERNAL_SERVER_ERROR",
         message: "Internal Server Error",

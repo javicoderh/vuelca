@@ -1,16 +1,15 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { Marzo, defaultMarzoValues } from "@/lib/types";
+import { MarzoEventos, defaultMarzoValues } from "@/lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { MarzoEventosSchema, UserSchema } from "@/lib/models";
-import { trpc } from "../../../_trpc/client";
+import { MarzoEventosSchema } from "@/lib/models";
 import '../globals.css'
-
+import { trpc } from "../_trpc/client";
 
 
 export const MarzoEventosList = () => {
-  const { register, handleSubmit, reset } = useForm<Marzo>({
+  const { register, handleSubmit, reset } = useForm<MarzoEventos>({
     defaultValues: defaultMarzoValues,
     resolver: zodResolver(MarzoEventosSchema),
   });
@@ -34,9 +33,9 @@ export const MarzoEventosList = () => {
     },
   });
 
-  const onSubmit = (data: Marzo) => {
+  const onSubmit = (data: MarzoEventos) => {
     if (data.id) {
-      crearEvento.mutate(data);
+      updateMarzo.mutate(data);
     } else {
       crearEvento.mutate(data);
     }
@@ -74,7 +73,7 @@ export const MarzoEventosList = () => {
         ) : (
           eventos.data?.map((evento) => (
             <li key={evento.id}>
-              <span>{evento.nombre}</span>|{"nombre"}
+              <span>{evento.nombre}</span>|{" "}
               <button
                 onClick={() =>
                   reset(evento, {

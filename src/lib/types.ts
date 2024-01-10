@@ -11,8 +11,8 @@ export const defaultUserValues: User = {
   roleId: 2,
 } as const;
 
-export type Marzo = z.infer<typeof MarzoEventosSchema>;
-export const defaultMarzoValues: Marzo = {
+export type MarzoEventos = z.infer<typeof MarzoEventosSchema>;
+export const defaultMarzoValues: MarzoEventos = {
   id: 0,
   nombre: '',
   fecha: 0,
