@@ -11,193 +11,193 @@ datasource db {
 }
 
 model permacultura {
-  id    Int     @id @default(autoincrement())
-  name  String?
+  id          Int     @id @default(autoincrement())
+  name        String?
   description String
-  category String
-  contact String
-  route String
+  category    String
+  contact     String
+  route       String
 }
 
 model eneroeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model febreroeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model marzoeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model abrileventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model mayoeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model junioeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model julioeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model agostoeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model septiembreeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model octubreeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model noviembreeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model diciembreeventos {
-  id    Int     @id @default(autoincrement())
-  nombre  String?
-  fecha Int
+  id          Int     @id @default(autoincrement())
+  nombre      String?
+  fecha       Int
   descripcion String
-  categoria String
-  contacto String
-  ruta String
-  imagen1 String?
-  eslogan String
-  mes String
+  categoria   String
+  contacto    String
+  ruta        String
+  imagen1     String?
+  eslogan     String
+  mes         String
 }
 
 model meses {
-  nombre String @unique
-  dias Int
-  ruta String?
+  nombre String  @unique
+  dias   Int
+  ruta   String?
 }
 
 model User {
-    id            String    @id @default(cuid())
-    name          String?
-    email         String?   @unique
-    password      String?
-    emailVerified DateTime?
-    image         String?
+  id            String    @id @default(cuid())
+  name          String?
+  email         String?   @unique
+  password      String?
+  emailVerified DateTime?
+  image         String?
 
-    roleId   Int?
-    userRole UserRole? @relation(fields: [roleId], references: [id])
+  roleId   Int?
+  userRole UserRole? @relation(fields: [roleId], references: [id])
 
-    @@map("users")
+  @@map("users")
 }
 
 model UserRole {
-    id   Int    @id @default(autoincrement())
-    name String @unique
+  id   Int    @id @default(autoincrement())
+  name String @unique
 
-    user User[]
+  user User[]
 }
