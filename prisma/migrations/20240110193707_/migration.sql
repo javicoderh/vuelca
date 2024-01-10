@@ -1,19 +1,62 @@
-/*
-  Warnings:
+-- CreateTable
+CREATE TABLE "permacultura" (
+    "id" SERIAL NOT NULL,
+    "name" TEXT,
+    "description" TEXT NOT NULL,
+    "category" TEXT NOT NULL,
+    "contact" TEXT NOT NULL,
+    "route" TEXT NOT NULL,
 
-  - Added the required column `mes` to the `eneroeventos` table without a default value. This is not possible if the table is not empty.
-  - Added the required column `mes` to the `febreroeventos` table without a default value. This is not possible if the table is not empty.
-  - Added the required column `mes` to the `marzoeventos` table without a default value. This is not possible if the table is not empty.
+    CONSTRAINT "permacultura_pkey" PRIMARY KEY ("id")
+);
 
-*/
--- AlterTable
-ALTER TABLE "eneroeventos" ADD COLUMN     "mes" TEXT NOT NULL;
+-- CreateTable
+CREATE TABLE "eneroeventos" (
+    "id" SERIAL NOT NULL,
+    "nombre" TEXT,
+    "fecha" INTEGER NOT NULL,
+    "descripcion" TEXT NOT NULL,
+    "categoria" TEXT NOT NULL,
+    "contacto" TEXT NOT NULL,
+    "ruta" TEXT NOT NULL,
+    "imagen1" TEXT,
+    "eslogan" TEXT NOT NULL,
+    "mes" TEXT NOT NULL,
 
--- AlterTable
-ALTER TABLE "febreroeventos" ADD COLUMN     "mes" TEXT NOT NULL;
+    CONSTRAINT "eneroeventos_pkey" PRIMARY KEY ("id")
+);
 
--- AlterTable
-ALTER TABLE "marzoeventos" ADD COLUMN     "mes" TEXT NOT NULL;
+-- CreateTable
+CREATE TABLE "febreroeventos" (
+    "id" SERIAL NOT NULL,
+    "nombre" TEXT,
+    "fecha" INTEGER NOT NULL,
+    "descripcion" TEXT NOT NULL,
+    "categoria" TEXT NOT NULL,
+    "contacto" TEXT NOT NULL,
+    "ruta" TEXT NOT NULL,
+    "imagen1" TEXT,
+    "eslogan" TEXT NOT NULL,
+    "mes" TEXT NOT NULL,
+
+    CONSTRAINT "febreroeventos_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "marzoeventos" (
+    "id" SERIAL NOT NULL,
+    "nombre" TEXT NOT NULL,
+    "fecha" INTEGER NOT NULL,
+    "descripcion" TEXT NOT NULL,
+    "categoria" TEXT NOT NULL,
+    "contacto" TEXT NOT NULL,
+    "ruta" TEXT NOT NULL,
+    "imagen1" TEXT,
+    "eslogan" TEXT NOT NULL,
+    "mes" TEXT NOT NULL,
+
+    CONSTRAINT "marzoeventos_pkey" PRIMARY KEY ("id")
+);
 
 -- CreateTable
 CREATE TABLE "abrileventos" (
@@ -158,3 +201,43 @@ CREATE TABLE "diciembreeventos" (
 
     CONSTRAINT "diciembreeventos_pkey" PRIMARY KEY ("id")
 );
+
+-- CreateTable
+CREATE TABLE "meses" (
+    "nombre" TEXT NOT NULL,
+    "dias" INTEGER NOT NULL,
+    "ruta" TEXT
+);
+
+-- CreateTable
+CREATE TABLE "users" (
+    "id" TEXT NOT NULL,
+    "name" TEXT,
+    "email" TEXT,
+    "password" TEXT,
+    "emailVerified" TIMESTAMP(3),
+    "image" TEXT,
+    "roleId" INTEGER,
+
+    CONSTRAINT "users_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateTable
+CREATE TABLE "UserRole" (
+    "id" SERIAL NOT NULL,
+    "name" TEXT NOT NULL,
+
+    CONSTRAINT "UserRole_pkey" PRIMARY KEY ("id")
+);
+
+-- CreateIndex
+CREATE UNIQUE INDEX "meses_nombre_key" ON "meses"("nombre");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "users_email_key" ON "users"("email");
+
+-- CreateIndex
+CREATE UNIQUE INDEX "UserRole_name_key" ON "UserRole"("name");
+
+-- AddForeignKey
+ALTER TABLE "users" ADD CONSTRAINT "users_roleId_fkey" FOREIGN KEY ("roleId") REFERENCES "UserRole"("id") ON DELETE SET NULL ON UPDATE CASCADE;
