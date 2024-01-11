@@ -181,15 +181,15 @@ export const MarzoEventosList = () => {
                 <Image className='modificar-evento-button mt-3' src={plus} width={40} height={40} alt="Ver detalles" />
               </button>
               <button
-  onClick={async () => {
-    console.log('Before toggleButtonAndView');
-    await toggleButtonAndView();
-    console.log('After toggleButtonAndView');
-    reset(evento, {
-      keepDefaultValues: true,
-    });
-  }}
->
+                onClick={async () => {
+                  console.log('Before toggleButtonAndView');
+                  await toggleButtonAndView();
+                  console.log('After toggleButtonAndView');
+                  reset(evento, {
+                    keepDefaultValues: true,
+                  });
+               }}
+              >
               <Image className='modificar-evento-button mt-3' src={edit} width={40} height={40} alt='edit' />
               </button>
               | <button onClick={() => deleteMarzo.mutate(evento)}>
