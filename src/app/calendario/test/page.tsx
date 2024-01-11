@@ -1,4 +1,4 @@
-import { MarzoEventosList } from '@/app/_components/marzoeventosList'
+import { MarzoEventosList } from '@/app/ui/marzoeventosList'
 import React from 'react'
 
 export default function Test() {

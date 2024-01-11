@@ -3,8 +3,32 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient()
 
 async function main() {
+
+    const enero = await prisma.meses.create({
+      data: {
+        nombre: 'enero',
+        dias: 31,
+        ruta: '/calendario/enero'
+      }
+    });
+
+    const febrero = await prisma.meses.create({
+      data: {
+        nombre: 'febrero',
+        dias: 29,
+        ruta: '/calendario/febrero'
+      }
+    });
+
+    const marzo = await prisma.meses.create({
+      data: {
+        nombre: 'marzo',
+        dias: 31,
+        ruta: '/calendario/marzo'
+      }
+    });
     
-    /*const abril = await prisma.meses.create({
+    const abril = await prisma.meses.create({
         data: {
           nombre: 'abril',
           dias: 30,
@@ -78,7 +102,8 @@ const diciembre = await prisma.meses.create({
     ruta: '/calendario/diciembre'
   }
 });
-*/
+
+/*
 const permaPalooza3 = await prisma.eneroeventos.create({
   data: {
     nombre: 'PermaPalooza',
@@ -246,7 +271,7 @@ const permaPalooza1 = await prisma.febreroeventos.create({
       eslogan: 'ven a vivir la emoción de permapalooza',
       mes: 'diciembre'
     }
-  });
+  });*/
 }  
   
     main()

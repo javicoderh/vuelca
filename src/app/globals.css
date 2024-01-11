@@ -353,7 +353,7 @@ background: url(https://st4.depositphotos.com/3765057/31601/i/450/depositphotos_
 }
 
 .proximosEventos::-webkit-scrollbar {
-  display: none
+display: none
 }
 
 .proximosEventos h2 {
@@ -391,11 +391,11 @@ font-size: 1.3rem;
 }
 
 .proximos-eventos-ul li h3 {
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: start;
-  font-size: 1.1rem;
-  color:rgb(127, 188, 241);
-  }
+font-family: Arial, Helvetica, sans-serif;
+text-align: start;
+font-size: 1.1rem;
+color:rgb(127, 188, 241);  
+}
 
 .evento-img {
 filter: invert(1);
@@ -406,7 +406,7 @@ transform: scale(0.5);
 width: 100vw;
 height: 100%;
 padding: 2%;
-overflow: hidden;
+overflow-y: scroll;
 }
 
 .inner-eventos-tit {
@@ -420,41 +420,202 @@ width: 190px;
 }
 
 .inner-proximos-eventos-ul {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  flex-direction: column;
-  gap: 5px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  height: 100%;
-  width: 40vw;
-  overflow-y: scroll;
+grid-template-columns: repeat(4, 1fr);
+flex-direction: column;
+gap: 5px;
+align-items: flex-start;
+justify-content: flex-start;
+height: 100%;
+width: 40vw;
 }
 
-.inner-proximos-eventos-ul::-webkit-scrollbar {
-display: none
+.inner-proximos-eventos-ul-mobile {
+grid-template-columns: repeat(2, 1fr);
+gap: 5px;
+align-items: flex-start;
+justify-content: flex-start;
+height: 100%;
+width: 100%;
 }
+
 
 .maxw {
 padding: 10px;
-max-width: 13vw;
+width: 14vw;
 background-color: #000658;
 border-radius: 5%;
 border: solid 2px rgb(91, 152, 231);
 }
 
+.maxw-mobile {
+padding: 10px;
+width: 100%;
+height: 20vh !;
+background-color: #000658;
+border-radius: 5%;
+border: solid 2px rgb(91, 152, 231);
+}
+
+.maxh2-mobile {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+text-align: center;
+background-color: aliceblue;
+color: rgb(46, 56, 201);
+margin-top: 5px;
+border: solid 2px rgb(114, 150, 250);
+}
+
 .maxh2 {
 background-color: aliceblue;
 color: rgb(46, 56, 201);
+margin-top: 5px;
 border: solid 2px rgb(114, 150, 250);
 }
 
 .maxh3 {
+margin-top: 7px;
 color: rgb(127, 188, 241);
+}
+
+.maxp {
+overflow-y: scroll;
+max-height: 100px;
+min-height: 100px;
+}
+
+.maxp::-webkit-scrollbar {
+display: none;
 }
 
 .enero-bg {
 background: url(https://i.redd.it/everlasting-summer-morning-1920x1080-v0-dln4j0cjmp5a1.jpg?width=1920&format=pjpg&auto=webp&s=bc6bdb3bf6b8bc5cd5b8d0425c205bd543504cdf); 
 }
+
+.eventos-mensuales-container h2 {
+position: relative;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.5rem;
+background-color: rgba(0, 0, 0, 0.4);
+color: rgb(176, 200, 252);
+text-align: center;
+border-radius: 70%;
+width: 190px;
+}
+
+.eventos-form {
+grid-template-rows: repeat(4, 1fr);
+grid-template-columns: repeat(3, 1fr);
+width: 60vw;
+gap: 5px;
+}
+
+.eventos-form-mobile {
+grid-template-columns: repeat(1, 1fr);
+width: 60vw;
+}
+
+.eventos-form label, input {
+color: white;
+margin: 1rem;
+}
+
+.eventos-form button, .eventos-form-mobile button {
+color: rgb(176, 200, 252);
+border-radius: 3%;
+padding: 1rem;
+font-size: 2rem;
+background-color: #000658;
+transform: scale(0.6);
+border: solid 2px rgb(176, 200, 252);
+}
+
+.eventos-form button:hover {
+transform: scale(0.59);
+transition: 0.3s;
+background-color: #213c96;
+}
+
+.eventos-form-mobile button {
+color: rgb(176, 200, 252);
+border-radius: 3%;
+padding: 1rem;
+font-size: 2rem;
+background-color: #000658;
+transform: scale(0.6) translateX(-18%);
+border: solid 2px rgb(176, 200, 252);
+}
+
+.viewButton {
+border: solid 2px rgb(176, 200, 252)
+}
+
+.eventos-form-mobile button:hover {
+transform: scale(0.59) translateX(-18%);
+transition: 0.3s;
+background-color: #213c96;
+}
+
+.input-format {
+display: flex;
+justify-content: space-between;
+backdrop-filter: blur(15px); 
+background-color: rgba(255, 255, 255, 0.4);
+border: solid 2px rgb(91, 152, 231);
+border-radius: 4%;
+}
+
+.eventos-form-mobile .input-format {
+display: flex;
+justify-content: space-between;
+backdrop-filter: blur(15px); 
+background-color: rgba(255, 255, 255, 0.4);
+border: solid 2px rgb(91, 152, 231);
+border-radius: 4%;
+transform: scale(0.7) translateX(-15%);
+}
+
+.input-format label {
+color: rgb(11, 5, 95);
+font-size: 1.2rem;
+margin: 2rem;
+font-weight: 900;
+text-shadow: rgb(149, 198, 238) -1px 1px;
+}
+
+.input-format input {
+margin: 2rem;
+padding: 5px;
+border: solid 1px black;
+color: black;
+}
+
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.modal-content {
+background: #fff;
+padding: 20px;
+border-radius: 8px;
+max-width: 600px;
+width: 100%;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.botton-vista {
+border-radius: 100px;
+}
+
 
 
