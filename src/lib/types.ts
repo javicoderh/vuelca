@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { MarzoEventosSchema, UserRoleSchema, UserSchema } from "./models";
+import { MarzoEventosSchema, EneroEventosSchema, UserRoleSchema, UserSchema } from "./models";
 
 export type User = z.infer<typeof UserSchema>;
 export const defaultUserValues: User = {
@@ -9,6 +9,20 @@ export const defaultUserValues: User = {
   emailVerified: null,
   image: null,
   roleId: 2,
+} as const;
+
+export type EneroEventos = z.infer<typeof EneroEventosSchema>;
+export const defaultEneroValues: EneroEventos = {
+  id: 0,
+  nombre: '',
+  fecha: 0,
+  descripcion: '',
+  categoria: '',
+  contacto: '',
+  ruta: '',
+  imagen1: '',
+  eslogan: '',
+  mes: '',
 } as const;
 
 export type MarzoEventos = z.infer<typeof MarzoEventosSchema>;

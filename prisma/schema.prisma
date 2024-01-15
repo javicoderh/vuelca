@@ -21,7 +21,7 @@ model permacultura {
 
 model eneroeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String

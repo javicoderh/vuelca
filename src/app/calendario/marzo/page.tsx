@@ -1,11 +1,11 @@
-import { fetchMarzo } from "@/app/lib/data"
+
 import '../../globals.css'
 import { MarzoEventosList } from "@/app/ui/marzo/marzoeventosList"
 
 async function Marzo() {
 
     let back = '/calendario'
-    const eventos = await fetchMarzo()
+    
     
     return (
     <div className="inner-eventos-container enero-bg">
@@ -15,4 +15,4 @@ async function Marzo() {
     )
 }
 
-export default Marzo;
+export default Marzo

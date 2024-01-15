@@ -1,9 +1,9 @@
 "use client";
 
 import { useForm } from "react-hook-form";
-import { MarzoEventos, defaultMarzoValues } from "@/lib/types";
+import { EneroEventos, defaultEneroValues } from "@/lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { MarzoEventosSchema } from "@/lib/models";
+import { EneroEventosSchema } from "@/lib/models";
 import '../../globals.css'
 import { trpc } from "../../_trpc/client";
 import Link from "next/link";
@@ -16,19 +16,19 @@ import Modal from "../modal";
 import { useState } from "react";
 
 
-export const MarzoEventosList = () => {
-  const { register, handleSubmit, reset } = useForm<MarzoEventos>({
-    defaultValues: defaultMarzoValues,
-    resolver: zodResolver(MarzoEventosSchema),
+export const EneroEventosList = () => {
+  const { register, handleSubmit, reset } = useForm<EneroEventos>({
+    defaultValues: defaultEneroValues,
+    resolver: zodResolver(EneroEventosSchema),
   });
 
   const [modalVisible, setModalVisible] = useState(false);
   const [view, setView] = useState<boolean>(false);
   const [button, setButton ] = useState<boolean>(true);
 
-  const [selectedEvent, setSelectedEvent] = useState<MarzoEventos | null>(null);
+  const [selectedEvent, setSelectedEvent] = useState<EneroEventos | null>(null);
   let back = '/calendario'
-  const eventos = trpc.marzo.readAll.useQuery();
+  const eventos = trpc.enero.readAll.useQuery();
 
   const toggleButtonAndView = async () => {
     console.log('toggleButtonAndView called');
@@ -37,29 +37,29 @@ export const MarzoEventosList = () => {
   };
 
 
-  const crearEvento = trpc.marzo.create.useMutation({
+  const crearEvento = trpc.enero.create.useMutation({
     onSuccess: () => {
       eventos.refetch();
       reset();
     },
   });
   
-  const updateMarzo = trpc.marzo.update.useMutation({
+  const updateEnero = trpc.enero.update.useMutation({
     onSuccess: async () => {
       eventos.refetch();
       reset();
     },
   });  
 
-  const deleteMarzo = trpc.marzo.delete.useMutation({
+  const deleteEnero = trpc.enero.delete.useMutation({
     onSuccess: () => {
       eventos.refetch();
     },
   });
 
-  const onSubmit = (data: MarzoEventos) => {
+  const onSubmit = (data: EneroEventos) => {
     if (data.id) {
-      updateMarzo.mutate(data);
+      updateEnero.mutate(data);
       toggleButtonAndView()
     } else {
       crearEvento.mutate(data);
@@ -69,7 +69,7 @@ export const MarzoEventosList = () => {
 
   return (
     <div className="eventos-mensuales-container">
-      <h1>Formulario ingreso de eventos Marzo:</h1>
+      <h1>Formulario ingreso de eventos Enero:</h1>
       <div className="block md:hidden">      
       {button ? <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> mostrar </button> : <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> ocultar </button> }
       {view && ( 
@@ -108,7 +108,7 @@ export const MarzoEventosList = () => {
     </div>
     <div className="input-format">
     <label htmlFor="mes">mes</label>
-    <input placeholder="Default" defaultValue={'marzo'} type="text" {...register("mes")} /> 
+    <input placeholder="Default" defaultValue={'enero'} type="text" {...register("mes")} /> 
     </div>
     <br />       
     <button type="submit">Ingresar</button>
@@ -150,13 +150,13 @@ export const MarzoEventosList = () => {
     </div>
     <div className="input-format">
     <label htmlFor="mes">mes</label>
-    <input placeholder="Default" defaultValue={'marzo'}  {...register("mes")} /> 
+    <input placeholder="Default" defaultValue={'enero'} {...register("mes")} /> 
     </div>
     <br />       
     <button type="submit">Ingresar</button>
   </form>
       <br />
-      <h2 className="mb-5">Eventos marzo:</h2>
+      <h2 className="mb-5">Eventos enero:</h2>
       <ul className="hidden md:grid mensuales-container scrollable inner-proximos-eventos-ul">
         {eventos.isLoading ? (
           <li>Loading...</li>
@@ -192,7 +192,7 @@ export const MarzoEventosList = () => {
               >
               <Image className='modificar-evento-button mt-3' src={edit} width={40} height={40} alt='edit' />
               </button>
-              | <button onClick={() => deleteMarzo.mutate(evento)}>
+              | <button onClick={() => deleteEnero.mutate(evento)}>
               <Image className='modificar-evento-button mt-3' src={borrar} width={40} height={40} alt='edit' />
               </button>             
             </li>
@@ -238,7 +238,7 @@ export const MarzoEventosList = () => {
 >
               <Image className='modificar-evento-button mt-3' src={edit} width={40} height={40} alt='edit' />
               </button>
-              | <button onClick={() => deleteMarzo.mutate(evento)}>
+              | <button onClick={() => deleteEnero.mutate(evento)}>
               <Image className='modificar-evento-button mt-3' src={borrar} width={40} height={40} alt='edit' />
               </button>             
             </li>

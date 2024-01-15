@@ -24,6 +24,19 @@ export const UserSchema = z.object({
   roleId: Int,
 });
 
+export const EneroEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
 export const MarzoEventosSchema = z.object({
   id:   Int,
   nombre:  String,
