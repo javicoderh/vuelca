@@ -6,7 +6,7 @@ interface Props {
   descripcion: string;
   imagen1: string | null | undefined;
   contacto: string;
-  fecha: string;
+  fecha: number;
   eslogan: string;
   onClose: () => void;
 }
