@@ -1,5 +1,16 @@
 import React from "react";
 
+interface Props {
+    nombre: string;
+    mes: string;
+    descripcion: string;
+    imagen1: string;
+    contacto: string;
+    fecha: string;
+    eslogan: string;
+    onClose: () => void;
+  }
+
 const Modal2 = ({ nombre, mes, descripcion, imagen1, contacto, fecha, eslogan, onClose }: Props) => {
     return (
       <div className="modal2-overlay" onClick={onClose}>
