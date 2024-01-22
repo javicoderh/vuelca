@@ -4,7 +4,7 @@ interface Props {
     nombre: string;
     mes: string;
     descripcion: string;
-    imagen1: string | undefined;
+    imagen1: string | null | undefined;
     contacto: string;
     fecha: number;
     eslogan: string;
