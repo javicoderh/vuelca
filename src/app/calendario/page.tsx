@@ -10,7 +10,7 @@ async function Calendario() {
     const back = '/'
     return (
     <div className="flex meses-container items-center justify-center flex-col">
-        <h1 className="meses-title">Calendario 2024</h1>
+        <h1 className="meses-title">Editor Calendario 2024</h1>
         <ul className="flex meses flex-col">
         {meses.map((mes) => (                     
               <Link

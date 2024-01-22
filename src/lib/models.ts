@@ -37,7 +37,137 @@ export const EneroEventosSchema = z.object({
   mes: String,
 })
 
+export const FebreroEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
 export const MarzoEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
+export const AbrilEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
+export const MayoEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
+export const JunioEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
+export const JulioEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
+export const AgostoEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
+export const SeptiembreEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
+export const OctubreEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
+export const NoviembreEventosSchema = z.object({
+  id:   Int,
+  nombre:  String,
+  fecha: Int,
+  descripcion: String,
+  categoria: String,
+  contacto: String,
+  ruta: String,
+  imagen1: String.nullable(),
+  eslogan: String,
+  mes: String,
+})
+
+export const DiciembreEventosSchema = z.object({
   id:   Int,
   nombre:  String,
   fecha: Int,

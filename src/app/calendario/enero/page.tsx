@@ -9,7 +9,7 @@ async function Enero() {
     
     return (
     <div className="inner-eventos-container enero-bg">
-        <h1 className="mb-[20px] inner-eventos-tit">eventos marzo 2024:</h1>
+        <h1 className="mb-[20px] inner-eventos-tit">eventos enero 2024</h1>
         <EneroEventosList />          
     </div>
     )

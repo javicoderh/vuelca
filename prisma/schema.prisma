@@ -34,7 +34,7 @@ model eneroeventos {
 
 model febreroeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String
@@ -60,7 +60,7 @@ model marzoeventos {
 
 model abrileventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String
@@ -73,7 +73,7 @@ model abrileventos {
 
 model mayoeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String
@@ -86,7 +86,7 @@ model mayoeventos {
 
 model junioeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String
@@ -99,7 +99,7 @@ model junioeventos {
 
 model julioeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String
@@ -112,7 +112,7 @@ model julioeventos {
 
 model agostoeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String
@@ -125,7 +125,7 @@ model agostoeventos {
 
 model septiembreeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String
@@ -138,7 +138,7 @@ model septiembreeventos {
 
 model octubreeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String
@@ -151,7 +151,7 @@ model octubreeventos {
 
 model noviembreeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String
@@ -164,7 +164,7 @@ model noviembreeventos {
 
 model diciembreeventos {
   id          Int     @id @default(autoincrement())
-  nombre      String?
+  nombre      String
   fecha       Int
   descripcion String
   categoria   String

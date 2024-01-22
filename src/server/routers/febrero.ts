@@ -1,18 +1,18 @@
-import { EneroEventosSchema } from "@/lib/models";
+import { FebreroEventosSchema } from "@/lib/models";
 import { publicProcedure, router } from "../trpc";
 import { prisma } from "@/lib/prisma";
 import { TRPCError } from "@trpc/server";
 
-export const eneroRouter = router({
+export const febreroRouter = router({
   create: publicProcedure
     .input(
-      EneroEventosSchema.omit({
+      FebreroEventosSchema.omit({
         id: true,
       })
     )
     .mutation(async (opts) => {
       try {
-        return await prisma.eneroeventos.create({
+        return await prisma.febreroeventos.create({
           data: opts.input,
         });
       } catch (error) {
@@ -24,9 +24,9 @@ export const eneroRouter = router({
     }),
   readAll: publicProcedure.query(async () => {
     try {
-      const enero = await prisma.eneroeventos.findMany();
-      console.log("🚀 ~ readAll:publicProcedure.query ~ marzo:", enero)
-      return enero;
+      const marzo = await prisma.febreroeventos.findMany();
+      console.log("🚀 ~ readAll:publicProcedure.query ~ marzo:", marzo)
+      return marzo;
     } catch (error) {
       console.log("🚀 ~ readAll:publicProcedure.query ~ error:", error)
       new TRPCError({
@@ -35,9 +35,9 @@ export const eneroRouter = router({
       });
     }
   }),
-  update: publicProcedure.input(EneroEventosSchema).mutation(async (opts) => {
+  update: publicProcedure.input(FebreroEventosSchema).mutation(async (opts) => {
     try {
-      return await prisma.eneroeventos.update({
+      return await prisma.febreroeventos.update({
         where: {
           id: opts.input.id,
         },
@@ -50,9 +50,9 @@ export const eneroRouter = router({
       });
     }
   }),
-  delete: publicProcedure.input(EneroEventosSchema).mutation(async (opts) => {
+  delete: publicProcedure.input(FebreroEventosSchema).mutation(async (opts) => {
     try {
-      return await prisma.eneroeventos.delete({
+      return await prisma.febreroeventos.delete({
         where: {
           id: opts.input.id,
         },
