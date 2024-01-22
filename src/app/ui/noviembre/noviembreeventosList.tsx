@@ -26,7 +26,7 @@ export const NoviembreEventosList = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [view, setView] = useState<boolean>(false);
   const [button, setButton ] = useState<boolean>(true);
-  const [selectedEventDetails, setSelectedEventDetails] = useState<AbrilEventos | null>(null);
+  const [selectedEventDetails, setSelectedEventDetails] = useState<NoviembreEventos | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<NoviembreEventos | null>(null);
   let back = '/calendario'
   const eventos = trpc.noviembre.readAll.useQuery();
