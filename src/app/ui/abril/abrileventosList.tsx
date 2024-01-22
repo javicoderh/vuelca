@@ -21,7 +21,7 @@ export const AbrilEventosList = () => {
     defaultValues: defaultAbrilValues,
     resolver: zodResolver(AbrilEventosSchema),
   });
-  const [selectedEvent, setSelectedEvent] = useState<AbrilEventos[] | null>(null);
+  const [selectedEvent, setSelectedEvent] = useState<AbrilEventos | null>(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [view, setView] = useState<boolean>(false);
   const [button, setButton ] = useState<boolean>(true);
