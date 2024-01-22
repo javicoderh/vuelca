@@ -33,8 +33,6 @@ const CalendarioInteractivo = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<EneroEventos[] | null>(null);
   const back = '/calendario';
-  const eventos = trpc.enero.readAll.useQuery()?.data as EneroEventos[] | undefined;
-  const marzoeventos = trpc.marzo.readAll.useQuery()?.data as MarzoEventos[] | undefined;
 
   return (
     <div className="calendario-interactivo">

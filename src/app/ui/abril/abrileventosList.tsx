@@ -202,8 +202,8 @@ export const AbrilEventosList = () => {
             <button className="boton-calendario mt-[20px]">atras</button>
         </Link>
         {modalVisible && selectedEvent && (
-        <Modal evento={selectedEvent} onClose={() => setModalVisible(false)} />
-      )}
+        <Modal eventos={[selectedEvent]} onClose={() => setModalVisible(false)} />
+        )}
       </ul>
       <ul className="grid md:hidden scrollable inner-proximos-eventos-ul-mobile">
         {eventos.isLoading ? (
@@ -248,8 +248,8 @@ export const AbrilEventosList = () => {
             <button className="boton-calendario mt-[20px]">atras</button>
         </Link>
         {modalVisible && selectedEvent && (
-        <Modal eventos={selectedEvent} onClose={() => setModalVisible(false)} />
-      )}
+        <Modal eventos={[selectedEvent]} onClose={() => setModalVisible(false)} />
+        )}
       </ul>
       {modalVisible && selectedEvent && (
         <Modal eventos={selectedEvent} onClose={() => setModalVisible(false)} />
