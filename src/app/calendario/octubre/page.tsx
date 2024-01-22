@@ -1,5 +1,6 @@
 
-import { OctubreEventosList } from '@/app/ui/octubre/eneroeventosList'
+
+import { OctubreEventosList } from '@/app/ui/octubre/octubreeventosList'
 import '../../globals.css'
 
 async function Octubre() {
