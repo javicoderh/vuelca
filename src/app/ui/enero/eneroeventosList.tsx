@@ -14,6 +14,7 @@ import plus from '../../../../public/plus.png'
 import borrar from '../../../../public/delete.png'
 import Modal from "../modal";
 import { useState } from "react";
+import Modal2 from "../modal2";
 
 
 export const EneroEventosList = () => {
@@ -25,6 +26,7 @@ export const EneroEventosList = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [view, setView] = useState<boolean>(false);
   const [button, setButton ] = useState<boolean>(true);
+  const [selectedEventDetails, setSelectedEventDetails] = useState<EneroEventos | null>(null);
 
   const [selectedEvent, setSelectedEvent] = useState<EneroEventos | null>(null);
   let back = '/calendario'
@@ -176,6 +178,7 @@ export const EneroEventosList = () => {
                 onClick={() => {
                   setSelectedEvent(evento);
                   setModalVisible(true);
+                  setSelectedEventDetails(evento);
                 }}
               >
                 <Image className='modificar-evento-button mt-3' src={plus} width={40} height={40} alt="Ver detalles" />
@@ -201,9 +204,6 @@ export const EneroEventosList = () => {
         <Link href={back}>
             <button className="boton-calendario mt-[20px]">atras</button>
         </Link>
-        {modalVisible && selectedEvent && (
-        <Modal evento={selectedEvent} onClose={() => setModalVisible(false)} />
-      )}
       </ul>
       <ul className="grid md:hidden scrollable inner-proximos-eventos-ul-mobile">
         {eventos.isLoading ? (
@@ -224,6 +224,7 @@ export const EneroEventosList = () => {
                 onClick={() => {
                   setSelectedEvent(evento);
                   setModalVisible(true);
+                  setSelectedEventDetails(evento);
                 }}
               >
                 <Image className='modificar-evento-button mt-3' src={plus} width={40} height={40} alt="Ver detalles" />
@@ -247,13 +248,19 @@ export const EneroEventosList = () => {
         <Link href={back}>
             <button className="boton-calendario mt-[20px]">atras</button>
         </Link>
-        {modalVisible && selectedEvent && (
-        <Modal evento={selectedEvent} onClose={() => setModalVisible(false)} />
-      )}
       </ul>
-      {modalVisible && selectedEvent && (
-        <Modal evento={selectedEvent} onClose={() => setModalVisible(false)} />
-      )}
+      {modalVisible && selectedEventDetails && (
+  <Modal2 
+    nombre={selectedEventDetails.nombre}
+    descripcion={selectedEventDetails.descripcion}
+    imagen1={selectedEventDetails.imagen1}
+    contacto={selectedEventDetails.contacto}
+    fecha={selectedEventDetails.fecha}
+    mes ={selectedEventDetails.mes}
+    eslogan={selectedEventDetails.eslogan}
+    onClose={() => setModalVisible(false)} 
+  />
+)}
     </div>
   );
 };
