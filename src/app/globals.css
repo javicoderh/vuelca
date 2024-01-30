@@ -339,8 +339,8 @@ font-weight: 900;
 position: absolute;
 top: 300px;
 right: 20px;
-align-items: flex-start;
-justify-content: flex-start;
+align-items: center;
+justify-content: center;
 grid-template-columns: 1fr;
 padding: 0.5%;
 width: 10vw;
@@ -365,12 +365,102 @@ border: solid 2px rgb(114, 150, 250);
 background-color: aliceblue;
 }
 
+.cat-mobile {
+position: relative;
+overflow: hidden;
+display: grid;
+grid-template-rows: 1fr 1fr;
+align-items: center;
+justify-content: center;
+width: 100vw;
+height: 12vh;
+margin-bottom: 5rem;
+overflow-x: auto;
+white-space: nowrap;
+-webkit-overflow-scrolling: touch;
+background-color: transparent;
+bottom: 30px;
+}
+
+.cat-mobile {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  background-color: transparent;
+}
+
+.cat-ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  padding-left: 600px; 
+  scrollbar-width: thin; 
+  scrollbar-color: rgb(202, 20, 20) silver; 
+}
+
+.cat-ul-container {
+  position: relative;
+}
+
+.cat-ul {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(218, 32, 32); 
+  scroll-margin-block-start: 15px;
+}
+
+.cat-ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cat-ul::-webkit-scrollbar-thumb {
+  background-color: goldenrod; /* Webkit (Chrome, Safari) */
+  border-radius: 4px;
+}
+
+.cat-ul::-webkit-scrollbar-track {
+  background-color: transparent; /* Set the track color to transparent */
+}
+
+.cat-ul::-webkit-scrollbar-corner {
+  background-color: transparent; /* Hide the corner for a cleaner look */
+}
+
+.cat-children {
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 30px;
+  width: 80px;
+}
+
+.cat-children p {
+text-align: center;
+}
+
+.circular-cat {
+border-radius: 50%;
+border: solid 1px goldenrod;
+box-shadow: 0px 0px 10px 2px silver;
+transform: scale(1.5);
+}
+
+
+
 .proximos-eventos-ul {
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 justify-content: flex-start;
 height: 100%;
+transform: scale(0.95);
+}
+
+.rsize {
+transform: scale(0.85);
 }
 
 .proximos-eventos-ul li {

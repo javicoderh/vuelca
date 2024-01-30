@@ -29,7 +29,7 @@ const Categorias: React.FC = () => {
 
   return (
     
-    <div className='w-full grid grid-cols-2 grid-rows-4 gap-5 md:grid-cols-9 md:gap-5 md:grid-rows-5 mt-6 redimensionado'>
+    <div className='w-full hidden md:grid grid-cols-2 grid-rows-4 gap-5 md:grid-cols-9 md:gap-5 md:grid-rows-5 mt-6 redimensionado'>
       {categorias.map((categoria, index) => (
         <Link
         href={categoria.href}
