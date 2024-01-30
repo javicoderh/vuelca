@@ -708,7 +708,6 @@ color: black;
 position: fixed;
 top: 0;
 left: 0;
-overflow-y: auto;
 width: 100vw;
 height: 100vh;
 background: rgba(0, 0, 0, 0.5);
@@ -718,10 +717,6 @@ align-items: center;
 justify-content: center;
 transform: scale(1);
 z-index: 7;
-}
-
-.modal-overlay::-webkit-scrollbar {
-display: none;
 }
 
 .modal2-overlay {
@@ -743,14 +738,19 @@ transform: translatey(0%);
 display: none;
 }
 
-
 .modal-content {
 background: #fff;
 padding: 20px;
 border-radius: 8px;
 max-width: 600px;
 width: 100%;
+height: 80%;
 box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+overflow-y: auto;
+}
+
+.modal-content::-webkit-scrollbar {
+display: none;
 }
 
 .modal2-content {
