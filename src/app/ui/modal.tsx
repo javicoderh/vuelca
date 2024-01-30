@@ -1,8 +1,8 @@
 import React from "react";
-import '../globals.css';
-import { EneroEventos } from "@/lib/types";
-import plus from '../../../public/plus.png'
 import Image from "next/image";
+import { EneroEventos } from "@/lib/types";
+import plus from "../../../public/plus.png";
+import closeIcon from "../../../public/close.png";
 import Link from "next/link";
 
 interface ModalProps {
@@ -10,7 +10,7 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const editarEventos = '/calendario';
+const editarEventos = "/calendario";
 
 const Modal: React.FC<ModalProps> = ({ eventos, onClose }) => {
   return (
@@ -22,14 +22,25 @@ const Modal: React.FC<ModalProps> = ({ eventos, onClose }) => {
             <p>{evento.descripcion}</p>
           </div>
         ))}
-        <Link href={editarEventos}>
-          <button><Image className='modificar-evento-button mt-3' src={plus} width={40} height={40} alt="Ver detalles" /></button>
-        </Link>
+        <div className="button-container">
+          <Link href={editarEventos}>
+            <button className="action-button">
+              <Image
+                className="modificar-evento-button"
+                src={plus}
+                width={40}
+                height={40}
+                alt="Ver detalles"
+              />
+            </button>
+          </Link>
+          <button className="close-button" onClick={onClose}>
+            <Image src={closeIcon} width={40} height={40} alt="Cerrar" />
+          </button>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Modal;
-
-
