@@ -373,7 +373,7 @@ grid-template-rows: 1fr 1fr;
 align-items: center;
 justify-content: center;
 width: 100vw;
-height: 12vh;
+height: 15vh;
 margin-bottom: 5rem;
 overflow-x: auto;
 white-space: nowrap;
@@ -395,7 +395,7 @@ bottom: 30px;
   list-style: none;
   padding: 0;
   display: flex;
-  padding-left: 600px; 
+  padding-left: 1000px; 
   scrollbar-width: thin; 
   scrollbar-color: rgb(202, 20, 20) silver; 
 }
@@ -408,23 +408,6 @@ bottom: 30px;
   scrollbar-width: thin;
   scrollbar-color: rgb(218, 32, 32); 
   scroll-margin-block-start: 15px;
-}
-
-.cat-ul::-webkit-scrollbar {
-  width: 8px;
-}
-
-.cat-ul::-webkit-scrollbar-thumb {
-  background-color: goldenrod; /* Webkit (Chrome, Safari) */
-  border-radius: 4px;
-}
-
-.cat-ul::-webkit-scrollbar-track {
-  background-color: transparent; /* Set the track color to transparent */
-}
-
-.cat-ul::-webkit-scrollbar-corner {
-  background-color: transparent; /* Hide the corner for a cleaner look */
 }
 
 .cat-children {
