@@ -24,52 +24,32 @@ import AgostoInteractivo from "@/app/ui/calendarioInteractivo/agostoInteractivo"
 import SeptiembreInteractivo from "@/app/ui/calendarioInteractivo/septiembreInteractivo";
 import OctubreInteractivo from "@/app/ui/calendarioInteractivo/octubre";
 import NoviembreInteractivo from "@/app/ui/calendarioInteractivo/noviembreInteractivo";
-import Diciembre from "../diciembre/page";
 import DiciembreInteractivo from "@/app/ui/calendarioInteractivo/diciembreInteractivo";
 import JulioInteractivo from "@/app/ui/calendarioInteractivo/julioInteractivo";
 
 
 
-const CalendarioInteractivo = () => {
+const CalInteractivoMobile = () => {
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<EneroEventos[] | null>(null);
   const back = '/calendario';
-  const eventos = trpc.enero.readAll.useQuery()?.data as EneroEventos[] | undefined;
-  const marzoeventos = trpc.marzo.readAll.useQuery()?.data as MarzoEventos[] | undefined;
 
   return (
-    <div className="calendario-interactivo-container">
-      <h1 className="calendario-interactivo-titulo">Calendario 2024</h1>
-      <div className="calendario-interactivo hidden md:grid">
-        <EneroInteractivo />
-        <FebreroInteractivo />
-        <MarzoInteractivo />  
-        <AbrilInteractivo />
-        <MayoInteractivo />
-        <JunioInteractivo />
-        <JulioInteractivo />
-        <AgostoInteractivo />
-        <SeptiembreInteractivo />
-        <OctubreInteractivo />
-        <NoviembreInteractivo />
-        <DiciembreInteractivo />
-      </div>
-      <div className="calendario-interactivo2 grid md:hidden">
-        <EneroInteractivo />
-        <FebreroInteractivo />
-        <MarzoInteractivo />  
-        <AbrilInteractivo />
-        <MayoInteractivo />
-        <JunioInteractivo />
-        <JulioInteractivo />
-        <AgostoInteractivo />
-        <SeptiembreInteractivo />
-        <OctubreInteractivo />
-        <NoviembreInteractivo />
-        <DiciembreInteractivo />
-      </div>
+    <div className="calendario-interactivo-mobile grid md:hidden">
+      <EneroInteractivo />
+      <FebreroInteractivo />
+      <MarzoInteractivo />  
+      <AbrilInteractivo />
+      <MayoInteractivo />
+      <JunioInteractivo />
+      <JulioInteractivo />
+      <AgostoInteractivo />
+      <SeptiembreInteractivo />
+      <OctubreInteractivo />
+      <NoviembreInteractivo />
+      <DiciembreInteractivo />
     </div>
   );
 };
 
-export default CalendarioInteractivo;
+export default CalInteractivoMobile;

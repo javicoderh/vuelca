@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { AbrilEventos } from "@/lib/types";
+import { AbrilEventos, AgostoEventos } from "@/lib/types";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { EneroEventosSchema } from "@/lib/models";
 import '../../globals.css'
@@ -14,10 +14,13 @@ import plus from '../../../../public/plus.png'
 import borrar from '../../../../public/delete.png'
 import Modal from "../modal";
 import { useState } from "react";
+import Modal2 from "../modal2";
 
 
 
 const AbrilInteractivo = () => {
+
+  const [selectedEventDetails, setSelectedEventDetails] = useState<AbrilEventos | null>(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [selectedEvent, setSelectedEvent] = useState<AbrilEventos[] | null>(null);
   const back = '/calendario';
@@ -34,10 +37,9 @@ const AbrilInteractivo = () => {
         >
           <Image className='modificar-evento-button mt-3' src={plus} width={40} height={40} alt="Ver detalles" />
         </button>
-        
         {modalVisible && selectedEvent && (
           <Modal eventos={selectedEvent} onClose={() => setModalVisible(false)} />
-        )}
+        )}  
       </div>
   )
 }

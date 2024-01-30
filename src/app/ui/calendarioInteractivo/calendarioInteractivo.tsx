@@ -35,7 +35,7 @@ const CalendarioInteractivo = () => {
   const back = '/calendario';
 
   return (
-    <div className="calendario-interactivo">
+    <div className="calendario-interactivo hidden md:grid">
       <EneroInteractivo />
       <FebreroInteractivo />
       <MarzoInteractivo />  

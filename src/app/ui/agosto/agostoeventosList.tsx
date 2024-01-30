@@ -12,7 +12,6 @@ import calendario from '../../../../public/timetable.svg';
 import edit from '../../../../public/edit.jpg';
 import plus from '../../../../public/plus.png'
 import borrar from '../../../../public/delete.png'
-import Modal from "../modal";
 import { useState } from "react";
 import Modal2 from "../modal2";
 

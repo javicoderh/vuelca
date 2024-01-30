@@ -708,14 +708,20 @@ color: black;
 position: fixed;
 top: 0;
 left: 0;
-width: 100%;
-height: 100%;
+overflow-y: auto;
+width: 100vw;
+height: 100vh;
 background: rgba(0, 0, 0, 0.5);
 display: flex;
+flex-direction: column;
 align-items: center;
 justify-content: center;
-transform: scale(2);
+transform: scale(1);
 z-index: 7;
+}
+
+.modal-overlay::-webkit-scrollbar {
+display: none;
 }
 
 .modal2-overlay {
@@ -807,7 +813,6 @@ padding: 5%;
 
 .calendario-interactivo {
 background-color: #cfd1e2;
-display: grid;
 grid-template-columns: repeat(4, 1fr);
 grid-template-rows: repeat(3, 1fr);
 gap: 15px;
@@ -815,6 +820,21 @@ background-color: rgb(88, 88, 62);
 border-radius: 5%;
 padding: 1%;
 border: solid 2px rgb(182, 182, 142);
+}
+
+.calendario-interactivo2 {
+position:absolute;
+top: 100px;
+left: -90px;
+background-color: #cfd1e2;
+grid-template-columns: repeat(3, 1fr);
+grid-template-rows: repeat(4, 1fr);
+gap: 15px;
+background-color: rgb(88, 88, 62);
+border-radius: 5%;
+padding: 1%;
+border: solid 2px rgb(182, 182, 142);
+transform: scale(0.6);
 }
 
 .calendario-interactivo-titulo {

@@ -10,10 +10,9 @@ interface ModalProps {
   onClose: () => void;
 }
 
-const editarEventos = '/calendario'
+const editarEventos = '/calendario';
 
 const Modal: React.FC<ModalProps> = ({ eventos, onClose }) => {
-  
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -24,7 +23,7 @@ const Modal: React.FC<ModalProps> = ({ eventos, onClose }) => {
           </div>
         ))}
         <Link href={editarEventos}>
-        <button><Image className='modificar-evento-button mt-3' src={plus} width={40} height={40} alt="Ver detalles" /></button>
+          <button><Image className='modificar-evento-button mt-3' src={plus} width={40} height={40} alt="Ver detalles" /></button>
         </Link>
       </div>
     </div>
@@ -32,4 +31,5 @@ const Modal: React.FC<ModalProps> = ({ eventos, onClose }) => {
 };
 
 export default Modal;
+
 

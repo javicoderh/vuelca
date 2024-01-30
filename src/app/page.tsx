@@ -22,11 +22,14 @@ export default function Home() {
         <Carousel />
         <CategoriasMobile />        
         <Categorias /> 
-        <Link href={interactivo}>
+        <Link className='md:hidden' href={interactivo}>
         <h2 className='calendario-tit'>Calendario 2024</h2>
         </Link>               
         <Destacados /> 
-        <DestacadosMobile />       
+        <DestacadosMobile /> 
+        <Link className='hidden md:block' href={interactivo}>
+        <h2 className='calendario-tit'>Calendario 2024</h2>
+        </Link>       
         <ProximosEventos />
         
       </main>
