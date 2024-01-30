@@ -20,6 +20,8 @@ const Modal: React.FC<ModalProps> = ({ eventos, onClose }) => {
           <div key={index}>
             <h2>{evento.nombre}</h2>
             <p>{evento.descripcion}</p>
+            <p>contacto:</p>
+            <p>{evento.contacto}</p>
           </div>
         ))}
         <div className="button-container">
