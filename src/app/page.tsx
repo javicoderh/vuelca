@@ -10,6 +10,7 @@ import ProximosEventos from './ui/proximosEventos'
 import CalendarioInteractivo from './calendario/interactivo/page'
 import Link from 'next/link'
 import CategoriasMobile from './ui/categorias-mobile'
+import DestacadosMobile from './ui/destacados-mob'
 
 
 const interactivo = '/calendario/interactivo'
@@ -20,11 +21,13 @@ export default function Home() {
       <main className='w-full h-[80vh] overflow-main p-3'>
         <Carousel />
         <CategoriasMobile />        
-        <Categorias />                
-        <Destacados />        
-        <ProximosEventos />
+        <Categorias /> 
         <Link href={interactivo}>
         <h2 className='calendario-tit'>Calendario 2024</h2>
-        </Link>
+        </Link>               
+        <Destacados /> 
+        <DestacadosMobile />       
+        <ProximosEventos />
+        
       </main>
 )}

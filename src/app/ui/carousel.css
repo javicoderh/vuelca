@@ -10,6 +10,18 @@ width: max-content;
 margin: auto;
 padding: 20px;
 }
+
+.carousel-container2 {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+position: relative;
+width: max-content;
+margin: auto;
+padding: 20px;
+transform: scale(0.5) translateX(-60%) translateY(-50%);
+}
   
 .carousel-controls {
 position: absolute;

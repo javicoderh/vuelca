@@ -147,6 +147,20 @@ background-color: transparent;
 transform: translateY(-80%);
 }
 
+.destacados2 {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position: absolute;
+top: 600px;
+z-index: 7;
+}
+
+..destacados2 h1 {
+text-align: center;
+}
+
 .destacados-text {
 padding-top: 2rem;
 }
@@ -234,6 +248,12 @@ transform: translateX(40%);
 font-size: 2rem;
 color: rgb(238, 184, 134);
 }
+
+.destacados-title2 {
+  font-size: 2rem;
+  color: rgb(238, 184, 134);
+  text-align: center;
+  }
 
 .destacados-subtitle {
 font-size: 2rem;
