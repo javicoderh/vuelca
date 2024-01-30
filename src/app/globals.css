@@ -156,6 +156,10 @@ position: absolute;
 top: 600px;
 }
 
+.reubicado {
+transform: translateY(-20%);
+}
+
 ..destacados2 h1 {
 text-align: center;
 }
