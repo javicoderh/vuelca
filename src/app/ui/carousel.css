@@ -20,7 +20,7 @@ position: relative;
 width: max-content;
 margin: auto;
 padding: 20px;
-transform: scale(0.45) translateX(-67%) translateY(-70%);
+transform: scale(0.45) translateX(-70%) translateY(-85%);
 }
   
 .carousel-controls {
