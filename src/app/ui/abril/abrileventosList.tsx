@@ -70,9 +70,7 @@ export const AbrilEventosList = () => {
   return (
     <div className="eventos-mensuales-container">
       <h1>Formulario ingreso de eventos abril</h1>
-      <div className="block md:hidden">      
-      {button ? <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> mostrar </button> : <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> ocultar </button> }
-      {view && ( 
+      <div className="block md:hidden">               
     <form className="grid md:hidden eventos-form-mobile" onSubmit={handleSubmit(onSubmit)}>
     <div className="input-format">
     <label htmlFor="nombre">nombre</label>
@@ -80,7 +78,7 @@ export const AbrilEventosList = () => {
     </div>
     <div className="input-format">
     <label htmlFor="fecha">fecha</label>
-    <input placeholder="Solo el número del día..." defaultValue={''} type="number" max={31} {...register("fecha")} />
+    <input placeholder="Solo el número del día..." defaultValue={undefined} type="number" max={31} {...register("fecha")} />
     </div>
     <div className="input-format">
     <label htmlFor="descripcion">descripción</label>
@@ -113,7 +111,6 @@ export const AbrilEventosList = () => {
     <br />       
     <button type="submit">Ingresar</button>
   </form> 
-)}
   </div>
       <form className="hidden md:grid eventos-form" onSubmit={handleSubmit(onSubmit)}>
     <div className="input-format">
@@ -122,7 +119,7 @@ export const AbrilEventosList = () => {
     </div>
     <div className="input-format">
     <label htmlFor="fecha">fecha</label>
-    <input placeholder="Solo el número del día..." defaultValue={''} type="number" max={31} {...register("fecha")} />
+    <input placeholder="Solo el número del día..." defaultValue={undefined} type="number" max={31} {...register("fecha")} />
     </div>
     <div className="input-format">
     <label htmlFor="descripcion">descripción</label>
