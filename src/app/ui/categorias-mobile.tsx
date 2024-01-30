@@ -36,7 +36,7 @@ const CategoriasMobile: React.FC = () => {
     >
       <ul 
         className='cat-ul' 
-        style={{ listStyle: 'none', paddingLeft: 850, margin: 0, display: 'flex', gap: '16px' }}
+        style={{ listStyle: 'none', paddingLeft: 810, margin: 0, display: 'flex', gap: '16px' }}
       >
         {categorias.map((categoria, index) => (
           <Link href={categoria.href} key={categoria.name}>
