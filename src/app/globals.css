@@ -1,5 +1,5 @@
 
-
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -28,7 +28,7 @@ background-color: rgb(36, 17, 0);
 }
 
 body {
-height: 100vh;
+height: 95vh;
 overflow: hidden;
 overflow-y: hidden;
 padding: 0rem;
@@ -48,14 +48,14 @@ background-color: rgb(36, 17, 0);
 main {
 background: url(https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?ixlib=rb-4.0.3);
 background-size: cover;
-padding-bottom: 10pxgit ;
+padding-bottom: 10px;
 }
 
 footer {
 border-top: solid 2px  rgb(95, 168, 107);
 background-color: rgb(36, 17, 0); 
 color: rgb(238, 184, 134);
-z-index: 2;
+z-index: 1;
 }
 
 .high-layer {
@@ -193,6 +193,7 @@ transform: scaleX(1.7) scaleY(2);
 }
 
 .footer-img {
+overflow: hidden;
 transform: scale(2) translateY(-35%);
 z-index: 5;
 filter: invert(2) drop-shadow(2px 2px 0 rgb(251, 255, 0)) 
@@ -216,14 +217,14 @@ filter: invert(2) drop-shadow(2px 2px 0 rgb(251, 255, 0))
 
 
 .phrase-container {
-  position: relative;
+position: relative;
 }
 
 .phrase {
-  position: absolute;
-  width: 100%;
-  transition: opacity 1s ease-in-out;
-  opacity: 0;
+position: absolute;
+width: 100%;
+transition: opacity 1s ease-in-out;
+opacity: 0;
 }
 
 .phrase-translate {
@@ -469,8 +470,6 @@ border: solid 1px goldenrod;
 box-shadow: 0px 0px 10px 2px silver;
 transform: scale(1.5);
 }
-
-
 
 .proximos-eventos-ul {
 display: flex;
@@ -890,5 +889,54 @@ text-shadow: 0px 0px 0px 0px beige;
 transform: translateY(-120%) scale(1.5);
 }
 
+.newHeader {
+position: relative;
+top:0;
+left:0;
+z-index: 7;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(3, 1fr);
+height: 10vh;
+width: 100%;
+background-color: #221800;
+border-bottom: solid 2px #87421F;
+}
 
+.newLogo {
+margin-left: 2rem;
+position: relative;
+align-items: flex-start;
+justify-content: flex-start;
+grid-column-start: 1;
+grid-column-end: 6;
+grid-row-start: 1;
+grid-row-end: 4;
+}
 
+.newLogo h1 {
+position: absolute;
+top: 0px;
+left: 20px;
+font-size: 2.5rem;
+font-family: 'Cinzel', serif;
+}
+
+.newLogo nav:hover {
+color: white;
+transition: 0.3s;
+font-size: 1.5rem;
+}
+
+.newLogo nav {
+position: absolute;
+display: flex;
+width: 100vh;
+top: 60px;
+margin-bottom: 15px;
+}
+
+.nLogoImg {
+position:relative;
+filter: invert(1);
+}

@@ -35,7 +35,7 @@ const InverseDinamicFooter = () => {
   }, []);
 
   return (
-    <footer className='w-full h-[6vh] flex flex-row items-center justify-center p-2'>
+    <footer className='w-full h-[0.5vh] flex flex-row items-center justify-center pt-5 p-2'>
         <h3 className='inverse-phrase-translate text-center md:footer-imgDesktop'>{currentPhrase}</h3>
         <Image className='inverse-footer-img' src={lotus} alt='footer' width='100' height='100' />     
     </footer>

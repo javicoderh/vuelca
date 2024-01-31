@@ -31,7 +31,7 @@ const CategoriasMobile: React.FC = () => {
         overflowX: 'auto', 
         maxHeight: '100vh', 
         scrollbarWidth: 'thin',
-        scrollbarColor: 'goldenrod silver', // goldenrod for thumb, silver for track
+        scrollbarColor: 'goldenrod'
       }}
     >
       <ul 
