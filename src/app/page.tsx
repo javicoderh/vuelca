@@ -18,17 +18,22 @@ const interactivo = '/calendario/interactivo'
 export default function Home() {
   
   return (    
-      <main className='w-full h-[90vh] overflow-main p-3'>
+      <main className='w-full h-[90vh] flex flex-col overflow-main p-3'>
         <Carousel />
         <CategoriasMobile />        
         <Categorias /> 
+        <p className='text-white introduccion hidden md:block'>Vuelca es una plataforma diseñada para reunir empresas que ofrecen distintos tipos de servicios y productos, 
+        manteniendo un canon <br></br>de responsabilidad empresarial tanto con sus empleados como con la comunidad y el medio ambiente. <br></br>
+        No las llamamos empresas b dado que una empresa b requiere algunos protocolos administrativos y nosotros incluimos tambien <br></br> emprendimientos
+        emergentes que pueden estar aún en vías de certificarse y aún asi cumplir con esta responsabilidad antes mencionada.</p> 
         <Link className='md:hidden' href={interactivo}>
-        <h2 className='calendario-tit'>Calendario 2024</h2>
-        </Link>               
+        <h2 className='calendario-tit-mobile'>Calendario 2024</h2>
+        </Link>                      
         <Destacados /> 
         <DestacadosMobile /> 
         <Link className='hidden md:block' href={interactivo}>
-        <h2 className='calendario-tit'>Calendario 2024</h2>
+        <p className='text-white calendario-p'>Revisa todos los eventos que tenemos para ti este 2024:</p>
+        <h2 className='calendario-tit calendario-link'>Calendario 2024</h2>
         </Link>       
         <ProximosEventos />        
       </main>
