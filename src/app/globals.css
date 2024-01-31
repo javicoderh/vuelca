@@ -921,6 +921,7 @@ grid-column-start: 1;
 grid-column-end: 6;
 grid-row-start: 1;
 grid-row-end: 4;
+transform: scale(0.9);
 }
 
 .newLogo h1 {
