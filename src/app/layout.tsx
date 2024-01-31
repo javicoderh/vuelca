@@ -25,12 +25,12 @@ export default function RootLayout({
   let hrefCalendario = "/calendario";
   return (
     <html
-      className="flex background w-full h-[99vh] flex-col overflow items-center justify-center bg-blue-900"
+      className="flex background w-full h-[99vh] flex-col overflow items-center justify-start bg-blue-900"
       lang="en"
     >
-      <body className="flex w-full h-[100vh] flex-col overflow items-center justify-center">
+      <body className="flex w-full h-[98vh] flex-col overflow items-center justify-start">
         <Provider>
-          <div className="flex min-h-[100vh] flex-col min-w-full items-center justify-between pb-[65px] md:pb-[0px]">
+          <div className="flex min-h-[98vh] flex-col min-w-full items-center justify-between pb-[65px] md:pb-[0px]">
             <Header />
             {children}
             <InverseDinamicFooter />

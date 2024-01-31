@@ -18,7 +18,7 @@ const interactivo = '/calendario/interactivo'
 export default function Home() {
   
   return (    
-      <main className='w-full h-[80vh] overflow-main p-3'>
+      <main className='w-full h-[90vh] overflow-main p-3'>
         <Carousel />
         <CategoriasMobile />        
         <Categorias /> 
@@ -30,7 +30,6 @@ export default function Home() {
         <Link className='hidden md:block' href={interactivo}>
         <h2 className='calendario-tit'>Calendario 2024</h2>
         </Link>       
-        <ProximosEventos />
-        
+        <ProximosEventos />        
       </main>
 )}

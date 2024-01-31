@@ -1,27 +1,38 @@
 import React from 'react';
 import Image from 'next/image';
-import logo from '../../../public/forest.jpg';
-import '../globals.css';
+import salud from '../../../public/salud.jpg'
+import permacultura from '../../../public/permacultura.jpg'
+import mujer from '../../../public/mujer.jpg'
+import comunidades from '../../../public/comunidades.jpg'
+import educacion from '../../../public/educacion.jpg'
+import deportes from '../../../public/deportes.jpg'
+import cultura from '../../../public/cultura.jpg'
+import turismo from '../../../public/turismo.jpg'
+import alimentacion from '../../../public/alimentacion.png'
+import '../globals.css'
 import Link from 'next/link';
 
+
+
 const CategoriasMobile: React.FC = () => {
+
   type Category = {
     name: string;
     tooltip: string;
     imageSrc: any;
     href: string;
   };
-
+  
   const categorias: Category[] = [
-    { name: 'salud', tooltip: 'Description for salud completa', imageSrc: logo, href: '/categorias/salud' },
-    { name: 'alimentación', tooltip: 'Description for alimentación regenerativa', imageSrc: logo, href: '/categorias/alimentacion' },
-    { name: 'perma cultura', tooltip: 'Description for perma cultura', imageSrc: logo, href: '/categorias/permacultura' },
-    { name: 'mujer', tooltip: 'Description for salud completa', imageSrc: logo, href: '/categorias/mujer' },
-    { name: 'comunidades', tooltip: 'Description for alimentación regenerativa', imageSrc: logo, href: '/categorias/redes' },
-    { name: 'educación', tooltip: 'Description for perma cultura', imageSrc: logo, href: '/categorias/educacion' },
-    { name: 'deportes', tooltip: 'Description for salud completa', imageSrc: logo, href: '/categorias/deportes' },
-    { name: 'cultura', tooltip: 'Description for alimentación regenerativa', imageSrc: logo, href: '/categorias/cultura' },
-    { name: 'turismo', tooltip: 'Description for perma cultura', imageSrc: logo, href: '/categorias/turismo' },
+    { name: 'salud', tooltip: 'Description for salud completa', imageSrc: salud, href: '/categorias/salud' },
+    { name: 'alimentación', tooltip: 'Description for alimentación regenerativa', imageSrc: alimentacion, href: '/categorias/alimentacion' },
+    { name: 'perma cultura', tooltip: 'Description for perma cultura', imageSrc: permacultura, href: '/categorias/permacultura' },
+    { name: 'mujer', tooltip: 'Description for salud completa', imageSrc: mujer, href: '/categorias/mujer' },
+    { name: 'comunidades', tooltip: 'Description for alimentación regenerativa', imageSrc: comunidades, href: '/categorias/redes' },
+    { name: 'educación', tooltip: 'Description for perma cultura', imageSrc: educacion, href: '/categorias/educacion' },
+    { name: 'deportes', tooltip: 'Description for salud completa', imageSrc: deportes, href: '/categorias/deportes' },
+    { name: 'cultura', tooltip: 'Description for alimentación regenerativa', imageSrc: cultura, href: '/categorias/cultura' },
+    { name: 'turismo', tooltip: 'Description for perma cultura', imageSrc: turismo, href: '/categorias/turismo' },  
   ];
 
   return (
