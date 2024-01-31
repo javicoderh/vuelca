@@ -913,7 +913,7 @@ border-bottom: solid 2px #87421F;
 }
 
 .newLogo {
-margin-left: 2rem;
+margin-left: 1rem;
 position: relative;
 align-items: flex-start;
 justify-content: flex-start;
@@ -921,7 +921,7 @@ grid-column-start: 1;
 grid-column-end: 6;
 grid-row-start: 1;
 grid-row-end: 4;
-transform: scale(0.9);
+transform: scale(0.85);
 }
 
 .newLogo h1 {
