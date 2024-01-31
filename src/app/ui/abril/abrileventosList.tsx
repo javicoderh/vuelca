@@ -59,7 +59,6 @@ export const AbrilEventosList = () => {
   });
 
   const onSubmit = async (data: AbrilEventos) => {
-    console.log("🚀 ~ onSubmit ~ data:", data);
     if (data.id) {
       await updateAbril.mutateAsync(data);
       toggleButtonAndView();
