@@ -973,29 +973,39 @@ width: 100vw;
 .categoria-container h1 {
   font-family: 'Cinzel', serif;
   font-size: 2rem;
-  }
+}
 
-  .categoria-container p {
+.categoria-container p {
   text-align: center;
-  }
+}
 
-  .cat-children-in {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    justify-content: center;
-    }
+.cat-children-in {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  margin-left: 3.6rem;
+}
 
-  .categoria-container p {
+.categoria-container p {
   width: 70%;
-  }
+}
 
-  .cat-children li h2 {
+.cat-children-in li {
+  display: flex;
+  flex-direction: column;
   color: white;
   font-size: 1.5rem;
-  }
+  align-items: center;
+  justify-content: flex-start;
+}
 
-  .cat-children li p {
+.cat-children-in li p {
   color: rgb(173, 173, 173);
-  }
+  text-align: start;
+  font-size: 0.8rem;
+}
+
+.cat-children-in li h2 {
+text-align: start;
+}
