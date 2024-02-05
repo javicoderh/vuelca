@@ -17,6 +17,7 @@ import borrar from '../../../../public/delete.png'
 import Modal from "../modal";
 import { useState } from "react";
 import Modal2 from "../modal2";
+import { useMediaQuery } from "react-responsive";
 
 
 export const MayoEventosList = () => {
@@ -25,6 +26,7 @@ export const MayoEventosList = () => {
     resolver: zodResolver(MayoEventosSchema),
   });
 
+  const mobile = useMediaQuery({ maxWidth: 768 });
   const [modalVisible, setModalVisible] = useState(false);
   const [view, setView] = useState<boolean>(false);
   const [button, setButton ] = useState<boolean>(true);
@@ -76,7 +78,7 @@ export const MayoEventosList = () => {
       <h1>Formulario ingreso de eventos mayo</h1>
       <div className="block md:hidden">      
       {button ? <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> mostrar </button> : <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> ocultar </button> }
-      {view && ( 
+      {mobile && view && ( 
     <form className="grid md:hidden eventos-form-mobile" onSubmit={handleSubmit(onSubmit)}>
     <div className="input-format">
     <label htmlFor="nombre">nombre</label>
@@ -119,7 +121,7 @@ export const MayoEventosList = () => {
   </form> 
 )}
   </div>
-      <form className="hidden md:grid eventos-form" onSubmit={handleSubmit(onSubmit)}>
+      {!mobile &&(<form className="hidden md:grid eventos-form" onSubmit={handleSubmit(onSubmit)}>
     <div className="input-format">
     <label htmlFor="nombre">nombre</label>
     <input placeholder="Máximo 30 caracteres..." type="text" maxLength={30} {...register("nombre")} />
@@ -159,6 +161,7 @@ export const MayoEventosList = () => {
     <br />       
     <button type="submit">Ingresar</button>
   </form>
+      )}
       <br />
       <h2 className="mb-5">Eventos mayo</h2>
       <ul className="hidden md:grid mensuales-container scrollable inner-proximos-eventos-ul">
