@@ -79,8 +79,6 @@ export default function Rutas() {
         Los emprendimientos que recomendamos son terapeutas complementarios y/o practicantes de diversas disciplinas
         que sin reemplazar a la medicina convencional están pensadas para mejorar la calidad de vida en varios aspectos.
       </p>
-
-      <h2>Subcategorias Salud:</h2>
       <ul className='cat-children-in'>
         {Object.keys(subcategorias).map((key) => (          
           <li key={key} className='text-center'>
