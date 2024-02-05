@@ -14,6 +14,8 @@ import plus from '../../../../public/plus.png'
 import borrar from '../../../../public/delete.png'
 import Modal2 from "../modal2";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
+
 
 
 export const AbrilEventosList = () => {
@@ -21,6 +23,8 @@ export const AbrilEventosList = () => {
     defaultValues: defaultAbrilValues,
     resolver: zodResolver(AbrilEventosSchema),
   });
+
+  const mobile = useMediaQuery({ maxWidth: 768 });
   const [selectedEvent, setSelectedEvent] = useState<AbrilEventos | null>(null);
   const [modalVisible, setModalVisible] = useState(false);
   const [view, setView] = useState<boolean>(false);
@@ -82,7 +86,7 @@ export const AbrilEventosList = () => {
       <h1>Formulario ingreso de eventos abril</h1>
       <div className="block md:hidden">      
       {button ? <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> mostrar </button> : <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> ocultar </button> }
-      {view && ( 
+      {mobile && view && ( 
     <form className="grid md:hidden eventos-form-mobile" onSubmit={handleSubmit(onMobileSubmit)}>
     <div className="input-format">
     <label htmlFor="nombre">nombre</label>
@@ -125,7 +129,7 @@ export const AbrilEventosList = () => {
   </form> 
 )}
   </div>
-      <form className="hidden md:grid eventos-form" onSubmit={handleSubmit(onSubmit)}>
+     {!mobile && (<form className="hidden md:grid eventos-form" onSubmit={handleSubmit(onSubmit)}>
     <div className="input-format">
     <label htmlFor="nombre">nombre</label>
     <input placeholder="Máximo 30 caracteres..." type="text" maxLength={30} {...register("nombre")} />
@@ -164,7 +168,8 @@ export const AbrilEventosList = () => {
     </div>
     <br />       
     <button type="submit">Ingresar</button>
-  </form>
+  </form> 
+     )}
       <br />
       <h2 className="mb-5">Eventos abril</h2>
       <ul className="hidden md:grid mensuales-container scrollable inner-proximos-eventos-ul">
