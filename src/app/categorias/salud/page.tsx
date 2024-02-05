@@ -82,17 +82,16 @@ export default function Rutas() {
 
       <h2>Subcategorias Salud:</h2>
       <ul className='cat-children'>
-        {Object.keys(subcategorias).map((key) => (
-          
-        <Link
-        href={subcategorias[key].link}
-        >
+        {Object.keys(subcategorias).map((key) => (          
           <li key={key} className='text-center'>
-            <Image className='circular-cat m-4' src={subcategorias[key].imgurl} height={50} width={50} alt='' />
-            <h2>{subcategorias[key].nombre}</h2>
-            <p>{subcategorias[key].descripcion}</p>
+            <Link href={subcategorias[key].link}>
+              <a>
+                <Image className='circular-cat m-4' src={subcategorias[key].imgurl} height={50} width={50} alt='' />
+                <h2>{subcategorias[key].nombre}</h2>
+                <p>{subcategorias[key].descripcion}</p>
+              </a>
+            </Link>
           </li>
-        </Link>
         ))}
       </ul>
     </div>
