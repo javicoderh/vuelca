@@ -47,14 +47,14 @@ const CategoriasMobile: React.FC = () => {
     >
       <ul 
         className='cat-ul' 
-        style={{ listStyle: 'none', paddingLeft: 780, margin: 0, display: 'flex', gap: '16px' }}
+        style={{ listStyle: 'none', paddingLeft: 680, margin: 0, display: 'flex', gap: '8px' }}
       >
         {categorias.map((categoria, index) => (
           <Link href={categoria.href} key={categoria.name}>
             <li 
               className='cat-children' 
               key={index} 
-              style={{ flex: '0 0 auto', textAlign: 'center' }}
+              style={{ flex: '0 0 auto', textAlign: 'center', display: 'flex', flexDirection: 'column' }}
             >
               <Image 
                 className='circular-cat' 

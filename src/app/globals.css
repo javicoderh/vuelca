@@ -980,13 +980,11 @@ width: 100vw;
   }
 
   .cat-children {
-  margin-left: 2rem;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   }
 
   .categoria-container p {
