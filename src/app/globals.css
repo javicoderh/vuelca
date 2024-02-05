@@ -965,3 +965,47 @@ font-size: 1.3rem;
   color: rgb(238, 184, 134);
   transform: translateY(-120%);
   }
+
+.categoria-container {
+width: 100vw;
+}
+
+.categoria-container h1 {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  }
+
+  .categoria-container p {
+  text-align: center;
+  }
+
+  .cat-children {
+  margin-left: 2rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  }
+
+  .categoria-container p {
+  width: 70%;
+  }
+
+  .cat-children li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  }
+
+  .cat-children li h2 {
+  color: white;
+  font-size: 1.5rem;
+  }
+
+  .cat-children li p {
+  color: rgb(173, 173, 173);
+  }

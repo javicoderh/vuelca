@@ -1,48 +1,100 @@
 import Image from 'next/image'
-import lotus from '../../../../public/lotus.svg'
+import salud from '../../../../public/salud.jpg'
 import '../../globals.css'
+import Link from 'next/link'
+
+interface Subcategoria {
+  nombre: string;
+  descripcion: string;
+  imgurl: any;
+  link: string;
+}
+
+interface Subcategorias {
+  [key: string]: Subcategoria;
+}
 
 
 
 export default function Rutas() {
+  const subcategorias: Subcategorias = {
+    Biocosmetica: {
+      nombre: 'Biocosmetica',
+      descripcion: 'Productos naturales para el cuidado de tu salud.',
+      imgurl: salud,
+      link: 'categorias/salud/Biocosmetica'
+    },
+    Terapeutas: {
+      nombre: 'Terapeutas',
+      descripcion: 'Maso, flores de Bach, TethaHealing, Quiropraxia, Reiki, etc...',
+      imgurl: salud,
+      link: 'categorias/salud/Terapeutas'
+    },
+    Yoga: {
+      nombre: 'Yoga',
+      descripcion: 'integra y perfecciona la sabiduría de este arte milenario.',
+      imgurl: salud,
+      link: 'categorias/salud/Yoga'
+    },
+    Ayurveda: {
+      nombre: 'Ayurveda',
+      descripcion: 'Comprensión y tecnicas de medicina india.',
+      imgurl: salud,
+      link: 'categorias/salud/Ayurveda'
+    },
+    'Limpieza del Hogar': {
+      nombre: 'Limpieza del Hogar',
+      descripcion: 'Productos Biodegradables y saludables para la mantención de tu hogar.',
+      imgurl: salud,
+      link: 'categorias/salud/Limpieza-del-Hogar'
+    },
+    'Tarot y otras magias': {
+      nombre: 'Tarot y otras magias',
+      descripcion: 'Numerología, Quiromancia, registros akashikos y mas.',
+      imgurl: salud,
+      link: 'categorias/salud/Tarot-y-otras-magias'
+    },
+    'Medicina China': {
+      nombre: 'Medicina China',
+      descripcion: 'Profesionales de la medicina holistica oriental.',
+      imgurl: salud,
+      link: 'categorias/salud/Medicina-China'
+    },
+    'Astrología': {
+      nombre: 'Astrología',
+      descripcion: 'Aprende como la danza planetaria afecta nuestro ser.',
+      imgurl: salud,
+      link: 'categorias/salud/Astrologia'
+    }
+  };
 
   return (    
-        <div className='w-full flex flex-col items-center justify-center'>
-        <h1 className='text-white text-center w-full mb-5'>Salud Completa</h1>
-        <p className='text-white'>
-                ................................................................<br/>
-                ................................................................<br/>
-                ................................................................<br/>
-        </p>
-            <div className='grid grid-cols-2 gap-8 md:grid-cols-4 items-center justify-center mt-10 redimensionado'>
-                <div className='flex flex-col items-center justify-center'>
-                  <Image className='footer-img' src={lotus} alt='footer' width='50' height='50' />
-                  <h3 className='text-white'>subcategoria.name</h3>
-                  <p className='text-white'>subcategoria.description</p>
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <Image className='footer-img' src={lotus} alt='footer' width='50' height='50' />
-                  <h3 className='text-white'>subcategoria.name</h3>
-                  <p className='text-white'>subcategoria.description</p>
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <Image className='footer-img' src={lotus} alt='footer' width='50' height='50' />
-                  <h3 className='text-white'>subcategoria.name</h3>
-                  <p className='text-white'>subcategoria.description</p>
-                </div>
-                <div className='flex flex-col items-center justify-center'>
-                  <Image className='footer-img' src={lotus} alt='footer' width='50' height='50' />
-                  <h3 className='text-white'>subcategoria.name</h3>
-                  <p className='text-white'>subcategoria.description</p>
-                </div>
-                <div className='flex flex-col items-center justify-center high-layer'>
-                  <Image className='footer-img' src={lotus} alt='footer' width='50' height='50' />
-                  <h3 className='text-white'>subcategoria.name</h3>
-                  <p className='text-white'>subcategoria.description</p>
-                </div>
-            </div>              
-          <iframe className='iframe' width="560" height="315" src="https://www.youtube.com/embed/AGcTCvn-a6g?si=Cqwld_dMR_OTazPP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-          <iframe className='iframe' width="560" height="315" src="https://www.youtube.com/embed/AGcTCvn-a6g?si=Cqwld_dMR_OTazPP" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>
-        </div>
-  )
+    <div className='w-full categoria-container flex flex-col items-center justify-center p-2'>
+      <h1 className='text-white'>Salud</h1>
+      <Image className='circular-cat m-4' src={salud} height={100} width={100} alt='' />
+      <p className='text-white mt-4'>
+        En vuelca entendemos la salud desde una perspectiva integrativa que considera tanto el bienestar físico de la persona
+        como su bienestar emocional y social.
+        <br />
+        Los emprendimientos que recomendamos son terapeutas complementarios y/o practicantes de diversas disciplinas
+        que sin reemplazar a la medicina convencional están pensadas para mejorar la calidad de vida en varios aspectos.
+      </p>
+
+      <h2>Subcategorias Salud:</h2>
+      <ul className='cat-children'>
+        {Object.keys(subcategorias).map((key) => (
+          
+        <Link
+        href={subcategorias[key].link}
+        >
+          <li key={key} className='text-center'>
+            <Image className='circular-cat m-4' src={subcategorias[key].imgurl} height={50} width={50} alt='' />
+            <h2>{subcategorias[key].nombre}</h2>
+            <p>{subcategorias[key].descripcion}</p>
+          </li>
+        </Link>
+        ))}
+      </ul>
+    </div>
+  );
 }
