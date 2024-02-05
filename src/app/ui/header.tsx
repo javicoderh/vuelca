@@ -17,9 +17,21 @@ const Header: React.FC = () => {
         <h1 className='text-white mb-2'>Vuelca</h1>
         <Image className='nLogoImg' src={logo} width={200} height={100} alt='logo' />
         <nav className='text-white w-full flex flex-row'>
+          <Link
+          href={'/'}
+          >
           <li>Home</li>
+          </Link>
+          <Link
+          href={'/nosotros'}
+          >
           <li>Nosotros</li>
+          </Link>
+          <Link
+          href={'/contacto'}
+          >
           <li>Contacto</li>
+          </Link>
         </nav>
       </div>
     </header>
