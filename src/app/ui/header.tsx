@@ -8,7 +8,9 @@ import Link from 'next/link';
 
 const Header: React.FC = () => {
 
- 
+ const home = '/';
+ const nosotros = '/nosotros';
+ const contacto = '/contacto';
 
   return (
     
@@ -17,9 +19,21 @@ const Header: React.FC = () => {
         <h1 className='text-white mb-2'>Vuelca</h1>
         <Image className='nLogoImg' src={logo} width={200} height={100} alt='logo' />
         <nav className='text-white w-full flex flex-row'>
-          <li>Home</li>
-          <li>Nosotros</li>
-          <li>Contacto</li>
+          <Link
+          href={home}
+          >
+            <li>Home</li>
+          </Link>
+          <Link
+          href={nosotros}
+          >
+            <li>Nosotros</li>
+          </Link>
+          <Link
+          href={contacto}
+          >
+            <li>Contacto</li>
+          </Link>
         </nav>
       </div>
     </header>

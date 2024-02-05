@@ -24,6 +24,7 @@ export const MarzoEventosList = () => {
     resolver: zodResolver(MarzoEventosSchema),
   });
 
+  const mobile = useMediaQuery({ maxWidth: 768 });
   const [modalVisible, setModalVisible] = useState(false);
   const [view, setView] = useState<boolean>(false);
   const [button, setButton] = useState<boolean>(true);
@@ -73,6 +74,92 @@ export const MarzoEventosList = () => {
   return (
     <div className="eventos-mensuales-container">
       <h1>Formulario ingreso de eventos Marzo:</h1>
+
+      <div className="block md:hidden">      
+      {button ? <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> mostrar </button> : <button className="text-white viewButton bg-black w-[70px]" onClick={toggleButtonAndView}> ocultar </button> }
+      {mobile && view && ( 
+    <form className="grid md:hidden eventos-form-mobile" onSubmit={handleSubmit(onSubmit)}>
+    <div className="input-format">
+    <label htmlFor="nombre">nombre</label>
+    <input placeholder="Máximo 30 caracteres..." type="text" maxLength={30} {...register("nombre")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="fecha">fecha</label>
+    <input placeholder="Solo el número del día..." defaultValue={''} type="number" max={31} {...register("fecha")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="descripcion">descripción</label>
+    <input placeholder="Describe tu evento..." type="text" {...register("descripcion")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="categoria">categoría</label>
+    <input placeholder="Categoría del evento..." type="text" {...register("categoria")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="">contacto</label>
+    <input placeholder="Mail de contacto..." type="text" {...register("contacto")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="ruta">ruta</label>
+    <input placeholder="Link página del evento..." type="text" {...register("ruta")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="imagen1">imagen1</label>
+    <input placeholder="Link de imagen para el evento..." type="text" {...register("imagen1")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="eslogan">slogan</label>
+    <input placeholder="Slogan del evento..." type="text" {...register("eslogan")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="mes">mes</label>
+    <input placeholder="Default" defaultValue={'marzo'} type="text" {...register("mes")} /> 
+    </div>
+    <br />       
+    <button type="submit">Ingresar</button>
+  </form> 
+)}
+  </div>
+      {!mobile && (<form className="hidden md:grid eventos-form" onSubmit={handleSubmit(onSubmit)}>
+    <div className="input-format">
+    <label htmlFor="nombre">nombre</label>
+    <input placeholder="Máximo 30 caracteres..." type="text" maxLength={30} {...register("nombre")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="fecha">fecha</label>
+    <input placeholder="Solo el número del día..." defaultValue={''} type="number" max={31} {...register("fecha")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="descripcion">descripción</label>
+    <input placeholder="Describe tu evento..." type="text" {...register("descripcion")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="categoria">categoría</label>
+    <input placeholder="Categoría del evento..." type="text" {...register("categoria")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="">contacto</label>
+    <input placeholder="Mail de contacto..." type="text" {...register("contacto")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="ruta">ruta</label>
+    <input placeholder="Link página del evento..." type="text" {...register("ruta")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="imagen1">imagen1</label>
+    <input placeholder="Link de imagen para el evento..." type="text" {...register("imagen1")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="eslogan">slogan</label>
+    <input placeholder="Slogan del evento..." type="text" {...register("eslogan")} />
+    </div>
+    <div className="input-format">
+    <label htmlFor="mes">mes</label>
+    <input placeholder="Default" defaultValue={'marzo'}  {...register("mes")} /> 
+    </div>
+    <br />       
+    <button type="submit">Ingresar</button>
+  </form>
       <div className="block md:hidden">
         {button ? (
           <button
