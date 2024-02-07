@@ -168,3 +168,29 @@ nombre: string;
 dias: number;
 ruta: string;
 }
+
+export type EmpresasSalud = {
+id:             any
+nombreempresa:  String 
+descripcion:    String
+mail:           String
+telefono:       String
+imagen1:        String
+imagen2:        String
+logo:           String
+categoria:      String
+ruta:           String
+clickscount:    number
+};
+
+export type ProductosSalud = {
+id:             any
+nombre:         String
+descripcion:    String
+empresa:        String
+precio:         String
+stock:          number
+clickscount:    number
+imagen:         String
+ruta:           String
+  }

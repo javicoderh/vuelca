@@ -1,6 +1,6 @@
  import { sql } from '@vercel/postgres';
 
- import { Permacultura, EneroEventos, FebreroEventos, MarzoEventos, AbrilEventos, MayoEventos, JunioEventos, JulioEventos, AgostoEventos, SeptiembreEventos, OctubreEventos, NoviembreEventos, DiciembreEventos, Meses } from './definitions'; 
+ import { Permacultura, EneroEventos, FebreroEventos, MarzoEventos, AbrilEventos, MayoEventos, JunioEventos, JulioEventos, AgostoEventos, SeptiembreEventos, OctubreEventos, NoviembreEventos, DiciembreEventos, Meses, EmpresasSalud } from './definitions'; 
 
  export async function fetchPermacultura() {
    try {
@@ -237,5 +237,33 @@ export async function fetchDiciembre() {
   } catch (error) {
     console.error('Database Error:', error);
     throw new Error('Failed to fetch diciembre data.');
+  }
+}
+
+export async function fetchEmpresasSalud() {
+  try {
+    console.log('Fetching empresas salud data...');
+    await new Promise((resolve) => setTimeout(resolve, 2000));
+    
+    const data = await sql<EmpresasSalud>`SELECT empresassalud.nombreempresa, empresassalud.descripcion, empresassalud.mail, 
+    empresassalud.telefono, empresassalud.imagen1, empresassalud.imagen2, empresassalud.logo, empresassalud.categoria, empresassalud.ruta, empresassalud.clickscount, 
+    String 
+    descripcion    String
+    mail           String
+    telefono       String
+    imagen1        String
+    imagen2        String
+    logo           String
+    categoria      String
+    ruta           String
+    clickscount    Int
+    FROM empresassalud`;
+    console.log(data.rows)
+    console.log('empresas salud data fetch completed.');
+    return data.rows;
+    
+  } catch (error) {
+    console.error('Database Error:', error);
+    throw new Error('Failed to fetch empresas salud data.');
   }
 }

@@ -3,7 +3,7 @@ const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient()
 
 async function main() {
-
+/*
     const enero = await prisma.meses.create({
       data: {
         nombre: 'enero',
@@ -86,6 +86,54 @@ async function main() {
     }
   });
 
+  
+
+  const ecofarmacia = await prisma.saludempresas.create({
+    data: {
+      nombreempresa: 'ecofarmacia',
+      descripcion: 'esta empresa es una farmacia con productos ecofriendly, organicos blablabala....',
+      mail: 'ecofarm@gmail.com',
+      telefono: '+56920445576',
+      imagen1: 'wwww.google.cl/imagen1.jpg',
+      imagen2: 'www.google.cl/imagen2.jpg ',
+      logo: 'www.logo.cl',
+      categoria: 'tienda',
+      ruta: 'salud/ecofarmacia',
+      clickscount: 0
+    }
+  });
+*/
+
+  const blessin = await prisma.productossalud.create({
+    data: {
+      nombre: 'blessin',
+      descripcion: 'producto para mejorar la vitalidad del cuerpo hecho a base de plantas y minerales',
+      empresa:     'ecofarmacia', 
+      precio:      '8.99',
+      stock:       10,
+      clickscount: 0,
+      imagen:      'www.imagen.cl',
+      ruta:        '/salud/blessin'
+    }
+  });
+
+
+
+
+
+
+
+  /*
+  nombreempresa  String @unique key
+descripcion    String
+mail           String
+telefono       String
+imagen1        String
+imagen2        String
+logo           String
+categoria      String
+ruta           String
+clickscount    Number
 
 const noviembre = await prisma.meses.create({
   data: {
@@ -102,7 +150,7 @@ const diciembre = await prisma.meses.create({
     ruta: '/calendario/diciembre'
   }
 });
-
+*/
 /*
 const permaPalooza3 = await prisma.eneroeventos.create({
   data: {

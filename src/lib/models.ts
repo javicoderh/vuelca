@@ -180,6 +180,32 @@ export const DiciembreEventosSchema = z.object({
   mes: String,
 })
 
+export const EmpresasSaludSchema = z.object({
+  id:   Int,
+  nombreempresa:  String, 
+  descripcion:    String,
+  mail:           String,
+  telefono:       String,
+  imagen1:        String,
+  imagen2:        String,
+  logo:           String,
+  categoria:      String,
+  ruta:           String,
+  clickscount:    Int
+})
+
+export const ProductosSaludSchema = z.object({
+  id:   Int,
+  nombre:         String,
+  descripcion:    String,
+  empresa:        String,
+  precio:         String,
+  stock:          Int,
+  clickscount:    Int,
+  imagen:         String,
+  ruta:           String
+})
+
 export const UserRoleSchema = z.object({
   id: Int,
   name: String,

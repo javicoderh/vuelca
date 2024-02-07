@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { MarzoEventosSchema, EneroEventosSchema, FebreroEventosSchema, AbrilEventosSchema, MayoEventosSchema, JunioEventosSchema, JulioEventosSchema, AgostoEventosSchema, SeptiembreEventosSchema, OctubreEventosSchema, NoviembreEventosSchema, DiciembreEventosSchema, UserRoleSchema, UserSchema } from "./models";
+import { MarzoEventosSchema, EneroEventosSchema, FebreroEventosSchema, AbrilEventosSchema, MayoEventosSchema, JunioEventosSchema, JulioEventosSchema, AgostoEventosSchema, SeptiembreEventosSchema, OctubreEventosSchema, NoviembreEventosSchema, DiciembreEventosSchema, UserRoleSchema, UserSchema, EmpresasSaludSchema, ProductosSaludSchema, } from "./models";
 
 export type User = z.infer<typeof UserSchema>;
 export const defaultUserValues: User = {
@@ -185,4 +185,40 @@ export const defaultUserRoleValues: UserRole = {
   name: "",
 } as const;
 
-  
+export type EmpresasSalud = z.infer<typeof EmpresasSaludSchema>;
+export const defaultEmpresasSaludValues: EmpresasSalud = {
+  id: 0,
+  nombreempresa: '',  
+  descripcion:   '',
+  mail:          '',
+  telefono:      '',
+  imagen1:       '',
+  imagen2:       '',
+  logo:          '',
+  categoria:     '',
+  ruta:          '',
+  clickscount:    0
+} as const;
+
+export type ProductossSalud = z.infer<typeof ProductosSaludSchema>;
+export const defaultProductosSaludValues: ProductossSalud = {
+  id: 0,
+  nombre:         '',
+  descripcion:    '',
+  empresa:        '',
+  precio:         '',
+  stock:          0,
+  clickscount:    0,
+  imagen:         '',
+  ruta:           ''
+} as const;
+
+
+
+
+
+
+
+
+
+
