@@ -27,11 +27,11 @@ export const TarotGet = () => {
             <h3 className="text-2xl font-bold">{empresa.nombreempresa}</h3>
             <p>{empresa.descripcion}</p>
             <br />
-            <p>puedes contactarnos en:</p>
+            <p>puedes contactarme en:</p>
             <br />
             <p>{empresa.mail}</p>
             <p>{empresa.telefono}</p>
-            <p>visita nuestra tienda <Link className="text-blue-300 hoveredLink" href={empresa.ruta}>aquí</Link></p>
+            <p>visita mi página <Link className="text-blue-300 hoveredLink" href={empresa.ruta}>aquí</Link></p>
           </div>            
           </div>
         </div>
