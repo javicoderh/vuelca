@@ -2,6 +2,7 @@ import { EmpresasSaludSchema, FebreroEventosSchema } from "@/lib/models";
 import { publicProcedure, router } from "../trpc";
 import { prisma } from "@/lib/prisma";
 import { TRPCError } from "@trpc/server";
+import { z } from "zod";
 
 export const empresasSaludRouter = router({
   create: publicProcedure
@@ -22,11 +23,21 @@ export const empresasSaludRouter = router({
         });
       }
     }),
-  readAll: publicProcedure.query(async () => {
+  readAll: publicProcedure
+  .input(
+    z
+    .object({categoria: z.string().optional()}).optional()
+  ).query(async (opts) => {
     try {
-      const empresassalud = await prisma.saludempresas.findMany();
-      console.log("🚀 ~ readAll:publicProcedure.query ~ marzo:", empresassalud)
-      return empresassalud;
+
+      if (opts.input?.categoria != '') {
+        const empresassalud = await prisma.saludempresas.findMany({where:{categoria: opts.input?.categoria}});
+        return empresassalud;
+        
+      } else {
+        const empresassalud = await prisma.saludempresas.findMany()
+        return empresassalud;
+      }      
     } catch (error) {
       console.log("🚀 ~ readAll:publicProcedure.query ~ error:", error)
       new TRPCError({

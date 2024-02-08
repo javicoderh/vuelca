@@ -25,12 +25,15 @@ export const BiocosmeticaGet = () => {
     resolver: zodResolver(EmpresasSaludSchema),
   });
 
-
+const empresasTiendas = trpc.empresasSalud.readAll.useQuery({
+    categoria: 'tiendas'
+});
 
 return (
-
-    <div>
-        
-    </div>
-)
-}
+    {empresasTiendas.data && (
+        <div>
+            <h1 className="text-white">{empresasTiendas.data?.}</h1>
+            <p className="text-white">{empresasTiendas.data?.}</p>
+        </div>
+    )}
+)}
