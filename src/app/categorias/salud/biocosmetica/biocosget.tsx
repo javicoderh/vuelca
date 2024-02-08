@@ -14,8 +14,9 @@ export const BiocosmeticaGet = () => {
   });
 
   const empresasTiendas = trpc.empresasSalud.readAll.useQuery({
-    categoria: "tiendas",
+    categoria: "tienda",
   });
+  console.log("🚀 ~ BiocosmeticaGet ~ empresasTiendas:", empresasTiendas)
 
   return (
     <>
