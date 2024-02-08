@@ -6,7 +6,7 @@ import { TarotGet } from "./tarotget";
    
   return (
     <div className="inner-eventos-container enero-bg">
-        <h1 className="mb-[20px] inner-eventos-tit">Empresas Biocosmetica 2024</h1>
+        <h1 className="mb-[20px] inner-eventos-tit">Tarotistas 2024</h1>
         <TarotGet />    
     </div>
     )
