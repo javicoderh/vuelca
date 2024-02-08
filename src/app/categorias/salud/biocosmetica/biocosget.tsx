@@ -1,17 +1,11 @@
 "use client";
 
-import { useForm } from "react-hook-form";
 import { EmpresasSalud, defaultEmpresasSaludValues } from "@/lib/types";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { EmpresasSaludSchema } from "@/lib/models";
 import "../../../globals.css";
 import { trpc } from "../../../_trpc/client";
 
 export const BiocosmeticaGet = () => {
-  const { register, handleSubmit, reset } = useForm<EmpresasSalud>({
-    defaultValues: defaultEmpresasSaludValues,
-    resolver: zodResolver(EmpresasSaludSchema),
-  });
 
   const empresasTiendas = trpc.empresasSalud.readAll.useQuery({
     categoria: "tiendas",
@@ -19,7 +13,7 @@ export const BiocosmeticaGet = () => {
 
   return (
     <>
-      {empresasTiendas.data?.map((empresa) => (
+      {empresasTiendas.data?.map((empresa: any) => (
         <div
           key={empresa.id}
           className="flex flex-col w-full bg-white shadow-md rounded-lg overflow-hidden mb-4"
