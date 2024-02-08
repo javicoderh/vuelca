@@ -8,7 +8,7 @@ import { trpc } from "../../../_trpc/client";
 export const BiocosmeticaGet = () => {
 
   const empresasTiendas = trpc.empresasSalud.readAll.useQuery({
-    categoria: "tiendas",
+    categoria: "tienda",
   });
 
   return (
