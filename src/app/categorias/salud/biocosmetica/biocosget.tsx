@@ -6,8 +6,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { EmpresasSaludSchema } from "@/lib/models";
 import "../../../globals.css";
 import { trpc } from "../../../_trpc/client";
-import Link from "next/link";
-import Image from "next/image";
 
 export const BiocosmeticaGet = () => {
   const { register, handleSubmit, reset } = useForm<EmpresasSalud>({
