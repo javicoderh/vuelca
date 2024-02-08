@@ -1,15 +1,16 @@
 import React from "react";
-import { BiocosmeticaGet } from "./biocosget";
+import { TarotGet } from "./tarotget";
 
- function Biocosmetica() {
+
+ function Tarot() {
    
   return (
     <div className="inner-eventos-container enero-bg">
         <h1 className="mb-[20px] inner-eventos-tit">Empresas Biocosmetica 2024</h1>
-        <BiocosmeticaGet />    
+        <TarotGet />    
     </div>
     )
   ;
 }
 
-export default Biocosmetica;
+export default Tarot;

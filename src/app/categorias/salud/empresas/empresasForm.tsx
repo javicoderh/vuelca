@@ -107,7 +107,16 @@ export const SaludEmpresasForm = () => {
     </div>
     <div className="input-format">
     <label htmlFor="eslogan">categoría</label>
-    <input placeholder="Slogan del evento..." type="text" {...register("categoria")} />
+    <select className="formselect" {...register("categoria")}> 
+    <option selected value="biocosmetica">biocosmetica</option>
+    <option value="yoga">yoga</option>
+    <option value="tarot">tarot y otras magias</option>
+    <option value="limpieza">limpieza del hogar</option>
+    <option value="medicinachina">medicina china</option>
+    <option value="terapeutas">terapeutas</option>
+    <option value="ayurveda">ayurveda</option>
+    <option value="atrologia">astrología</option>
+    </select>
     </div>
     <div className="input-format">
     <label htmlFor="mes">ruta</label>
@@ -153,7 +162,16 @@ export const SaludEmpresasForm = () => {
     </div>
     <div className="input-format">
     <label htmlFor="eslogan">categoria</label>
-    <input placeholder="Slogan del evento..." type="text" {...register("categoria")} />
+    <select className="formselect" {...register("categoria")}> 
+    <option selected value="biocosmetica">biocosmetica</option>
+    <option value="yoga">yoga</option>
+    <option value="tarot">tarot y otras magias</option>
+    <option value="limpieza">limpieza del hogar</option>
+    <option value="medicinachina">medicina china</option>
+    <option value="terapeutas">terapeutas</option>
+    <option value="ayurveda">ayurveda</option>
+    <option value="atrologia">astrología</option>
+    </select>
     </div>
     <div className="input-format">
     <label htmlFor="mes">ruta</label>
@@ -264,7 +282,7 @@ export const SaludEmpresasForm = () => {
     nombre={selectedEventDetails.nombreempresa}
     descrip={selectedEventDetails.descripcion}
     email={selectedEventDetails.mail}
-    tel={selectedEventDetails.mail}
+    tel={selectedEventDetails.telefono}
     img1={selectedEventDetails.imagen1}
     img2 ={selectedEventDetails.imagen2}
     log={selectedEventDetails.logo}

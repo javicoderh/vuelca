@@ -8,12 +8,12 @@ import Image from "next/image";
 import ecofriendly from '../../../../../public/ecofriendly.jpg'
 import Link from "next/link";
 
-export const BiocosmeticaGet = () => {
+export const MedicinaChinaGet = () => {
 
   const empresasTiendas = trpc.empresasSalud.readAll.useQuery({
-    categoria: "biocosmetica",
+    categoria: "medicinachina",
   });
-  console.log("🚀 ~ BiocosmeticaGet ~ empresasTiendas:", empresasTiendas)
+  console.log("🚀 ~ yogacaGet ", empresasTiendas)
 
   return (
     <>

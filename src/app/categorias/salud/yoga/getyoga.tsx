@@ -8,12 +8,12 @@ import Image from "next/image";
 import ecofriendly from '../../../../../public/ecofriendly.jpg'
 import Link from "next/link";
 
-export const BiocosmeticaGet = () => {
+export const YogaGet = () => {
 
   const empresasTiendas = trpc.empresasSalud.readAll.useQuery({
-    categoria: "biocosmetica",
+    categoria: "yoga",
   });
-  console.log("🚀 ~ BiocosmeticaGet ~ empresasTiendas:", empresasTiendas)
+  console.log("🚀 ~ yogacaGet ", empresasTiendas)
 
   return (
     <>
@@ -23,6 +23,7 @@ export const BiocosmeticaGet = () => {
           className="flex flex-col w-full empresa-card-container shadow-md rounded-lg overflow-hidden mb-4"
         >
           <div className="empresa-card flex flex-row items-start p-3">
+            <Image className="empresaimg" src={ecofriendly} width={400} height={300} alt="" />
           <div className="flex flex-col p-3">
             <h3 className="text-2xl font-bold">{empresa.nombreempresa}</h3>
             <p>{empresa.descripcion}</p>

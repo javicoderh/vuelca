@@ -1009,3 +1009,40 @@ width: 100vw;
 .cat-children-in li h2 {
 text-align: start;
 }
+
+.empresa-card-container {
+height: 80vh;
+background-color: transparent;
+}
+
+.empresa-card {
+background-color: #221800;
+color: white;
+width: 60%;
+border-radius: 3%;
+border: solid 2px silver;
+margin-bottom: 1rem;
+}
+
+.empresaimg {
+border: solid black 1px;
+border-radius: 2%;
+}
+
+.empresa-card h3 {
+font-family: 'Cinzel', serif;
+}
+
+.hoveredLink:hover {
+transform: scale(1.15);
+transition: 0.4s;
+color: #88fdc2;
+}
+
+.formselect {
+width: 60%;
+height: 50px;
+margin-right: 15px;
+margin-top: 30px;
+border: solid 1px black
+}

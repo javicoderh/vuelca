@@ -22,49 +22,49 @@ export default function Rutas() {
       nombre: 'Biocosmetica',
       descripcion: 'Productos naturales para el cuidado de tu salud.',
       imgurl: salud,
-      link: 'categorias/salud/Biocosmetica'
+      link: 'salud/biocosmetica'
     },
     Terapeutas: {
       nombre: 'Terapeutas',
       descripcion: 'Maso, flores de Bach, TethaHealing, Quiropraxia, Reiki, etc...',
       imgurl: salud,
-      link: 'categorias/salud/Terapeutas'
+      link: 'salud/terapeutas'
     },
     Yoga: {
       nombre: 'Yoga',
       descripcion: 'integra y perfecciona la sabiduría de este arte milenario.',
       imgurl: salud,
-      link: 'categorias/salud/Yoga'
+      link: 'salud/yoga'
     },
     Ayurveda: {
       nombre: 'Ayurveda',
       descripcion: 'Comprensión y tecnicas de medicina india.',
       imgurl: salud,
-      link: 'categorias/salud/Ayurveda'
+      link: 'salud/ayurveda'
     },
     'Limpieza del Hogar': {
       nombre: 'Limpieza del Hogar',
       descripcion: 'Productos Biodegradables y saludables para la mantención de tu hogar.',
       imgurl: salud,
-      link: 'categorias/salud/Limpieza-del-Hogar'
+      link: 'salud/limpiezahogar'
     },
     'Tarot y otras magias': {
       nombre: 'Tarot y otras magias',
       descripcion: 'Numerología, Quiromancia, registros akashikos y mas.',
       imgurl: salud,
-      link: 'categorias/salud/Tarot-y-otras-magias'
+      link: 'salud/tarot'
     },
     'Medicina China': {
       nombre: 'Medicina China',
       descripcion: 'Profesionales de la medicina holistica oriental.',
       imgurl: salud,
-      link: 'categorias/salud/Medicina-China'
+      link: 'salud/medicinachina'
     },
     'Astrología': {
       nombre: 'Astrología',
       descripcion: 'Aprende como la danza planetaria afecta nuestro ser.',
       imgurl: salud,
-      link: 'categorias/salud/Astrologia'
+      link: 'salud/astrologia'
     }
   };
 
