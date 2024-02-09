@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import lotus from '../../../public/lotus.svg'; 
 import '../globals.css'
+import Aura from './aura';
 
 const DinamicFooter = () => {
 
@@ -36,7 +37,7 @@ const DinamicFooter = () => {
 
   return (
     <footer className='w-full h-[6vh] flex flex-row items-center justify-center p-2'>
-      <Image className='footer-img' src={lotus} alt='footer' width='100' height='100' />
+      <Aura />
       <h3 className='phrase-translate text-center md:footer-imgDesktop'>{currentPhrase}</h3>
     </footer>
   );

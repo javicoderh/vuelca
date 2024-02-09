@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import lotus from '../../../public/lotus.svg'; 
 import '../globals.css'
+import Aura from './aura';
 
 const InverseDinamicFooter = () => {
 
@@ -37,7 +38,7 @@ const InverseDinamicFooter = () => {
   return (
     <footer className='w-full h-[0.5vh] flex flex-row items-center justify-center pt-5 p-2'>
         <h3 className='inverse-phrase-translate text-center md:footer-imgDesktop'>{currentPhrase}</h3>
-        <Image className='inverse-footer-img' src={lotus} alt='footer' width='100' height='100' />     
+        <Aura />    
     </footer>
   );
 };

@@ -32,7 +32,6 @@ export default function Home() {
         <Destacados /> 
         <DestacadosMobile /> 
         <Link className='hidden md:block' href={interactivo}>
-        <p className='text-white calendario-p'>Revisa todos los eventos que tenemos para ti este 2024:</p>
         <h2 className='calendario-tit calendario-link'>Calendario 2024</h2>
         </Link>       
         <ProximosEventos />        
