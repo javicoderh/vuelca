@@ -18,7 +18,7 @@ export const TarotGet = () => {
   return (
     <>
       {empresasTiendas.data?.map((empresa: any) => (
-        <Link href={empresa.ruta}>
+        <Link key={empresa.id} href={empresa.ruta}>
         <div
           key={empresa.id}
           className="flex flex-col w-full empresa-card-container shadow-md rounded-lg overflow-hidden mb-4"
