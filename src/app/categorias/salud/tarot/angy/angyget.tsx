@@ -19,7 +19,7 @@ export const AngyGet = () => {
     <>
       {empresasTiendas.data?.map((producto: any) => (
         <div
-          key={producto.id}
+          key={producto.nombre}
           className="flex flex-col w-[500px] producto-card-container shadow-md rounded-lg overflow-hidden mb-4"
         >
           <div className="empresa-card flex flex-row items-start p-3">
