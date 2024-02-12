@@ -170,9 +170,10 @@ padding-top: 2rem;
 
 .circular {
 border-radius: 50%;
-border: solid 2px silver;
-box-shadow: 0px 0px 30px 2px silver;
-background-color: black;
+padding: 3px;
+background-color: #b10044;
+border: solid 5px rgb(255, 255, 255);
+box-shadow: 0px 0px 30px 2px rgb(255, 255, 255);
 width: 100px;
 height: 100px;
 }
@@ -478,7 +479,7 @@ text-align: center;
 
 .circular-cat {
 border-radius: 50%;
-border: solid 1px goldenrod;
+border: groove 3px rgb(255, 255, 255);
 box-shadow: 0px 0px 10px 2px silver;
 transform: scale(1.5);
 width: 50px;
@@ -1061,9 +1062,9 @@ border: solid 1px black
 
 .tooltip {
   position: absolute;
-  top: -200px; 
+  top: -280px; 
   overflow-y: scroll;
-  margin-left: 6rem;
+  margin-left: 15rem;
   transform: translateX(0%);
   background-color: #fff;
   color: #333;
@@ -1080,10 +1081,10 @@ border: solid 1px black
 }
 
 .tooltip-mobile {
-  position: absolute;
-  top: -170px; 
+  position: fixed;
+  top: 620px; 
   overflow-y: scroll;
-  left: -270px;
+  left: 30px;
   transform: translateX(0%);
   background-color: #fff;
   color: #333;
@@ -1096,7 +1097,7 @@ border: solid 1px black
   font-size: 1rem;
   opacity: 1;
   box-shadow: 0px 0px 10px 5px white;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;z-index: 8;
 }
 
 .tooltip-mobile::-webkit-scrollbar {
@@ -1110,4 +1111,15 @@ display: none
 .aura-container {
 display: flex;
 position: relative;
+}
+
+.cerrar {
+color: white;
+background-color: black;
+border: solid 2px rgb(129, 230, 255);
+padding: 5px;
+border-radius: 12%;
+margin-bottom: 1rem;
+margin-top: 2rem;
+font-family: 'Cinzel', serif;
 }

@@ -2,6 +2,7 @@ import { ProductosSaludSchema } from "@/lib/models";
 import { publicProcedure, router } from "../trpc";
 import { prisma } from "@/lib/prisma";
 import { TRPCError } from "@trpc/server";
+import { z } from "zod";
 
 export const productosSaludRouter = router({
   create: publicProcedure
@@ -22,11 +23,21 @@ export const productosSaludRouter = router({
         });
       }
     }),
-  readAll: publicProcedure.query(async () => {
+  readAll: publicProcedure
+  .input(
+    z
+    .object({empresa: z.string().optional()}).optional()
+  ).query(async (opts) => {
     try {
-      const marzo = await prisma.productossalud.findMany();
-      console.log("🚀 ~ readAll:publicProcedure.query ~ marzo:", marzo)
-      return marzo;
+
+      if (opts.input?.empresa != '') {
+        const productossalud = await prisma.productossalud.findMany({where:{empresa: opts.input?.empresa}});
+        return productossalud;
+        
+      } else {
+        const productossalud = await prisma.productossalud.findMany()
+        return productossalud;
+      }      
     } catch (error) {
       console.log("🚀 ~ readAll:publicProcedure.query ~ error:", error)
       new TRPCError({

@@ -18,6 +18,7 @@ export const TarotGet = () => {
   return (
     <>
       {empresasTiendas.data?.map((empresa: any) => (
+        <Link href={empresa.ruta}>
         <div
           key={empresa.id}
           className="flex flex-col w-full empresa-card-container shadow-md rounded-lg overflow-hidden mb-4"
@@ -33,8 +34,9 @@ export const TarotGet = () => {
             <p>{empresa.telefono}</p>
             <p>visita mi página <Link className="text-blue-300 hoveredLink" href={empresa.ruta}>aquí</Link></p>
           </div>            
-          </div>
+          </div>          
         </div>
+        </Link>
       ))}
     </>
   );

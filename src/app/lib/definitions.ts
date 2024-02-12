@@ -185,12 +185,12 @@ clickscount:    number
 
 export type ProductosSalud = {
 id:             any
-nombre:         String
-descripcion:    String
-empresa:        String
-precio:         String
+nombre:         string
+descripcion:    string
+empresa:        string
+precio:         string
 stock:          number
 clickscount:    number
-imagen:         String
-ruta:           String
+imagen:         string
+ruta:           string
   }

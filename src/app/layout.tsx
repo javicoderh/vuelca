@@ -8,6 +8,7 @@ import Link from "next/link";
 import Calendario from "./ui/calendar";
 import Provider from "./_trpc/Provider";
 import Header from "./ui/header";
+import songUrl from '../../public/lofigirl.mp3'
 
 const inter = Inter({ subsets: ["latin"] });
 

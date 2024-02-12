@@ -19,12 +19,12 @@ superjson.registerCustom<Decimal, string>(
 export default function Provider({ children }: { children: React.ReactNode }) {
   const [queryClient] = useState(() => new QueryClient({}));
 
-  // Define a variable for the API URL
+ 
   let apiUrl = "http://localhost:3000";
 
-  // Check if we're in a client-side environment
+ 
   if (typeof window !== "undefined") {
-    // Dynamically determine the URL based on the current port
+    
     apiUrl = window.location.origin;
   }
 
