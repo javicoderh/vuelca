@@ -4,6 +4,7 @@ import Image from 'next/image';
 import lotus from '../../../public/lotus.svg'; 
 import '../globals.css'
 import Aura from './aura';
+import AuraMobile from './auramobile';
 
 const InverseDinamicFooter = () => {
 
@@ -38,7 +39,8 @@ const InverseDinamicFooter = () => {
   return (
     <footer className='w-full h-[0.5vh] flex flex-row items-center justify-center pt-5 p-2'>
         <h3 className='inverse-phrase-translate text-center md:footer-imgDesktop'>{currentPhrase}</h3>
-        <Aura />    
+        <Aura /> 
+        <AuraMobile />   
     </footer>
   );
 };

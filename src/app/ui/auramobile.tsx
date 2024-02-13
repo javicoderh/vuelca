@@ -5,7 +5,7 @@ import lotus from '../../../public/lotus.svg';
 import '../globals.css'
 import Link from 'next/link';
 
-const Aura: React.FC = () => {
+const AuraMobile: React.FC = () => {
   const loveMessages = ["¿Sabías que la permacultura es un sistema de principios de diseño agrícola, económico, político y social basado en los patrones y las características del ecosistema natural?", "You make my heart smile", "I'm so lucky to have you"];
   const [messageIndex, setMessageIndex] = useState(0);
   const [vistaTooltip, setVistaTooltip] = useState('welcome')
@@ -50,8 +50,8 @@ const Aura: React.FC = () => {
       }
 
   return (
-   <div className='hidden md:flex aura-container'>
-      {vistaTooltip == 'categorias'? <div className='tooltip-mobile2'>
+   <div className='flex md:hidden aura-container'>
+      {vistaTooltip == 'categorias'? <div className='tooltip-mobile'>
                                     <h1 className='text-white'>¿Qué categoría de productos buscas</h1>
                                     <div className='aura-categorias'>
                                     <Link href={'/categorias/salud'}> <button >Salud</button></Link> 
@@ -67,14 +67,14 @@ const Aura: React.FC = () => {
                                     <button onClick={cerrar}>cerrar</button>
                                     </div>
                                     </div> : null}
-      {vistaTooltip == 'welcome'? <div className='tooltip-mobile2 flex-tooltip'>
+      {vistaTooltip == 'welcome'? <div className='tooltip-mobile flex-tooltip'>
                                     <h1 className='text-white'>¿Qué estás buscando?</h1>
                                     <button onClick={dirigirACategorias}>productos</button> 
                                     <button onClick={dirigirAInformacion}>información</button>
                                     <button onClick={dirigirATips}>tips</button>
                                     <button onClick={cerrar}>cerrar</button>
                                     </div>: null }
-      {vistaTooltip == 'tooltip'? <div className='block tooltip-mobile2'>{loveMessages[messageIndex]} <br />
+      {vistaTooltip == 'tooltip'? <div className='block tooltip-mobile'>{loveMessages[messageIndex]} <br />
         <button className='cerrar' onClick={cerrar}>cerrar</button>
       </div>:  null}
       <Image className='footer-img' onClick={dirigirAWelcome}  src={lotus} alt='footer' width='100' height='100' />
@@ -82,4 +82,4 @@ const Aura: React.FC = () => {
   );
 };
 
-export default Aura;
+export default AuraMobile;
