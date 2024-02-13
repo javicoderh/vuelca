@@ -59,7 +59,7 @@ const Aura: React.FC = () => {
                                     <Link href={'/categorias/permacultura'}><button >Permacultura</button></Link>
                                     <Link href={'/categorias/educacion'}><button >Educación</button></Link>
                                     <Link href={'/categorias/turismo'}><button >Turismo</button></Link>
-                                    <Link href={'/categorias/redes'}><button >Redes y comunidad</button></Link>
+                                    <Link href={'/categorias/redes'}><button >Redes</button></Link>
                                     <Link href={'/categorias/alimentacion'}><button >alimentación</button></Link> 
                                     <Link href={'/categorias/deportes'}><button >deportes</button></Link>
                                     <Link href={'/categorias/cultura'}><button >cultura</button></Link>
