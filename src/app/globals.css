@@ -1080,6 +1080,85 @@ border: solid 1px black
   transition: opacity 0.3s ease;
 }
 
+.tooltip-welcome {
+  flex-direction: column;
+  position: absolute;
+  top: -280px; 
+  overflow-y: scroll;
+  margin-left: 15rem;
+  transform: translateX(0%);
+  background-color: #fff;
+  color: #333;
+  width: 30vw;
+  height: 15vh;
+  text-align: center;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: groove 3px rgb(129, 230, 255);
+  font-size: 1.4rem;
+  opacity: 1;
+  box-shadow: 0px 0px 10px 5px white;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip-categorias {
+  flex-direction: column;
+  position: absolute;
+  top: -280px; 
+  overflow-y: scroll;
+  margin-left: 15rem;
+  transform: translateX(0%);
+  background-color: #fff;
+  color: #333;
+  width: 30vw;
+  height: 15vh;
+  text-align: center;
+  padding: 2px 4px;
+  border-radius: 4px;
+  border: groove 3px rgb(129, 230, 255);
+  font-size: 1.4rem;
+  opacity: 1;
+  box-shadow: 0px 0px 10px 5px white;
+  transition: opacity 0.3s ease;
+}
+
+.aura-categorias {
+display: grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: auto;
+background-color: #221800;
+}
+
+.tooltip-categorias h1 {
+  background-color: black;
+  color: white;
+  font-family: 'Cinzel', serif;
+  }
+
+.tooltip-categorias::-webkit-scrollbar {
+display: none;
+}
+
+.tooltip-welcome::-webkit-scrollbar {
+  display: none;
+  }
+
+  .tooltip::-webkit-scrollbar {
+    display: none;
+    }
+
+.tooltip-welcome, .tooltip-categorias button {
+background-color: black;
+color: white;
+font-family: 'Cinzel', serif;
+}
+
+.tooltip-welcome h1 {
+  background-color: black;
+  color: white;
+  font-family: 'Cinzel', serif;
+  }
+
 .tooltip-mobile {
   position: fixed;
   top: 620px; 
