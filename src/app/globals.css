@@ -1217,7 +1217,6 @@ flex-direction: column;
 }
 
 .flex-tooltip h1, button {
-background-color: #221800;
 color: white;
 font-family: 'Cinzel', serif;
 }
@@ -1229,7 +1228,6 @@ grid-template-rows: auto;
 }
 
 .grid-tooltip h1, button {
-background-color: #221800;
 color: white;
 font-family: 'Cinzel', serif;
 }
