@@ -74,7 +74,7 @@ const AuraMobile: React.FC = () => {
                                     <button onClick={dirigirATips}>tips</button>
                                     <button onClick={cerrar}>cerrar</button>
                                     </div>: null }
-      {vistaTooltip == 'tooltip'? <div className='block tooltip-mobile'>{loveMessages[messageIndex]} <br />
+      {vistaTooltip == 'tooltip'? <div className='block tooltip-mobile text-white'>{loveMessages[messageIndex]} <br />
         <button className='cerrar' onClick={cerrar}>cerrar</button>
       </div>:  null}
       <Image className='footer-img' onClick={dirigirAWelcome}  src={lotus} alt='footer' width='100' height='100' />
