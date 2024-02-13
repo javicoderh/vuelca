@@ -52,7 +52,7 @@ const Aura: React.FC = () => {
   return (
    <div className='aura-container'>
 
-      {vistaTooltip == 'categorias'? <div className='hidden md:flex tooltip-categorias'>
+      {vistaTooltip == 'categorias'? <div className='flex md:flex tooltip-categorias'>
                                     <h1 className='text-white'>¿Qué categoría de productos buscas</h1>
                                     <div className='aura-categorias'>
                                     <Link href={'/categorias/salud'}> <button >Salud</button></Link> 
@@ -68,14 +68,14 @@ const Aura: React.FC = () => {
                                     <button onClick={cerrar}>cerrar</button>
                                     </div>
                                     </div> : null}
-      {vistaTooltip == 'welcome'? <div className='hidden md:flex tooltip-welcome'>
+      {vistaTooltip == 'welcome'? <div className='flex tooltip-welcome'>
                                     <h1 className='text-white'>¿Qué estás buscando?</h1>
                                     <button onClick={dirigirACategorias}>productos</button> 
                                     <button onClick={dirigirAInformacion}>información</button>
                                     <button onClick={dirigirATips}>tips</button>
                                     <button onClick={cerrar}>cerrar</button>
                                     </div>: null }
-      {vistaTooltip == 'tooltip'? <div className='hidden md:block tooltip'>{loveMessages[messageIndex]} <br />
+      {vistaTooltip == 'tooltip'? <div className='block md:block tooltip'>{loveMessages[messageIndex]} <br />
         <button className='cerrar' onClick={cerrar}>cerrar</button>
       </div>:  null}
       <Image className='footer-img' onClick={dirigirAWelcome}  src={lotus} alt='footer' width='100' height='100' />
