@@ -52,7 +52,7 @@ const AuraMobile: React.FC = () => {
   return (
    <div className='flex md:hidden aura-container'>
       {vistaTooltip == 'categorias'? <div className='tooltip-mobile'>
-                                    <h1 className='text-white'>¿Qué categoría de productos buscas</h1>
+                                    <h1 className='text-white'>¿Qué categoría de productos buscas?</h1>
                                     <div className='aura-categorias'>
                                     <Link href={'/categorias/salud'}> <button >Salud</button></Link> 
                                     <Link href={'/categorias/mujer'}><button >Mujer</button></Link>
