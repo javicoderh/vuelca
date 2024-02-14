@@ -8,22 +8,22 @@ import Link from 'next/link';
 interface Drink {
   name: string;
   ruta: string;
-  imgsrc: string
+  imgsrc: any
 }
 
 const CarouselDestacados = () => {
-    const drinks = [
-        { name: 'Emprendimiento 1', ruta: '/categorias/salud', imgsrc: 'imagen'},
-        { name: 'emprendimiento 2', ruta: '/emprendimiento2', imgsrc: '1'},
-        { name: 'emprendimiento 3', ruta: '/emprendimiento3', imgsrc: '2'},
-        { name: 'emprendimiento 4', ruta: '/emprendimiento4', imgsrc: '3'},
-        { name: 'emprendimiento 5', ruta: '/emprendimiento5', imgsrc: '4'},
-        { name: 'emprendimiento 6', ruta: '/emprendimiento6', imgsrc: '5'},
-        { name: 'emprendimiento 7', ruta: '/emprendimiento7', imgsrc: '6'},
-        { name: 'emprendimiento 8', ruta: '/emprendimiento8', imgsrc: '7'},
-        { name: 'emprendimiento 9', ruta: '/emprendimiento9', imgsrc: '8'},
-        { name: 'emprendimiento 10', ruta: '/emprendimiento10', imgsrc: '9'},              
-      ];
+  const drinks = [
+    { name: 'Árticulos permacultura', ruta: '/articulos', imgsrc: logo},
+    { name: 'tarot y otras magias', ruta: '/categorias/salud/tarot', imgsrc: logo},
+    { name: 'emprendimiento 3', ruta: '/emprendimiento3', imgsrc: logo},
+    { name: 'emprendimiento 4', ruta: '/emprendimiento4', imgsrc: logo},
+    { name: 'emprendimiento 5', ruta: '/emprendimiento5', imgsrc: logo},
+    { name: 'emprendimiento 6', ruta: '/emprendimiento6', imgsrc: logo},
+    { name: 'emprendimiento 7', ruta: '/emprendimiento7', imgsrc: logo},
+    { name: 'emprendimiento 8', ruta: '/emprendimiento8', imgsrc: logo},
+    { name: 'emprendimiento 9', ruta: '/emprendimiento9', imgsrc: logo},
+    { name: 'emprendimiento 10', ruta: '/emprendimiento10', imgsrc: logo},              
+  ];
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
@@ -69,18 +69,17 @@ const CarouselDestacados = () => {
               className={`carousel-item ${isActive ? 'active' : ''} ${positionClass(index)}`}
               key={index}
             >
-            <Link href={drinks[activeIndex].ruta}>
-              <Image src={logo} alt='foto' width='100' height='100' />
-            </Link>
-            </div>
-           
+              <Link href={drink.ruta}>
+                <Image src={drink.imgsrc} alt='foto' width='100' height='100' />
+              </Link>
+              {isActive && <h2 className='nombre'>{drink.name}</h2>}
+            </div>           
           );
         })}
       </div>
       <div className="carousel-controls carousel-controls-next" onClick={goToNext}>
         <button>Siguiente</button>
       </div>
-      <h2 className='nombre'>{drinks[activeIndex].name}</h2>
     </div>
   );
 };

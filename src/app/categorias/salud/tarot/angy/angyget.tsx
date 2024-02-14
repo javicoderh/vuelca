@@ -46,6 +46,7 @@ export const AngyGet = () => {
           className="flex flex-col w-[500px] producto-card-container shadow-md rounded-lg overflow-hidden mb-4"
         >
           <div onClick={() => toggleDetalles(index)} className="empresa-card flex flex-col items-start p-3">
+            <Image src={producto.imagen} width={50} height={50} alt="" />
             <h3 className="text-2xl font-bold">{producto.nombre}</h3>
             
             {detalles[index] ? (

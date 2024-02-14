@@ -1254,3 +1254,27 @@ margin-bottom: 1rem;
 margin-top: 2rem;
 font-family: 'Cinzel', serif;
 }
+
+.nombre {
+color: black;
+position: fixed;
+bottom: 0px;
+left: 0px;
+font-size: 1rem;
+text-align: center;
+background-color: black;
+width: 100%;
+color: white;
+}
+
+.nombre-mobile {
+color: black;
+position: fixed;
+bottom: 0px;
+left: 0px;
+font-size: 1.5rem;
+text-align: center;
+background-color: black;
+width: 100%;
+color: white;
+}
