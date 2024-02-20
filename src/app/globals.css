@@ -21,8 +21,8 @@
     background-color: white;
   }
   25% {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     transform: translateY(-180%);
     background-color: white;
@@ -54,6 +54,62 @@
   100% {
     transform: translateX(200px) translateY(-180%);
     width: 500px;
+    height: 15vh;
+    border-radius: 2%;
+  }
+}
+
+@keyframes bloomInMobile {
+  0% {
+    background-color: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  10% {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: solid white 5px;
+    box-shadow: 0px 0px 20px 5px rgb(81, 243, 243);
+    background-color: white;
+  }
+  25% {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transform: translateY(-40%);
+    background-color: white;
+  }
+  40% {
+    transform: translateX(-200px) translateY(-60%);
+    width: 40px;
+    height: 40px;
+    border-radius: 40%;
+    background-color: white;
+  }
+  50% {
+    transform: translateX(-300px) translateY(-120%);
+    width: 70vw;
+    height: 15vh;
+    border-radius: 2%;
+  }
+  60% {
+    transform: translateX(-300px) translateY(-120%);
+    width: 70vw;
+    height: 15vh;
+    border-radius: 2%;
+  }
+  90% {
+    transform: translateX(-300px) translateY(-120%);
+    width: 70vw;
+    height: 15vh;
+    border-radius: 2%;
+  }
+  100% {
+    transform: translateX(-300px) translateY(-120%);
+    width: 70vw;
     height: 15vh;
     border-radius: 2%;
   }
@@ -1215,14 +1271,12 @@ font-family: 'Cinzel', serif;
 
 .tooltip-mobile {
   position: fixed;
-  top: 520px; 
+  top: 720px; 
   overflow-y: scroll;
-  left: 20px;
+  left: 340px;
   transform: translateX(0%);
   background-color: #000000;
   color: #ffffff;
-  width: 70vw;
-  height: 15vh;
   text-align: center;
   padding: 4px 4px;
   border-radius: 4px;
@@ -1231,6 +1285,7 @@ font-family: 'Cinzel', serif;
   opacity: 1;
   box-shadow: 0px 0px 10px 5px white;
   transition: opacity 0.3s ease;z-index: 8;
+  animation: bloomInMobile 5s ease forwards 0s;
 }
 
 .tooltip-mobile2 {
@@ -1259,7 +1314,6 @@ display: none;
 }
 
 .tooltip-mobile h1 {
-  background-color: #221800;
   color: white;
   font-family: 'Cinzel', serif; 
 }
