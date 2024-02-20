@@ -45,9 +45,15 @@ const Aura: React.FC = () => {
     setVistaTooltip('tooltip')
     }
 
-    const dirigirACategorias = () => {
-      setVistaTooltip('categorias')
-      }
+  const dirigirACategorias = () => {
+  setVistaTooltip('categorias')
+  }
+  const dirigirAPrecios = () => {
+  setVistaTooltip('precios')
+  }
+  const dirigirAArticulos = () => {
+  setVistaTooltip('articulos')
+  }
 
   return (
    <div className='hidden md:flex aura-container'>
@@ -74,6 +80,13 @@ const Aura: React.FC = () => {
                                     <button onClick={dirigirATips}>tips</button>
                                     <button onClick={cerrar}>cerrar</button>
                                     </div>: null }
+                                    {vistaTooltip == 'información'? <div className='tooltip-mobile2 flex-tooltip'>
+                                    <h1 className='text-white'>¿Qué información necesitas?</h1>
+                                    <Link href={'/nosotros'}><button>¿que es Vuelca?</button></Link>
+                                    <Link href={'/precios'}><button>¿Cómo aparecer en vuelca?</button></Link>
+                                    <Link href={'/articulos'}><button>Árticulos informativos</button></Link>                                    
+                                    <button onClick={cerrar}>cerrar</button>
+                                    </div>: null }                             
       {vistaTooltip == 'tooltip'? <div className='block tooltip-mobile2'>{loveMessages[messageIndex]} <br />
         <button className='cerrar' onClick={cerrar}>cerrar</button>
       </div>:  null}

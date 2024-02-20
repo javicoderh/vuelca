@@ -198,7 +198,7 @@ model User {
 model UserRole {
   id   Int    @id @default(autoincrement())
   name String @unique
-
+  
   user User[]
 }
 
