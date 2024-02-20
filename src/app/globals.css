@@ -1430,8 +1430,8 @@ text-align: center;
 }
 
 .nosotros-img-container:hover .nosotros-tooltip {
-  opacity: 1; /* Make tooltip visible on hover */
-  pointer-events: auto; /* Enable pointer events on the tooltip */
+  opacity: 1; 
+  pointer-events: auto; 
 }
 
 .contacto-container {
