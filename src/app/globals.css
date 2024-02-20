@@ -1271,9 +1271,9 @@ font-family: 'Cinzel', serif;
 
 .tooltip-mobile {
   position: fixed;
-  top: 640px; 
+  top: 600px; 
   overflow-y: scroll;
-  left: 340px;
+  left: 300px;
   transform: translateX(0%);
   background-color: #000000;
   color: #ffffff;
