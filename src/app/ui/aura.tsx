@@ -87,7 +87,7 @@ const Aura: React.FC = () => {
                                     <Link href={'/articulos'}><button>Árticulos informativos</button></Link>                                    
                                     <button onClick={cerrar}>cerrar</button>
                                     </div>: null }                             
-      {vistaTooltip == 'tooltip'? <div className='block tooltip-mobile2'>{loveMessages[messageIndex]} <br />
+      {vistaTooltip == 'tooltip'? <div className='block tooltip-mobile2 text-white'>{loveMessages[messageIndex]} <br />
         <button className='cerrar' onClick={cerrar}>cerrar</button>
       </div>:  null}
       <Image className='footer-img' onClick={dirigirAWelcome}  src={lotus} alt='footer' width='100' height='100' />
