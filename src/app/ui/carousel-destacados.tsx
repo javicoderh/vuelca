@@ -58,7 +58,7 @@ const CarouselDestacados = () => {
   return (
     <div className="carousel-container">
       <div className="carousel-controls carousel-controls-prev" onClick={goToPrevious}>
-        <button>Anterior</button>
+        <button className='text-white'>Anterior</button>
       </div>
       <div className="carousel">
         {visibleIndices.map((index) => {

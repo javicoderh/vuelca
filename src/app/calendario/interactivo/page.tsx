@@ -13,7 +13,7 @@ import edit from '../../../../public/edit.jpg';
 import plus from '../../../../public/plus.png'
 import borrar from '../../../../public/delete.png'
 import Modal from "../../ui/modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import EneroInteractivo from "@/app/ui/calendarioInteractivo/eneroInteractivo";
 import FebreroInteractivo from "@/app/ui/calendarioInteractivo/febreroInteractivo";
 import MarzoInteractivo from "@/app/ui/calendarioInteractivo/marzoInteractivo";
@@ -30,6 +30,8 @@ import JulioInteractivo from "@/app/ui/calendarioInteractivo/julioInteractivo";
 import Enero2 from "@/app/ui/calendario2.0/enero";
 import MesesLista from "@/app/ui/calendario2.0/meseslist";
 import Febrero2  from "@/app/ui/calendario2.0/febrero";
+import Destacados from "@/app/ui/destacados";
+import ProximosEventos from "@/app/ui/proximosEventos";
 
 
 
@@ -50,6 +52,7 @@ const CalendarioInteractivo = () => {
       <h1 className="calendario-interactivo-titulo">Calendario de eventos conscientes</h1>
       <div className="calendario-interactivo hidden md:grid">
       <MesesLista />
+      <ProximosEventos />
       </div>
       <div className="calendario-interactivo2 grid md:hidden">
         <EneroInteractivo />

@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import calendario from '../../../public/timetable.svg';
 
-function ProximosEventos() {
+function ProximosEventosMain() {
   const { data: eventos, error, isLoading } = trpc.febrero.readAll.useQuery({
     mes: "febrero"
   }); 
@@ -23,7 +23,7 @@ function ProximosEventos() {
   }
 
   return (
-    <div className='proximosEventos hidden md:grid'>
+    <div className='proximosEventosMain hidden md:grid'>
       <h2 className='pl-[5px] mb-[25px]'>Eventos febrero</h2>
       <ul className='proximos-eventos-ul'>
         {eventos.map((evento) => (
@@ -42,4 +42,4 @@ function ProximosEventos() {
   );
 }
 
-export default ProximosEventos;
+export default ProximosEventosMain;

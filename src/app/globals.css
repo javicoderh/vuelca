@@ -154,8 +154,7 @@ background-color: rgb(36, 17, 0);
 }
 
 main {
-background: url(https://images.unsplash.com/photo-1439792675105-701e6a4ab6f0?ixlib=rb-4.0.3);
-background-size: cover;
+background-color: rgb(148, 148, 121);
 padding-bottom: 10px;
 }
 
@@ -371,7 +370,7 @@ transform: translateX(40%);
 
 .destacados-title {
 font-size: 2rem;
-color: rgb(238, 184, 134);
+color: rgb(255, 241, 228);
 }
 
 .destacados-title2 {
@@ -482,8 +481,6 @@ font-weight: 900;
 
 .proximosEventos {
 position: absolute;
-top: 300px;
-left: 20px;
 align-items: center;
 justify-content: center;
 grid-template-columns: 1fr;
@@ -494,7 +491,28 @@ border-radius: 2%;
 border: solid 3px rgb(112, 249, 253);
 box-shadow: 0px 0px 2px rgb(143, 16, 2);      
 overflow-y: scroll;
-background: url(https://st4.depositphotos.com/3765057/31601/i/450/depositphotos_316017572-stock-illustration-beautiful-watercolor-seamless-pattern-with.jpg);
+background: url(https://img.freepik.com/premium-photo/fresh-green-flower-as-pattern-texture-background_25381-29.jpg);
+transform: translateX(450%);
+}
+
+.proximosEventosMain {
+position: absolute;
+align-items: center;
+justify-content: center;
+grid-template-rows: 1fr;
+padding: 0.5%;
+overflow-x: scroll;
+width: 10vw;
+height: 60vh;
+border-radius: 2%;
+border: solid 3px rgb(112, 249, 253);
+box-shadow: 0px 0px 2px rgb(143, 16, 2);      
+overflow-y: scroll;
+background: url(https://img.freepik.com/premium-photo/fresh-green-flower-as-pattern-texture-background_25381-29.jpg);
+}
+
+.proximosEventosMain::-webkit-scrollbar {
+display: none;
 }
 
 .proximosEventos::-webkit-scrollbar {
@@ -503,7 +521,7 @@ display: none
 
 .proximosEventos h2 {
 font-family: Arial, Helvetica, sans-serif;
-color: rgb(46, 56, 201);
+color: rgb(0, 0, 0);
 font-size: 1.5rem;
 text-align: start;
 border: solid 2px rgb(114, 150, 250);
@@ -601,10 +619,6 @@ align-items: flex-start;
 justify-content: flex-start;
 height: 100%;
 transform: scale(0.95);
-}
-
-.rsize {
-transform: scale(0.85);
 }
 
 .proximos-eventos-ul li {
@@ -1026,7 +1040,7 @@ grid-template-columns: repeat(5, 1fr);
 grid-template-rows: repeat(3, 1fr);
 height: 10vh;
 width: 100%;
-background-color: #221800;
+background-color: #837e7e;
 border-bottom: solid 2px #87421F;
 }
 
@@ -1043,10 +1057,14 @@ transform: scale(0.85);
 
 .newLogo h1 {
 position: absolute;
-top: 0px;
+top: -10px;
 left: 20px;
 font-size: 2.5rem;
 font-family: 'Cinzel', serif;
+}
+
+.newLogo nav li {
+color : beige
 }
 
 .newLogo nav li:hover {
@@ -1065,7 +1083,6 @@ margin-bottom: 15px;
 
 .nLogoImg {
 position:relative;
-filter: invert(1);
 }
 
 .introduccion {
@@ -1540,6 +1557,7 @@ border-radius: 3%;
 overflow-y: scroll;
 color: white;
 border: solid 2px silver;
+z-index: 11;
 }
 
 .eventosDiarios::-webkit-scrollbar {
@@ -1547,6 +1565,7 @@ display: none;
 }
 
 .eventosDiarios li {
+margin-top: 10px;
 background-color: #a0a0a0;
 color: white;
 border: solid 1px white;
@@ -1556,4 +1575,27 @@ padding: 1rem;
 
 .eventosDiarios h2 {
 margin-bottom: 15px;
+}
+
+.bienvenida { 
+flex-direction: column;
+position: relative;
+top:0px;
+left: 0px;
+width: 100vw;
+height: 30vh !important;
+background-color: white;
+padding-left: 20px;
+padding-top: 50px;
+padding-bottom: 50px;
+background: url(https://4kwallpapers.com/images/wallpapers/alps-mountains-mountain-range-summer-sunny-day-forest-clear-3840x1080-5384.jpg);
+background-size: cover;
+}
+
+.bienvenida h1 {
+font-size: 4rem;
+color: beige;
+margin-bottom: 20px;
+background-color: rgba(0, 0, 0, 0.5);
+padding-left: 20px;
 }

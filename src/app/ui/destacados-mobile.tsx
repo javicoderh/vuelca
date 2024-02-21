@@ -73,15 +73,13 @@ const CarouselDestacadosMobile = () => {
               <Image src={drink.imgsrc} alt='foto' width='100' height='100' />
             </Link>
             {isActive && <h2 className='nombre-mobile'>{drink.name}</h2>}
-            </div>
-           
+            </div>           
           );
         })}
       </div>
       <div className="carousel-controls carousel-controls-next" onClick={goToNext}>
         <button>Siguiente</button>
       </div>
-      <h2 className='nombre'>{drinks[activeIndex].name}</h2>
     </div>
   );
 };

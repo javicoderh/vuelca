@@ -11,6 +11,7 @@ import CalendarioInteractivo from './calendario/interactivo/page'
 import Link from 'next/link'
 import CategoriasMobile from './ui/categorias-mobile'
 import DestacadosMobile from './ui/destacados-mob'
+import ProximosEventosMain from './ui/proximoseventosmain'
 
 
 const interactivo = '/calendario/interactivo'
@@ -19,8 +20,12 @@ export default function Home() {
   
   return (    
       <main className='w-full h-[90vh] flex flex-col overflow-main p-3'>
+        <div className='bienvenida hidden md:flex'>
+          <h1>Bienvenidos a Vuelca <br />
+          el lugar donde encontrar lo que necesitas...</h1>  
+        </div>       
         <Carousel />
-        <CategoriasMobile />        
+        <CategoriasMobile />         
         <Categorias /> 
         <p className='text-white introduccion hidden md:block'>Vuelca es una plataforma diseñada para reunir empresas que ofrecen distintos tipos de servicios y productos, 
         manteniendo un canon <br></br>de responsabilidad empresarial tanto con sus empleados como con la comunidad y el medio ambiente. <br></br>
@@ -34,6 +39,5 @@ export default function Home() {
         <Link className='hidden md:block' href={interactivo}>
         <h2 className='calendario-tit calendario-link'>Calendario 2024</h2>
         </Link>       
-        <ProximosEventos />        
       </main>
 )}

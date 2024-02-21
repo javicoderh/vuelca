@@ -23,9 +23,24 @@ const Header: React.FC = () => {
           <li>Home</li>
           </Link>
           <Link
+          href={'/guia'}
+          >
+          <li>Guía</li>
+          </Link>
+          <Link
+          href={'/mapa'}
+          >
+          <li>Mapa</li>
+          </Link>
+          <Link
+          href={'/calendario/interactivo'}
+          >
+          <li>Calendario</li>
+          </Link>
+          <Link
           href={'/nosotros'}
           >
-          <li>Nosotros</li>
+          <li>nosotros</li>
           </Link>
           <Link
           href={'/contacto'}

@@ -8,7 +8,7 @@ import Link from 'next/link';
 const Aura: React.FC = () => {
   const loveMessages = ["¿Sabías que la permacultura es un sistema de principios de diseño agrícola, económico, político y social basado en los patrones y las características del ecosistema natural?", "You make my heart smile", "I'm so lucky to have you"];
   const [messageIndex, setMessageIndex] = useState(0);
-  const [vistaTooltip, setVistaTooltip] = useState('welcome')
+  const [vistaTooltip, setVistaTooltip] = useState('hidden')
   
   
   const cerrar = () => {
