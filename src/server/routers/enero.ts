@@ -2,6 +2,7 @@ import { EneroEventosSchema } from "@/lib/models";
 import { publicProcedure, router } from "../trpc";
 import { prisma } from "@/lib/prisma";
 import { TRPCError } from "@trpc/server";
+import z from 'zod'
 
 export const eneroRouter = router({
   create: publicProcedure
@@ -22,11 +23,26 @@ export const eneroRouter = router({
         });
       }
     }),
-  readAll: publicProcedure.query(async () => {
+    readAll: publicProcedure
+  .input(
+    z
+      .object({
+        mes: z.string().optional(),
+      }).optional()
+  ).query(async (opts) => {
     try {
-      const enero = await prisma.eneroeventos.findMany();
-      console.log("🚀 ~ readAll:publicProcedure.query ~ marzo:", enero)
-      return enero;
+      if (opts.input?.mes !== '') {
+        const eneroeventos = await prisma.eneroeventos.findMany({
+          where: {
+            mes: opts.input?.mes
+          }
+        });
+        return eneroeventos;
+        
+      } else {
+        const eneroeventos = await prisma.eneroeventos.findMany();
+        return eneroeventos;
+      }      
     } catch (error) {
       console.log("🚀 ~ readAll:publicProcedure.query ~ error:", error)
       new TRPCError({

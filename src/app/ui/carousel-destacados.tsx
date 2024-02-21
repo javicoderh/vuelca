@@ -66,7 +66,7 @@ const CarouselDestacados = () => {
           const isActive = index === activeIndex;
           return (            
             <div
-              className={`carousel-item ${isActive ? 'active' : ''} ${positionClass(index)}`}
+              className={`carousel-item ${isActive ? 'active' : ''} 'p-3' ${positionClass(index)}`}
               key={index}
             >
               <Link href={drink.ruta}>
