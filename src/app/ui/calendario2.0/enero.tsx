@@ -40,7 +40,7 @@ const Enero2 = () => {
 
   return (
     <div className="mes-container">
-      <h1 >Enero</h1>
+      <h1  className="mes-tit">Enero</h1>
       <div className="mes2">  
       <div 
           className={`dia2${selectedDay === 2 ? ' selected' : ''}`} 

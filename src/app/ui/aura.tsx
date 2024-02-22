@@ -77,6 +77,7 @@ const Aura: React.FC = () => {
                                     <h1 className='text-white'>¿Qué estás buscando?</h1>
                                     <button onClick={dirigirACategorias}>productos</button> 
                                     <button onClick={dirigirAInformacion}>información</button>
+                                    <Link href={'/calendario/interactivo'}><button onClick={dirigirAInformacion}>eventos</button></Link>
                                     <button onClick={dirigirATips}>tips</button>
                                     <button onClick={cerrar}>cerrar</button>
                                     </div>: null }

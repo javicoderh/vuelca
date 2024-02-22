@@ -2,6 +2,7 @@ import { DiciembreEventosSchema } from "@/lib/models";
 import { publicProcedure, router } from "../trpc";
 import { prisma } from "@/lib/prisma";
 import { TRPCError } from "@trpc/server";
+import z from 'zod'
 
 export const diciembreRouter = router({
   create: publicProcedure
@@ -22,19 +23,34 @@ export const diciembreRouter = router({
         });
       }
     }),
-  readAll: publicProcedure.query(async () => {
-    try {
-      const marzo = await prisma.diciembreeventos.findMany();
-      console.log("🚀 ~ readAll:publicProcedure.query ~ marzo:", marzo)
-      return marzo;
-    } catch (error) {
-      console.log("🚀 ~ readAll:publicProcedure.query ~ error:", error)
-      new TRPCError({
-        code: "INTERNAL_SERVER_ERROR",
-        message: "Internal Server Error",
-      });
-    }
-  }),
+    readAll: publicProcedure
+    .input(
+      z
+        .object({
+          mes: z.string().optional(),
+        }).optional()
+    ).query(async (opts) => {
+      try {
+        if (opts.input?.mes !== '') {
+          const diciembreeventos = await prisma.diciembreeventos.findMany({
+            where: {
+              mes: opts.input?.mes
+            }
+          });
+          return diciembreeventos;
+          
+        } else {
+          const diciembreeventos = await prisma.diciembreeventos.findMany();
+          return diciembreeventos;
+        }      
+      } catch (error) {
+        console.log("🚀 ~ readAll:publicProcedure.query ~ error:", error)
+        new TRPCError({
+          code: "INTERNAL_SERVER_ERROR",
+          message: "Internal Server Error",
+        });
+      }
+    }),
   update: publicProcedure.input(DiciembreEventosSchema).mutation(async (opts) => {
     try {
       return await prisma.diciembreeventos.update({

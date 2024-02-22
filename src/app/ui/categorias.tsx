@@ -37,7 +37,7 @@ const Categorias: React.FC = () => {
 
   return (
     
-    <div className='w-full hidden md:grid grid-cols-2 grid-rows-4 gap-5 md:grid-cols-9 md:gap-5 md:grid-rows-5 mt-6 redimensionado'>
+    <div className='w-full hidden md:grid grid-cols-2 mt-1 grid-rows-4 gap-5 md:grid-cols-9 md:gap-5 md:grid-rows-5 mt-6 redimensionado'>
       {categorias.map((categoria, index) => (
         <Link
         href={categoria.href}
@@ -45,7 +45,7 @@ const Categorias: React.FC = () => {
         >
         <div className='flex flex-col items-center justify-center high-layer' key={index}>
           <Image className='circular' src={categoria.imageSrc} alt={categoria.name} title={categoria.tooltip} width='50' height='75' />
-          <p className='text-white mt-4'>{categoria.name}</p>
+          <p className='text-black mt-4'>{categoria.name}</p>
         </div>
         </Link>
       ))}

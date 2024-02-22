@@ -154,7 +154,7 @@ background-color: rgb(36, 17, 0);
 }
 
 main {
-background-color: rgb(148, 148, 121);
+background-color: #fffbf4;
 padding-bottom: 10px;
 }
 
@@ -370,7 +370,7 @@ transform: translateX(40%);
 
 .destacados-title {
 font-size: 2rem;
-color: rgb(255, 241, 228);
+color: rgb(65, 65, 65);
 }
 
 .destacados-title2 {
@@ -975,7 +975,7 @@ transform: scale(0.6);
 font-size: 2rem;
 color: rgb(238, 181, 134);
 margin-bottom: 1rem;
-background-color: rgba(14, 1, 87, 0.3);
+background-color: rgba(14, 1, 87, 0.7);
 border-radius: 50%;
 padding: 0.8%;
 }
@@ -1040,7 +1040,7 @@ grid-template-columns: repeat(5, 1fr);
 grid-template-rows: repeat(3, 1fr);
 height: 10vh;
 width: 100%;
-background-color: #837e7e;
+background-color: #9e9e9e;
 border-bottom: solid 2px #87421F;
 }
 
@@ -1064,7 +1064,7 @@ font-family: 'Cinzel', serif;
 }
 
 .newLogo nav li {
-color : beige
+color : rgb(255, 255, 255)
 }
 
 .newLogo nav li:hover {
@@ -1086,8 +1086,11 @@ position:relative;
 }
 
 .introduccion {
-transform: translateX(15%) translateY(-450%);
+background-color: rgba(0, 0, 0, 0.5);
+transform: translateX(0%) translateY(-450%);
 font-size: 1.3rem;
+text-align: center;
+border: groove 4px white
 }
 
 .calendario-p {
@@ -1133,16 +1136,16 @@ width: 100vw;
 .cat-children-in li {
   display: flex;
   flex-direction: column;
-  color: white;
+  color: rgb(37, 37, 37);
   font-size: 1.5rem;
   align-items: center;
   justify-content: flex-start;
 }
 
 .cat-children-in li p {
-  color: rgb(173, 173, 173);
+  color: rgb(83, 83, 83);
   text-align: start;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .cat-children-in li h2 {
@@ -1473,6 +1476,7 @@ justify-content: center;
 gap: 5px;
 border:solid 2px silver;
 border-radius: 3%;
+box-shadow: 0px 2px 0px 50px rgba(0, 0, 0, 0.3);
 }
 
 .mes-container h1 {
@@ -1508,9 +1512,12 @@ background-color: rgba(0, 0, 0, 0.3);
 align-items: center;
 justify-content: flex-start;
 width: 16vw;
-height: 80vh;
+height: 59vh;
 padding-top: 2rem;
 transform: translatex(220%) translateY(-20%);
+box-shadow: 0px 5px 120px 10px rgb(223, 174, 70);
+border-radius: 5%;
+gap: 5px;
 }
 
 .calendario2 {
@@ -1534,6 +1541,11 @@ align-items: center;
 justify-content: center;
 border-radius: 5%;
 border: solid white 1px;
+transition: 0.4s
+}
+
+.dias-small:hover {
+  background-color: #858585;
 }
 
 .dia-small {
@@ -1553,7 +1565,7 @@ display: flex; flex-direction: column;
 align-items: center;
 justify-content: flex-start;
 padding: 1rem;
-border-radius: 3%;
+border-radius: 5%;
 overflow-y: scroll;
 color: white;
 border: solid 2px silver;
@@ -1599,3 +1611,4 @@ margin-bottom: 20px;
 background-color: rgba(0, 0, 0, 0.5);
 padding-left: 20px;
 }
+

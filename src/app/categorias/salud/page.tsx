@@ -70,9 +70,9 @@ export default function Rutas() {
 
   return (    
     <div className='w-full categoria-container flex flex-col items-center justify-center p-2'>
-      <h1 className='text-white'>Salud</h1>
+      <h1 className='text-black'>Salud</h1>
       <Image className='circular-cat m-4' src={salud} height={100} width={100} alt='' />
-      <p className='text-white mt-4'>
+      <p className='text-gray-700 mt-4'>
         En vuelca entendemos la salud desde una perspectiva integrativa que considera tanto el bienestar físico de la persona
         como su bienestar emocional y social.
         <br />

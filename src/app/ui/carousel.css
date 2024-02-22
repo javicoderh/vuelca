@@ -36,7 +36,7 @@ z-index: 2;
 .carousel-controls button {
 background: none;
 border: none;
-color: #FFE5B4;
+color: #353535;
 font-size: 1rem;
 }
   
@@ -130,5 +130,5 @@ margin-top: 20px;
 
 .nombre {
 font-size: 1.8rem;
-color: rgb(238, 184, 134);
+color: rgb(82, 82, 82);
 }

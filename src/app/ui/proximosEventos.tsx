@@ -24,7 +24,7 @@ function ProximosEventos() {
 
   return (
     <div className='proximosEventos hidden md:grid'>
-      <h2 className='pl-[5px] mb-[25px]'>Eventos febrero</h2>
+      <h2 className='pl-[5px] mb-[25px]'>eventos febrero</h2>
       <ul className='proximos-eventos-ul'>
         {eventos.map((evento) => (
           <Link key={evento.nombre} href={'/'+evento.nombre}>
