@@ -39,7 +39,7 @@ export const AngyGet = () => {
   console.log("🚀 ~ obteniendo productos de angy ~ empresasTiendas:", empresasTiendas);
 
   return (
-    <div className="grid grid-cols-4">
+    <div className="grid grid-cols-1">
       {empresasTiendas.data?.map((producto: any, index: number) => (
         <div
           key={producto.nombre}

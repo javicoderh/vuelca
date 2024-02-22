@@ -655,6 +655,8 @@ width: 100vw;
 height: 100%;
 padding: 2%;
 overflow-y: scroll;
+display: flex;
+flex-direction: column;
 }
 
 .inner-eventos-tit {
