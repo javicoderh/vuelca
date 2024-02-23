@@ -37,7 +37,7 @@ export default function Home() {
         <Destacados /> 
         <DestacadosMobile /> 
         <Link className='hidden md:block' href={interactivo}>
-        <h2 className='calendario-tit calendario-link'>Calendario 2024</h2>
+        <h2 className='calendario-tit calendario-link text-gray-700'>Calendario 2024</h2>
         </Link>       
       </main>
 )}

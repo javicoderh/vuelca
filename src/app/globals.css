@@ -488,11 +488,12 @@ padding: 0.5%;
 width: 10vw;
 height: 60vh;
 border-radius: 2%;
-border: solid 3px rgb(112, 249, 253);
+border: solid 3px rgb(133, 133, 133);
 box-shadow: 0px 0px 2px rgb(143, 16, 2);      
 overflow-y: scroll;
-background: url(https://img.freepik.com/premium-photo/fresh-green-flower-as-pattern-texture-background_25381-29.jpg);
+background-color: #fff7f1;
 transform: translateX(450%);
+box-shadow: 0px 0px 0px 20px rgba(0, 0, 0, 0.4);
 }
 
 .proximosEventosMain {
@@ -521,7 +522,6 @@ display: none
 
 .proximosEventos h2 {
 font-family: Arial, Helvetica, sans-serif;
-color: rgb(0, 0, 0);
 font-size: 1.5rem;
 text-align: start;
 border: solid 2px rgb(114, 150, 250);
@@ -629,7 +629,7 @@ justify-content: flex-start;
 margin-bottom: 5px;
 border-radius: 5%;
 background-color: #000658;
-border: solid 2px rgb(114, 150, 250);
+border: solid 2px rgb(156, 156, 156);
 }
 
 .proximos-eventos-ul li h2 {
@@ -642,7 +642,6 @@ font-size: 1.3rem;
 font-family: Arial, Helvetica, sans-serif;
 text-align: start;
 font-size: 1.1rem;
-color:rgb(127, 188, 241);  
 }
 
 .evento-img {
@@ -1017,19 +1016,18 @@ filter: invert(0);
 
 .calendario-tit {
 font-size: 2rem;
-color: white;
 transform: translateY(-320%);
-background-color: black;
+background-color: rgb(224, 224, 224);
 border: solid 1px white;
 border-radius: 2%;
 padding: 5px;
+border:solid 2px gray
 }
 
 .calendario-tit:hover {
-color: aquamarine;
 transition: 0.4s;
 text-shadow: 0px 0px 0px 0px beige;
-transform: translateY(-320%) scale(1.2);
+transform: translateY(-320%) scale(1.07);
 }
 
 .newHeader {
@@ -1127,7 +1125,7 @@ width: 100vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2.5rem;
-  margin-left: 3.6rem;
+  margin-left: 25.6rem;
   margin-top: 3rem;
 }
 
@@ -1472,7 +1470,7 @@ display: grid;
 grid-template-columns: repeat(5, 1fr);
 width: 40vw;
 height: 50vh;
-background-color: rgb(122, 122, 122);
+background-color: #fdfdfd;
 align-items: center;
 justify-content: center;
 gap: 5px;
@@ -1488,8 +1486,8 @@ font-size: 2rem;
 
 .dia2 {
 border-radius: 5%;
-background-color: #a5a5a5;
-color:#ffffff;
+background-color: #e9e6e1;
+color:#000000;
 border-radius: 5%;
 border: solid silver 2px;
 display: flex;
@@ -1503,7 +1501,7 @@ transition: 1s;
 
 .dia2:hover {
 transform: scale(1.025);
-background-color: #c4c4c4;
+background-color: #c9fffa;
 }
 
 .meses-container2 {
@@ -1514,7 +1512,7 @@ background-color: rgba(0, 0, 0, 0.3);
 align-items: center;
 justify-content: flex-start;
 width: 16vw;
-height: 59vh;
+height: 61.5vh;
 padding-top: 2rem;
 transform: translatex(220%) translateY(-20%);
 box-shadow: 0px 5px 120px 10px rgb(223, 174, 70);
@@ -1534,20 +1532,21 @@ display: none;
 .dias-small {
 padding: 5px;
 gap: 5px;
-background-color: #5c5c5c;
-color: white;
+background-color: #ffffff;
+color: rgb(0, 0, 0);
 width: 13vw;
 display: grid;
 grid-template-columns: repeat(5, 1fr);
 align-items: center;
 justify-content: center;
 border-radius: 5%;
-border: solid white 1px;
-transition: 0.4s
+padding-left: 5px;
+border: solid rgb(201, 201, 201) 2px;
+transition: 0.4s;
 }
 
 .dias-small:hover {
-  background-color: #858585;
+  background-color: #cbfffc;
 }
 
 .dia-small {

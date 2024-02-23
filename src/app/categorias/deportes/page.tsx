@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import salud from '../../../../public/salud.jpg'
+import deportes from '../../../../public/deportes.jpg'
 import '../../globals.css'
 import Link from 'next/link'
 
@@ -18,23 +18,23 @@ export default function Rutas() {
   
 const subcategorias: Subcategorias = {
     tiendas: {
-      nombre: 'tiendas de alimentos',
+      nombre: 'Yoga',
       descripcion: 'huertas orgánicas, bosques y productos orgánicos para tus cultivos',
-      imgurl: salud,
+      imgurl: deportes,
       link: 'categorias/permacultura/Bioconstruccion'
     },
     articulos: {
-      nombre: 'Articulos sobre nutrición',
+      nombre: 'slackline',
       descripcion: 'huertas orgánicas, bosques y productos orgánicos para tus cultivos',
-      imgurl: salud,
+      imgurl: deportes,
       link: 'categorias/permacultura/agroecologia'
     }    
     }
 
   return (    
     <div className='w-full categoria-container flex flex-col items-center justify-center p-2'>
-      <h1 className='text-gray-700'>Alimentación</h1>
-      <Image className='circular-cat m-4' src={salud} height={100} width={100} alt='' />
+      <h1 className='text-gray-700'>Deportes</h1>
+      <Image className='circular-cat m-4' src={deportes} height={100} width={100} alt='' />
       <p className='text-gray-600 mt-4'>
         En vuelca nos interesa que aprendas como alimentarte saludablemente y tengas proveedores con productos de primer nivel <br />
         frutas, veduras y legumbres orgánicas cultivadas de manera responsable con el medio ambiente y la salud de las personas <br />

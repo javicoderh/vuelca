@@ -50,9 +50,9 @@ export default function Rutas() {
 
   return (    
     <div className='w-full categoria-container flex flex-col items-center justify-center p-2'>
-      <h1 className='text-white'>Permacultura</h1>
+      <h1 className='text-gray-700'>Permacultura</h1>
       <Image className='circular-cat m-4' src={salud} height={100} width={100} alt='' />
-      <p className='text-white mt-4'>
+      <p className='text-gray-600 mt-4'>
         En vuelca nos interesa que puedas tener todas las comodidades de la vida urbana de una forma responsable y consciente con el medio ambiente,
         para esto te ofrecemos distintas alternativas para que puedas migrar a un estilo de vida sustentable para ti y las futuras generaciones
       </p>
