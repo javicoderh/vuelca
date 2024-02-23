@@ -4,7 +4,7 @@ import { YogaGet } from "./getyoga";
  function Yoga() {
    
   return (
-    <div className="inner-eventos-container enero-bg">
+    <div className="inner-eventos-container enero-bg text-gray-100">
         <h1 className="mb-[20px] inner-eventos-tit">Yoga 2024</h1>
         <YogaGet />    
     </div>

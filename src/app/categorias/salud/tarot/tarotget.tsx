@@ -26,18 +26,17 @@ export const TarotGet = () => {
   <Link key={empresa.id} href={empresa.ruta}>
     <div
       key={empresa.id}
-      className="flex flex-col w-full empresa-card-container shadow-md rounded-lg overflow-hidden mb-4"
-    >
-      <h3 className="text-2xl font-bold">{empresa.nombreempresa}</h3>
+      className="flex flex-col w-[30vw] empresa-card-container shadow-md rounded-lg overflow-hidden mb-4">     
       <div className="empresa-card flex flex-row items-start p-3">
-          <div className="flex flex-col p-3">
-            <p>{empresa.descripcion}</p>
+          <div className="flex flex-col p-3"> 
+          <h3 className="text-2xl font-bold text-gray-700">{empresa.nombreempresa}</h3>
+          <br />
+            <p className="text-gray-700">{empresa.descripcion}</p>
             <br />
-            <p>puedes contactarme en:</p>
-            <br />
-            <p>{empresa.mail}</p>
-            <p>{empresa.telefono}</p>
-            <p>
+            <p className="text-gray-700">puedes contactarme en:</p>
+            <p className="text-gray-700">{empresa.mail}</p>
+            <p className="text-gray-700">{empresa.telefono}</p>
+            <p className="text-gray-700">
               visita mi página{" "}
               <Link className="text-blue-300 hoveredLink" href={empresa.ruta}>
                 aquí
